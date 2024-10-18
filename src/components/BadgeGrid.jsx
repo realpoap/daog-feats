@@ -1,25 +1,21 @@
-import Badge from "./Badge"
+import BadgeRow from "./BadgeRow";
 
 const BadgesGrid = ({ tree }) => {
-	console.log('data content:', tree.content);
-
-	const badgesList = tree.content.map(f =>
-		<Badge
-			key={`#${f.rank}-${f.id}`}
-			id={f.id}
-			rank={f.rank}
-			title={f.title}
-			tooltip={f.tooltip}
-			icon={f.icon}
-			color={f.color}
-		/>
-	)
+	console.log('data content:', tree);
+	// const badgesList = tree.content.map(f =>
+	// 	<Badge
+	// 		key={`#${f.rank}-${f.id}`}
+	// 		id={f.id}
+	// 		rank={f.rank}
+	// 		title={f.title}
+	// 		tooltip={f.tooltip}
+	// 		icon={f.icon}
+	// 		color={f.color}
+	// 	/>
+	// )
 
 	return (
-		<div className='tree-column'>
-			<h3>{tree.name}</h3>
-			<ul className='list'>{badgesList}</ul>
-		</div>
+		<BadgeRow />
 	)
 }
 

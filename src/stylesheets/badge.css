@@ -35,6 +35,11 @@ body {
 
 }
 
+input{
+	/* visibility: hidden; */
+	z-index: 100;
+}
+
 .badge {
 	flex-flow: column;
 	align-items: center;

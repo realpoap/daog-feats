@@ -1,27 +1,19 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Tooltip } from 'react-tooltip'
 import SVG from 'react-inlinesvg';
 
-const Badge = ({ id, tooltip, icon, title, rank, color }) => {
+const Badge = ({ id, tooltip, icon, title, rank, color, isActive }) => {
 
-	console.log('icon:', icon);
-
-
-	const [isActive, setIsActive] = useState(false)
 	const coloredClass = `badge ${color}`
 
-	const toggleClass = () => {
-		//add skills count here - context
-		setIsActive(!isActive)
 
-	}
 	return (
-		<li
+		<div
 			className={isActive ? coloredClass : 'badge'}
-			onClick={toggleClass}
+
 			data-tooltip-id={id}
 			data-tooltip-content={tooltip}
-			data-tooltip-place='bottom'>
+			data-tooltip-place='bottom' >
 			<SVG className='icon' src={icon} width={128}
 				height="auto"
 				title={title} />
@@ -33,7 +25,9 @@ const Badge = ({ id, tooltip, icon, title, rank, color }) => {
 			<div>
 				<Tooltip className='tooltip' id={id} />
 			</div>
-		</li>
+
+		</div>
+
 	);
 };
 

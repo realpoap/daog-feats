@@ -22,6 +22,16 @@
 	text-transform: uppercase;
 }
 
+.tree-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 5px;
+	max-height: 40vh;
+	border: 2px solid greenyellow;
+	text-transform: uppercase;
+}
+
 .tree-block{
 	display: flex;
 	flex-direction: row;

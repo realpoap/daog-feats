@@ -1,13 +1,12 @@
 import BadgeGrid from './BadgeGrid'
-import ranged from '../data/ranged'
 
-const FeatBlock = ({ title }) => {
-	console.log('tree:', ranged.shooting)
+const FeatBlock = ({ title, tree }) => {
 	return (
 		<div className='main-wrapper'>
 			<h2>{title}</h2>
 			<div className='tree-block'>
-				<BadgeGrid className='grid-container' tree={ranged.preciseness} />
+				<BadgeGrid
+					tree={tree} />
 			</div>
 		</div>
 	);
