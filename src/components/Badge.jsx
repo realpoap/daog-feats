@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { Tooltip } from 'react-tooltip'
-
+import SVG from 'react-inlinesvg';
 
 const Badge = ({ id, tooltip, icon, title, rank, color }) => {
+
+	console.log('icon:', icon);
+
 
 	const [isActive, setIsActive] = useState(false)
 	const coloredClass = `badge ${color}`
@@ -19,16 +22,15 @@ const Badge = ({ id, tooltip, icon, title, rank, color }) => {
 			data-tooltip-id={id}
 			data-tooltip-content={tooltip}
 			data-tooltip-place='bottom'>
-
+			<SVG className='icon' src={icon} width={128}
+				height="auto"
+				title={title} />
+			<div className="circle">
+			</div>
+			<div className='ribbon'>
+				{title}
+			</div>
 			<div>
-				<div className="circle">
-					<div className='icon'>
-						<i className={`${icon} ra-fw`}></i>
-					</div>
-				</div>
-				<div className='ribbon'>
-					{title}
-				</div>
 				<Tooltip className='tooltip' id={id} />
 			</div>
 		</li>

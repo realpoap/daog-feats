@@ -1,3 +1,7 @@
+import bowman from '../assets/svg/bowman.svg'
+import bowstring from '../assets/svg/bow-string.svg'
+import target from '../assets/svg/archery-target.svg'
+
 const ranged = {
   "preciseness":
   {
@@ -8,16 +12,16 @@ const ranged = {
         "type": "preciseness",
         "rank": 1,
         "title": "Reaction shot",
-        "icon": "ra ra-archer",
+        "icon": bowman,
         "color": "green",
-        "tooltip": "You prepare your shot for the enemy to appear. You can make one shot at the target during its turn, with no penalty during your turn. Use your <b>INS</b> score instead of your DEX in this situation. Weapons that need to be reloaded still suffer this penalty."
+        "tooltip": "You prepare your shot for the enemy to appear. You can make one shot at the target during its turn, with no penalty during your turn. Use your INS score instead of your DEX in this situation. Weapons that need to be reloaded still suffer this penalty."
       },
       {
         "id": "rechange",
         "type": "preciseness",
         "rank": 2,
         "title": "Quick Repair",
-        "icon": "ra ra-cog-wheel",
+        "icon": bowstring,
         "color": "green",
         "tooltip": "You handle your broken weapon and quickly find a way to repair it using a rope or a dedicated tool. Roll a DEX save with disadvantage: if successful your weapon is functional again and you can fire within the turn if it is loaded and you have enough actions."
       },
@@ -35,7 +39,7 @@ const ranged = {
         "type": "preciseness",
         "rank": 4,
         "title": "True Aim",
-        "icon": "ra ra-archery-target",
+        "icon": target,
         "color": "green",
         "tooltip": "You relax your body and steady your breathing as you wait for the best moment to fire. Your shot is made with advantage, ignoring adverse conditions if you use 2 primary actions, and deals weapon damage + DEX bonus + your thoroughness score. The target hit must either succeed at a COU save or move away from you to take cover or flee."
       },

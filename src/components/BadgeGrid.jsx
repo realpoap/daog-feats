@@ -11,6 +11,7 @@ const BadgesGrid = ({ tree }) => {
 			title={f.title}
 			tooltip={f.tooltip}
 			icon={f.icon}
+			color={f.color}
 		/>
 	)
 

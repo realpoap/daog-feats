@@ -7,7 +7,7 @@ const FeatBlock = ({ title }) => {
 		<div className='main-wrapper'>
 			<h2>{title}</h2>
 			<div className='tree-block'>
-				<BadgeGrid className='grid-container' tree={ranged.shooting} />
+				<BadgeGrid className='grid-container' tree={ranged.preciseness} />
 			</div>
 		</div>
 	);
