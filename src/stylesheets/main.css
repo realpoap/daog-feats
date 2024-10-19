@@ -58,7 +58,8 @@ h4{
 }
 
 .main-wrapper {
-	max-width: 95vw;
+	min-width: 40vw;
+	max-width: 80vw;
 	margin: 3em auto;
 	text-align: center;
 	display: flex;
@@ -66,4 +67,12 @@ h4{
 	flex:1;
 	text-transform: uppercase;
 	/* border: 2px solid red; */
+}
+
+.slider-container{
+	margin: 0 5vw 0 5vw;
+}
+
+.center{
+	margin: 0 10vw 0 10vw;
 }

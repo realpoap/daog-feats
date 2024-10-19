@@ -4,6 +4,8 @@ import App from './App.jsx'
 
 import './stylesheets/main.css'
 import './stylesheets/badge.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
