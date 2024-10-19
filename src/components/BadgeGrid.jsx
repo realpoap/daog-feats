@@ -1,22 +1,17 @@
 import BadgeRow from "./BadgeRow";
 
-const BadgesGrid = ({ tree }) => {
-	console.log('data content:', tree);
-	// const badgesList = tree.content.map(f =>
-	// 	<Badge
-	// 		key={`#${f.rank}-${f.id}`}
-	// 		id={f.id}
-	// 		rank={f.rank}
-	// 		title={f.title}
-	// 		tooltip={f.tooltip}
-	// 		icon={f.icon}
-	// 		color={f.color}
-	// 	/>
-	// )
+const BadgesGrid = ({ trees }) => {
 
-	return (
-		<BadgeRow />
+	return Array.from(
+		{ length: 6 },
+		(_, i) => (
+			<BadgeRow
+				key={i}
+				trees={trees}
+				index={i} />
+		)
 	)
 }
 
 export default BadgesGrid
+

@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <h1>DAOG Skills</h1>
-      <FeatBlock title='ranged' tree={feats.ranged} />
+      <FeatBlock title='ranged' trees={feats.ranged} />
     </div>
   )
 }

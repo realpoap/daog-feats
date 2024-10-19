@@ -1,6 +1,18 @@
 import bowman from '../assets/svg/bowman.svg'
 import bowstring from '../assets/svg/bow-string.svg'
-import target from '../assets/svg/archery-target.svg'
+import target from '../assets/svg/bullseye.svg'
+import killershot from '../assets/svg/pierced-heart.svg'
+import arrowflight from '../assets/svg/arrow-flights.svg'
+import penalty from '../assets/svg/achilles-heel.svg'
+import quiver from '../assets/svg/quiver.svg'
+import doubleshot from '../assets/svg/double-shot.svg'
+import concealing from '../assets/svg/leaf-swirl.svg'
+import hunt from '../assets/svg/spearfishing.svg'
+import supressing from '../assets/svg/arrowed.svg'
+import ambush from '../assets/svg/hood.svg'
+import giantkiller from '../assets/svg/charged-arrow.svg'
+import friendly from '../assets/svg/branch-arrow.svg'
+import bleed from '../assets/svg/drop.svg'
 
 const feats = {
   "ranged": [
@@ -30,7 +42,7 @@ const feats = {
           "type": "preciseness",
           "rank": 3,
           "title": "Bleeding shot",
-          "icon": "ra ra-droplet",
+          "icon": bleed,
           "color": "green",
           "tooltip": "You choose an exposed part of your target to inflict a deep wound. Make a shot with disadvantage that causes 1d3 additional bleeds. The target suffers a penalty to its bleed resistance rolls equal to your thoroughness score."
         },
@@ -48,7 +60,7 @@ const feats = {
           "type": "preciseness",
           "rank": 5,
           "title": "Friendly fire",
-          "icon": "ra ra-on-target",
+          "icon": friendly,
           "color": "green",
           "tooltip": "You can shoot without disadvantage to and from melee range, even if your allies are in contact with the enemy. Immediately after shooting, you can take a free leap action, making an AGI check."
         }
@@ -62,7 +74,7 @@ const feats = {
           "type": "shooting",
           "rank": 1,
           "title": "Barrage shot",
-          "icon": "ra ra-arrow-flights",
+          "icon": arrowflight,
           "color": "green",
           "tooltip": "You can move during your turns as long as you maintain a barrage of fire. Enemy creatures that attempt to approach within range must succeed at an AGI save against your shooting score or suffer 1 + your DEX bonus."
         },
@@ -71,7 +83,7 @@ const feats = {
           "type": "shooting",
           "rank": 2,
           "title": "Penalty shot",
-          "icon": "ra ra-player-shot",
+          "icon": penalty,
           "color": "green",
           "tooltip": "You target a limb on your target to hinder its progress. You make your shot with disadvantage by aiming at the legs to give -5 MOV and disadvantage on combat and AGI rolls if successful..."
         },
@@ -80,7 +92,7 @@ const feats = {
           "type": "shooting",
           "rank": 3,
           "title": "Quick reload",
-          "icon": "ra ra-ammo-bag",
+          "icon": quiver,
           "color": "green",
           "tooltip": "You know your weapon and are able to reload with your eyes closed. You reduce the number of reload turns required by 1 for every ten DEX. If the reload time is then 0, you can fire in the same turn as you would with a bow."
         },
@@ -89,7 +101,7 @@ const feats = {
           "type": "shooting",
           "rank": 4,
           "title": "Giant killer",
-          "icon": "ra ra-barbed-arrow",
+          "icon": giantkiller,
           "color": "green",
           "tooltip": "When facing a large or larger creature, you muster up your courage to deal heavy damage while waiting to get close enough to your enemy. Roll a normal shooting roll with advantage depending on the size of the enemy. You deal your damage + shooting score (+ STR bonus if you are wielding a bow or throwing weapon), and reroll the damage die if you roll a 1. (Follow the rules for huge creatures if they apply: if you are at close range, roll a fear roll instead of your to hit roll.)"
         },
@@ -98,7 +110,7 @@ const feats = {
           "type": "shooting",
           "rank": 5,
           "title": "Double shot",
-          "icon": "ra ra-target-arrows",
+          "icon": doubleshot,
           "color": "green",
           "tooltip": "You place two bolts in your weapon and fire both at once, adjusting your movement. Your shot suffers disadvantage to hit, but you roll twice your damage if successful. OR You use your other hand to wield a second weapon. You roll two rolls to hit (one for each weapon). You can choose different targets for your 2 shots, but you then fire with disadvantage on each roll."
         }
@@ -112,7 +124,7 @@ const feats = {
           "type": "discretion",
           "rank": 1,
           "title": "Hunt",
-          "icon": "ra ra-pawprint",
+          "icon": hunt,
           "color": "green",
           "tooltip": "You target a target you can see. As long as you maintain sight of it, you gain advantage on your shots against that target. Only one creature can be the target of Hunt at a time, and you can’t change the target of this action until the first creature is prone or out of combat. During exploration phases, you can use Hunt to gain food with advantage on the Survival check and an extra unit of weight."
         },
@@ -121,7 +133,7 @@ const feats = {
           "type": "discretion",
           "rank": 2,
           "title": "Concealing shot",
-          "icon": "ra ra-thorn-arrow",
+          "icon": concealing,
           "color": "green",
           "tooltip": "You choose an opportune moment to shoot and take advantage of your surroundings to go unnoticed. Your shooting roll gains a bonus equal to your stealth. If your roll is successful you are considered stealthy with your raw score."
         },
@@ -130,7 +142,7 @@ const feats = {
           "type": "discretion",
           "rank": 3,
           "title": "Supressing fire",
-          "icon": "ra ra-supersonic-arrow",
+          "icon": supressing,
           "color": "green",
           "tooltip": "If you shoot at the same target as the previous turn, you can make a suppressive shot with advantage, and if it has not moved,. If successful, your damage inflicts 2x your Dexterity bonuses. The opponent suffers disadvantage on his COU rolls until his next turn."
         },
@@ -139,7 +151,7 @@ const feats = {
           "type": "discretion",
           "rank": 4,
           "title": "Ambush",
-          "icon": "ra ra-zigzag-leaf",
+          "icon": ambush,
           "color": "green",
           "tooltip": "While stealthy, you take a free shot at a target during Initiative. If your shot was the trigger for Initiative, then you can take a second shot. This action does not break your stealth."
         },
@@ -147,8 +159,8 @@ const feats = {
           "id": "killer",
           "type": "discretion",
           "rank": 5,
-          "title": "Killer shot",
-          "icon": "ra ra-shot-through-the-heart",
+          "title": "Killer Shot",
+          "icon": killershot,
           "color": "green",
           "tooltip": "You make a precise shot with disadvantage, aiming at your opponent’s vital point with your attention to detail. If your target is hit, you deal critical damage with your weapon and your opponent is knocked prone. This action does not break your stealth."
         },

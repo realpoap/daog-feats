@@ -1,47 +1,49 @@
 import { useState } from "react";
 
 import Badge from "./Badge";
-const BadgeRow = () => {
+const BadgeRow = ({ trees, index }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
+	console.log(trees);
+	if (index === 0) {
+		return (
+			<div className='title-row'>
+				{trees.map(t => <h6 className="skill-title" key={t.name}>{t.name}</h6>)}
+			</div>
+		)
+	}
+
 	return (
-		<div className='tree-row' >
-			<h4>1</h4>
-			<div onClick={() => setActiveIndex(1)} >
-				<Badge
-					id='sgergthteh'
-					title='truc'
-					icon=''
-					rank={1}
-					tooltip='tooltippppppp'
-					color='green'
-					isActive={activeIndex === 1}
-				/>
-			</div>
-			<div onClick={() => setActiveIndex(2)}>
-				<Badge
-					id='sgerggregrtgthteh'
-					title='truc'
-					icon=''
-					rank={1}
-					tooltip='teththrstyhppppp'
-					color='green'
-					isActive={activeIndex === 2}
-				/>
-			</div>
-			<div onClick={() => setActiveIndex(3)}>
-				<Badge
-					id='sgergtreqqhteh'
-					title='truc'
-					icon=''
-					rank={1}
-					tooltip='toolegethetippppppp'
-					color='green'
-					isActive={activeIndex === 3}
-				/>
+		<div className="skill-row">
+			<h4 className="index">{index}</h4>
+			<div className='tree-row'>
+				{trees.map((t, x) => {
+					console.log('index', index);
+
+					const skill = t.content[index - 1]
+					console.log('skill', skill);
+
+					return (
+						<div
+							key={skill.title}
+							className="skill"
+							onClick={() => setActiveIndex(x)}>
+							<Badge
+								id={`tooltip-${skill.title}`}
+								title={skill.title}
+								icon={skill.icon}
+								rank={skill.rank}
+								tooltip={skill.tooltip}
+								color={skill.color}
+								isActive={activeIndex === x}
+							/>
+						</div>
+					)
+				})}
 			</div>
 		</div>
 	);
 };
 
 export default BadgeRow;
+
