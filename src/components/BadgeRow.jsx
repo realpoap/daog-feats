@@ -27,7 +27,7 @@ const BadgeRow = ({ trees, index }) => {
 						<div
 							key={skill.title}
 							className="skill"
-							onClick={() => setActiveIndex(x)}>
+							onClick={() => setActiveIndex(x + 1)}>
 							<Badge
 								id={`tooltip-${skill.title}`}
 								title={skill.title}
@@ -35,7 +35,7 @@ const BadgeRow = ({ trees, index }) => {
 								rank={skill.rank}
 								tooltip={skill.tooltip}
 								color={skill.color}
-								isActive={activeIndex === x}
+								isActive={activeIndex === x + 1}
 							/>
 						</div>
 					)

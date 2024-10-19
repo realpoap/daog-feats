@@ -8,13 +8,13 @@ h4{
 }
 
 .skill-title {
-	text-transform: capitalize;
+	text-transform: uppercase;
 	font-weight: 300;
-	width: 20vw;
+	width: 10vw;
 }
 
 .skill{
-	width: 20vw;
+	width: 10vw;
 }
 
 .index{
