@@ -1,15 +1,15 @@
 import FeatBlock from "./components/FeatBlock"
 import Slider from "react-slick"
-import feats from './data/ranged'
+import feats from './data/feats'
 
 const App = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true
   };
 
@@ -20,9 +20,9 @@ const App = () => {
 
         <Slider {...settings}>
           <FeatBlock title='ranged' trees={feats.ranged} />
-          <FeatBlock title='ranged' trees={feats.ranged} />
-          <FeatBlock title='ranged' trees={feats.ranged} />
-          <FeatBlock title='ranged' trees={feats.ranged} />
+          <FeatBlock title='brawl' trees={feats.fists} />
+          {/* <FeatBlock title='ranged' trees={feats.fight} />
+          <FeatBlock title='ranged' trees={feats.wizardry} /> */}
         </Slider>
       </div>
     </>
