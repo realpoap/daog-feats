@@ -1,3 +1,4 @@
+
 import FeatBlock from "./components/FeatBlock"
 import Slider from "react-slick"
 import feats from './data/feats'
@@ -10,8 +11,9 @@ const App = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    pauseOnHover: true
-  };
+    pauseOnHover: true,
+    arrows: true,
+  }
 
   return (
     <>

@@ -3,8 +3,8 @@ import BadgeGrid from './BadgeGrid'
 const FeatBlock = ({ title, trees }) => {
 	return (
 		<div className='main-wrapper'>
-			<h2>{title}</h2>
 			<div className='tree-block'>
+				<h2>{title}</h2>
 				<BadgeGrid
 					trees={trees} />
 			</div>
