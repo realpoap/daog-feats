@@ -1,8 +1,31 @@
 import { Tooltip } from 'react-tooltip'
 import SVG from 'react-inlinesvg';
 
-const Badge = ({ id, tooltip, icon, title, color, isActive }) => {
+const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 	const coloredClass = `badge ${color}`
+	const actionLetter = action.substr(0, 1)
+	let actionStyle = ''
+	switch (actionLetter) {
+		case 'f':
+			actionStyle = "lightgreen"
+			break
+		case 'g':
+			actionStyle = "lightgreen"
+			break
+		case 'l':
+			actionStyle = "LightSkyBlue"
+			break
+		case 'm':
+			actionStyle = "SandyBrown"
+			break
+		case 'p':
+			actionStyle = "SandyBrown"
+			break
+		default:
+			actionStyle = 'red'
+	}
+
+
 
 	return (
 		<>
@@ -14,6 +37,9 @@ const Badge = ({ id, tooltip, icon, title, color, isActive }) => {
 				<SVG className='icon' src={icon} width={128}
 					height="auto"
 					title={title} />
+				<div className='action-bubble' style={{ backgroundColor: actionStyle }}>
+					{actionLetter}
+				</div>
 				<div className="circle">
 				</div>
 				<div className='ribbon'>
@@ -22,7 +48,7 @@ const Badge = ({ id, tooltip, icon, title, color, isActive }) => {
 				<div>
 					<Tooltip className='feat-tooltip' id={id} />
 				</div>
-			</div>
+			</div >
 		</>
 	)
 }

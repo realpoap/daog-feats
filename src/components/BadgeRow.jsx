@@ -1,4 +1,4 @@
-import { act, useState } from "react";
+import { React, useState } from "react";
 
 import Badge from "./Badge";
 const BadgeRow = ({ trees, index }) => {
@@ -12,18 +12,8 @@ const BadgeRow = ({ trees, index }) => {
 	}
 
 	const handleClick = (event) => {
-		console.log("before", activeIndex);
 		const value = event.currentTarget.value
-		console.log('value:', value, '| active index:', activeIndex);
-
-		if (activeIndex === value) {
-			console.log('toggle class')
-			setActiveIndex(0)
-		} else {
-			console.log('set active')
-			setActiveIndex(value)
-		}
-
+		activeIndex === value ? setActiveIndex(0) : setActiveIndex(value)
 	}
 
 	return (
@@ -48,6 +38,8 @@ const BadgeRow = ({ trees, index }) => {
 								rank={skill.rank}
 								tooltip={skill.tooltip}
 								color={skill.color}
+								type={skill.type}
+								action={skill.action}
 								isActive={activeIndex === x + 1}
 							/>
 						</li>
