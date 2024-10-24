@@ -36,13 +36,15 @@ const App = () => {
 
   return (
     <>
-      <h1>DAOG Skills</h1>
-      <button onClick={handleToggleLang}>{language}</button>
+      <div className="header">
+        <h1>DAOG Skills</h1>
+        <button className='language-btn' onClick={handleToggleLang}>{language}</button>
+      </div>
       <div className="slider-container">
 
         <Slider {...settings}>
-          <FeatBlock title='ranged' trees={feats.ranged} />
-          <FeatBlock title='brawl' trees={feats.fists} />
+          <FeatBlock title={language === 'en' ? 'ranged' : 'tir'} trees={feats.ranged} />
+          <FeatBlock title={language === 'en' ? 'brawl' : 'bagarre'} trees={feats.fists} />
           {/* <FeatBlock title='ranged' trees={feats.fight} />
           <FeatBlock title='ranged' trees={feats.wizardry} /> */}
         </Slider>
