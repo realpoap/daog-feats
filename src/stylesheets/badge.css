@@ -11,7 +11,7 @@ by Olivia Ng
 
 @media only screen and (width < 1250px) {
 	.feat-tooltip {
-		min-width: 50vw;
+		min-width: 50vw !important;
 		font-size: 0.7em !important;
 		border-radius: 4px !important;
 	}
