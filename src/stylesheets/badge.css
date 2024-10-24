@@ -3,20 +3,41 @@
 by Olivia Ng 
 (https://codepen.io/oliviale/pen/qpPByV)  */
 
-
-
-.tooltip {
-  --rt-transition-show-delay: 0.5s;
-  --rt-transition-closing-delay: 0.5s;
-	opacity: 100%;
-	min-width: 50vw;
-	max-width: 30vw;
-	text-transform: none;
-	font-weight: 500;
-	font-size: 1em;
-	z-index: 100;
-	padding: 25px;
+@-moz-document url-prefix() {
+  .icon {
+    top:25%;
+  }
 }
+
+@media only screen and (width < 1250px) {
+	.feat-tooltip {
+
+		min-width: 50vw;
+		max-width: 80vw;
+		font-size: 0.8em !important;
+		border-radius: 4px !important;
+	}
+}
+	
+	li{
+		list-style-type: none;
+	}
+	
+	.feat-tooltip {
+		--rt-transition-show-delay: 0.5s;
+		--rt-transition-closing-delay: 0.5s;
+		opacity: 1 !important;
+		/* min-width: 50vw; */
+		max-width: 30vw;
+		text-transform: none;
+		font-weight: 400;
+		font-size: 0.9em !important;
+		z-index: 100;
+		padding: 15px 10px 15px 10px;
+		border-radius: 10px !important;
+}
+
+
 
 body {
 	font-family: 'Comfortaa', sans-serif;

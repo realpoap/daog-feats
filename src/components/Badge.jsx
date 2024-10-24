@@ -20,7 +20,7 @@ const Badge = ({ id, tooltip, icon, title, color, isActive }) => {
 					{title}
 				</div>
 				<div>
-					<Tooltip className='tooltip' id={id} />
+					<Tooltip className='feat-tooltip' id={id} />
 				</div>
 			</div>
 		</>

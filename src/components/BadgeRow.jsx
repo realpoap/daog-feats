@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { act, useState } from "react";
 
 import Badge from "./Badge";
 const BadgeRow = ({ trees, index }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
-
-	console.log(trees);
 	if (index === 0) {
 		return (
 			<div className='title-row'>
@@ -13,21 +11,36 @@ const BadgeRow = ({ trees, index }) => {
 		)
 	}
 
+	const handleClick = (event) => {
+		console.log("before", activeIndex);
+		const value = event.currentTarget.value
+		console.log('value:', value, '| active index:', activeIndex);
+
+		if (activeIndex === value) {
+			console.log('toggle class')
+			setActiveIndex(0)
+		} else {
+			console.log('set active')
+			setActiveIndex(value)
+		}
+
+	}
+
 	return (
 		<div className="skill-row">
 			<h4 className="index">{index}</h4>
 			<div className='tree-row'>
 				{trees.map((t, x) => {
-					console.log('index', index);
 
 					const skill = t.content[index - 1]
-					console.log('skill', skill);
 
 					return (
-						<div
-							key={skill.title}
+						<li
+							key={`skill-${skill.title}`}
 							className="skill"
-							onClick={() => setActiveIndex(x + 1)}>
+							value={x + 1}
+							onClick={handleClick}
+						>
 							<Badge
 								id={`tooltip-${skill.title}`}
 								title={skill.title}
@@ -37,7 +50,7 @@ const BadgeRow = ({ trees, index }) => {
 								color={skill.color}
 								isActive={activeIndex === x + 1}
 							/>
-						</div>
+						</li>
 					)
 				})}
 			</div>
