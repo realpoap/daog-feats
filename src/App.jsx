@@ -1,9 +1,28 @@
-
+import { useContext, useEffect, useState } from "react"
 import FeatBlock from "./components/FeatBlock"
 import Slider from "react-slick"
-import feats from './data/feats'
+
+import featsEN from './data/feats-en'
+import featsFR from './data/feats-fr'
+import { LanguageContext } from "./store/languageContext"
 
 const App = () => {
+  const { language, languageData, setLanguage } = useContext(LanguageContext)
+  const [feats, setFeats] = useState(featsEN)
+
+  useEffect(() => {
+    setFeats(language === 'en' ? featsEN : featsFR)
+  }, [language])
+
+  console.log('base data: ', feats)
+
+
+  const handleToggleLang = () => {
+    const newLanguage = language === 'en' ? 'fr' : 'en'
+    setLanguage(newLanguage)
+    setFeats(language === 'en' ? featsEN : featsFR)
+  }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -18,6 +37,7 @@ const App = () => {
   return (
     <>
       <h1>DAOG Skills</h1>
+      <button onClick={handleToggleLang}>{language}</button>
       <div className="slider-container">
 
         <Slider {...settings}>

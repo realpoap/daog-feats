@@ -15,6 +15,10 @@ by Olivia Ng
 		font-size: 0.7em !important;
 		border-radius: 4px !important;
 	}
+	.badge:hover {
+		top:0px !important;
+		box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+	}
 }
 	
 	li{
