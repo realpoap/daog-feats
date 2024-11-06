@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 import FeatBlock from "./components/FeatBlock"
 import PlayerSkills from "./components/skillSetter"
@@ -18,21 +18,22 @@ const App = () => {
   const [feats, setFeats] = useState(featsEN)
   const [open, setOpen] = useState(false)
 
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState(null)
+
+  const loaded = useRef(false)
 
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
   }, [language])
 
+
+
   useEffect(() => {
-    if (localStorage.getItem('user-stats')) {
-      console.log('fetching user data...');
-      setUserData(JSON.parse(localStorage.getItem('user-stats')))
-      console.log('fetching user data...', userData);
-    } else {
-      console.log('resetting user data');
-      setUserData(player)
-    }
+    let data = localStorage.getItem('user_stats') ?
+      JSON.parse(localStorage.getItem('user_stats')) : player;
+    setUserData(data)
+    loaded.current = true
+    console.log(`loaded : ${loaded.current}`)
   }, [])
 
   // console.log('base data: ', feats)
@@ -55,34 +56,40 @@ const App = () => {
     arrows: true,
   }
 
-  return (
-    <>
-      <div className="header">
-        <h1>DAOG Skills</h1>
-        <button className='language-btn' onClick={handleToggleLang}>{language}</button>
-      </div>
-      <button className='language-btn' onClick={() => { setOpen(!open) }}>
-        {open ? 'Hide Stats' : 'Show Stats'}
-      </button>
-      <Collapsible
-        open={open}
-        onTransitionStart={(open) => { console.log('Collapsible box used to be', open ? 'open' : 'closed') }}
-        onTransitionEnd={(open) => { console.log('Collapsible box is now', open ? 'open' : 'closed') }}
-        revealType='bottomFirst'
-      >
-        <PlayerSkills userData={userData} setUserData={setUserData} />
-      </Collapsible>
-      <div className="slider-container">
+  if (!loaded.current) {
+    return (
+      <div>Loading data...</div>
+    )
+  } else {
 
-        <Slider {...settings}>
-          <FeatBlock title={language === 'en' ? 'ranged' : 'tir'} trees={feats.ranged} />
-          <FeatBlock title={language === 'en' ? 'brawl' : 'bagarre'} trees={feats.fists} />
-          {/* <FeatBlock title='ranged' trees={feats.fight} />
-          <FeatBlock title='ranged' trees={feats.wizardry} /> */}
-        </Slider>
-      </div>
-    </>
-  )
+    return (
+      <>
+        <div className="header">
+          <h1>DAOG Skills</h1>
+          <button className='language-btn' onClick={handleToggleLang}>{language}</button>
+        </div>
+        <button className='language-btn' onClick={() => { setOpen(!open) }}>
+          {open ? 'Hide Stats' : 'Show Stats'}
+        </button>
+        <Collapsible
+          open={open}
+          revealType='bottomFirst'
+        >
+          <PlayerSkills userData={userData} setUserData={setUserData} />
+        </Collapsible>
+        <div className="slider-container">
+
+          <Slider {...settings}>
+            <FeatBlock title={language === 'en' ? 'ranged' : 'tir'} trees={feats.ranged} />
+            <FeatBlock title={language === 'en' ? 'brawl' : 'bagarre'} trees={feats.fists} />
+            {/* <FeatBlock title='ranged' trees={feats.fight} />
+            <FeatBlock title='ranged' trees={feats.wizardry} /> */}
+          </Slider>
+        </div>
+      </>
+    )
+  }
+
 }
 
 export default App

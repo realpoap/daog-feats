@@ -1,5 +1,5 @@
-import { useState } from 'react';
-//import player from '../data/master-fr'
+
+import player from '../data/master-fr'
 
 const PlayerSkills = ({ userData, setUserData }) => {
 	// const [playerSkillList, setPlayerSkillList] = useState({
@@ -40,14 +40,14 @@ const PlayerSkills = ({ userData, setUserData }) => {
 		})
 		const updatedList = Object.fromEntries(propertiesEntries)
 		setUserData(updatedList)
-		localStorage.setItem('user-stats', JSON.stringify(updatedList))
+		localStorage.setItem('user_stats', JSON.stringify(updatedList))
 	}
 
 	const handleClear = () => {
 		console.log('removing local storage data');
 
-		localStorage.removeItem('user-stats')
-		userData({})
+		localStorage.removeItem('user_stats')
+		setUserData(player)
 	}
 
 

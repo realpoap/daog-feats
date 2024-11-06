@@ -25,7 +25,6 @@ h4{
 	flex-flow: column wrap;
 	height: 70vh;
 	flex-basis: 100%;
-	justify-content: space-between;	
 }
 
 .player-block label {
