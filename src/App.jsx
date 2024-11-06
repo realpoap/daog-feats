@@ -10,6 +10,7 @@ import 'collapsible-react-component/dist/index.css'
 
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
+import player from './data/master-fr'
 
 
 const App = () => {
@@ -17,11 +18,24 @@ const App = () => {
   const [feats, setFeats] = useState(featsEN)
   const [open, setOpen] = useState(false)
 
+  const [userData, setUserData] = useState({})
+
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
   }, [language])
 
-  console.log('base data: ', feats)
+  useEffect(() => {
+    if (localStorage.getItem('user-stats')) {
+      console.log('fetching user data...');
+      setUserData(JSON.parse(localStorage.getItem('user-stats')))
+      console.log('fetching user data...', userData);
+    } else {
+      console.log('resetting user data');
+      setUserData(player)
+    }
+  }, [])
+
+  // console.log('base data: ', feats)
 
 
   const handleToggleLang = () => {
@@ -56,7 +70,7 @@ const App = () => {
         onTransitionEnd={(open) => { console.log('Collapsible box is now', open ? 'open' : 'closed') }}
         revealType='bottomFirst'
       >
-        <PlayerSkills />
+        <PlayerSkills userData={userData} setUserData={setUserData} />
       </Collapsible>
       <div className="slider-container">
 
