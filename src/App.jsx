@@ -1,14 +1,21 @@
 import { useContext, useEffect, useState } from "react"
+
 import FeatBlock from "./components/FeatBlock"
+import PlayerSkills from "./components/skillSetter"
+import { LanguageContext } from "./store/languageContext"
+
 import Slider from "react-slick"
+import { Collapsible } from 'collapsible-react-component'
+import 'collapsible-react-component/dist/index.css'
 
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
-import { LanguageContext } from "./store/languageContext"
+
 
 const App = () => {
-  const { language, languageData, setLanguage } = useContext(LanguageContext)
+  const { language, setLanguage } = useContext(LanguageContext)
   const [feats, setFeats] = useState(featsEN)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
@@ -40,6 +47,17 @@ const App = () => {
         <h1>DAOG Skills</h1>
         <button className='language-btn' onClick={handleToggleLang}>{language}</button>
       </div>
+      <button className='language-btn' onClick={() => { setOpen(!open) }}>
+        {open ? 'Hide Stats' : 'Show Stats'}
+      </button>
+      <Collapsible
+        open={open}
+        onTransitionStart={(open) => { console.log('Collapsible box used to be', open ? 'open' : 'closed') }}
+        onTransitionEnd={(open) => { console.log('Collapsible box is now', open ? 'open' : 'closed') }}
+        revealType='bottomFirst'
+      >
+        <PlayerSkills />
+      </Collapsible>
       <div className="slider-container">
 
         <Slider {...settings}>
