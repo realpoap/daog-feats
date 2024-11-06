@@ -26,31 +26,36 @@ const PlayerSkills = () => {
 		tir: 0,
 	})
 
-	const properties = Object.keys(playerSkillList)
-	console.log(properties);
+	const propertiesEntries = Object.entries(playerSkillList)
+	console.log(propertiesEntries);
 
 	const handleChange = (e) => {
-		for (const prop in playerSkillList) {
-			if (prop === e.target.name) {
-				playerSkillList.prop = e.target.value
-				console.log(`🚀 ~ ${prop}: ${playerSkillList.prop}`)
+		e.preventDefault()
+		const name = e.target.name
+		const value = e.target.value
+		propertiesEntries.map(p => {
+			if (p[0] === name) {
+				p[1] = parseInt(value)
 			}
-		}
+		})
+		const updatedList = Object.fromEntries(propertiesEntries)
+		setPlayerSkillList(updatedList)
 	}
+
 
 	return (
 		<div className='player-block'>
 			{
-				properties.map(p => {
+				propertiesEntries.map(p => {
 					return (
-						<label key={p}>
-							{p}
+						<label key={p[0]}>
+							{p[0]}
 							<input
 								type='number'
-								name={p}
+								name={p[0]}
 								min={0}
-								defaultValue={0}
-								onChange={handleChange}
+								value={p[1]}
+								onChange={e => handleChange(e)}
 							/>
 						</label>
 					)
