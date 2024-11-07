@@ -10,33 +10,46 @@ import 'collapsible-react-component/dist/index.css'
 
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
-import player from './data/master-fr'
+import { playerFr, playerEng } from './data/master'
 
 
 const App = () => {
   const { language, setLanguage } = useContext(LanguageContext)
+  const { playerMasters, setPlayerMasters } = useContext(LanguageContext)
+  const [userData, setUserData] = useState(null)
   const [feats, setFeats] = useState(featsEN)
   const [open, setOpen] = useState(false)
 
-  const [userData, setUserData] = useState(null)
-
-  const loaded = useRef(false)
+  const loading = useRef(true)
 
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
-  }, [language])
-
-
-
-  useEffect(() => {
-    let data = localStorage.getItem('user_stats') ?
-      JSON.parse(localStorage.getItem('user_stats')) : player;
-    setUserData(data)
-    loaded.current = true
-    console.log(`loaded : ${loaded.current}`)
-  }, [])
-
+    const playerData = fetchPlayerData()
+    console.log('playerData:', playerData);
+    setPlayerMasters(playerData)
+    console.log('player masters are:', playerMasters);
+    playerMasters ? loading.current = false : loading.current = true
+  }, [language, userData])
   // console.log('base data: ', feats)
+
+  const mergeMasterArrays = (keys, values) => {
+    if (keys.length !== values.length) {
+      throw new Error("The number of keys and values must be the same.")
+    }
+    const mergedMap = keys.reduce((map, key, index) => {
+      map[key] = values[index];
+      return map
+    }, {})
+    return mergedMap
+  }
+
+  const fetchPlayerData = () => {
+    const keys = (language === 'en' ? Object.keys(playerEng) : Object.keys(playerFr))
+    const values = userData ? Object.values(JSON.parse(localStorage.getItem('user_stats'))) : new Array(keys.length).fill(0);
+    console.log('values for masters: ', values);
+    const newObject = mergeMasterArrays(keys, values)
+    return newObject
+  }
 
 
   const handleToggleLang = () => {
@@ -56,7 +69,7 @@ const App = () => {
     arrows: true,
   }
 
-  if (!loaded.current) {
+  if (loading.current) {
     return (
       <div>Loading data...</div>
     )
@@ -75,7 +88,7 @@ const App = () => {
           open={open}
           revealType='bottomFirst'
         >
-          <PlayerSkills userData={userData} setUserData={setUserData} />
+          <PlayerSkills masters={playerMasters} setUserData={setUserData} />
         </Collapsible>
         <div className="slider-container">
 

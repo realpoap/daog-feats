@@ -1,33 +1,9 @@
 
-import player from '../data/master-fr'
+import player from '../data/master'
 
-const PlayerSkills = ({ userData, setUserData }) => {
-	// const [playerSkillList, setPlayerSkillList] = useState({
-	// 	artisanat: 0,
-	// 	combat: 0,
-	// 	défense: 0,
-	// 	détection: 0,
-	// 	discrétion: 0,
-	// 	éloquence: 0,
-	// 	ésoterisme: 0,
-	// 	logique: 0,
-	// 	magie: 0,
-	// 	minutie: 0,
-	// 	mouvement: 0,
-	// 	négoce: 0,
-	// 	perception: 0,
-	// 	performance: 0,
-	// 	persuasion: 0,
-	// 	physique: 0,
-	// 	savoir: 0,
-	// 	sciences: 0,
-	// 	soin: 0,
-	// 	survie: 0,
-	// 	tir: 0,
-	// })
+const PlayerSkills = ({ masters, setUserData }) => {
 
-	const propertiesEntries = Object.entries(userData)
-	//console.log(propertiesEntries);
+	const propertiesEntries = Object.entries(masters)
 
 	const handleChange = (e) => {
 		e.preventDefault()
@@ -39,15 +15,17 @@ const PlayerSkills = ({ userData, setUserData }) => {
 			}
 		})
 		const updatedList = Object.fromEntries(propertiesEntries)
-		setUserData(updatedList)
+		console.log(updatedList);
+
 		localStorage.setItem('user_stats', JSON.stringify(updatedList))
+		setUserData(updatedList)
 	}
 
 	const handleClear = () => {
 		console.log('removing local storage data');
 
 		localStorage.removeItem('user_stats')
-		setUserData(player)
+		setUserData(null)
 	}
 
 

@@ -1,16 +1,12 @@
-import { createContext, useEffect, useState } from 'react';
-
-
+import { createContext, useState } from 'react';
 
 const LanguageContext = createContext()
 
 const LanguageProvider = ({ children }) => {
 	const [language, setLanguage] = useState('en')
-	const [languageData, setLanguageData] = useState({})
-
-
+	const [playerMasters, setPlayerMasters] = useState({})
 	return (
-		<LanguageContext.Provider value={{ language, setLanguage }}>
+		<LanguageContext.Provider value={{ language, setLanguage, playerMasters, setPlayerMasters }}>
 			{children}
 		</LanguageContext.Provider>
 	)
