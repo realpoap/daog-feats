@@ -15,8 +15,16 @@
 	font-family: 'Noto Sans Mono';
 }
 
+h1{
+	text-transform: uppercase;
+	margin: 10px 0 0 0;
+	font-size: 2em;
+
+}
+
 h2{
 	margin-bottom: 10px;
+	font-family: 1em;
 }
 
 h4{
@@ -25,12 +33,13 @@ h4{
 
 .player-block {
 	width: 100vw;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
-	height: 65vh;
+	display: grid;
+	grid-auto-rows:1fr;
+	grid-template-columns:repeat(auto-fit,minmax(25em,1fr));
+	justify-content: space-around;
+	max-height: 90vh;
 	flex-basis: 100%;
-	margin-top: 10px;
+	margin: 5% 0 5% 0;
 }
 
 .player-block label {
@@ -39,20 +48,29 @@ h4{
 	flex-basis: 50%;
 	max-height: 20px;
 	align-items:center;
-	align-content: space-between;
-	justify-content: space-between;
+	align-content:center;
+	justify-content: center;
 	padding: 0 0 0 5px;
 	height: auto;
 	font-size: 0.7em;
+
+}
+
+.player-block span {
+	margin-left: 20%;
+	padding-bottom: 1px;
+	display: flex;
+	width: 80%;
+	border-bottom: 0.5px solid #555;
 }
 
 .player-block label input {
+	margin-right: 20%;
 	margin-left: 10px;
-	width: 4em;
+	width: 10%;
 	flex-wrap: wrap;
 	background: linear-gradient(to bottom, #555 0%, #666 100%);
   border: none;
-	margin-right: 10px;
   padding: 3px 0 3px 5px ;
 	color: white;
 	font-size: 0.7em;
@@ -138,23 +156,77 @@ h4{
 .header{
 	width: 100vw;
 	padding:0;
+	margin: 0;
 	text-align: center;
 }
 
-.language-btn{
-	right: 5%;
+button.action-btn{
 	text-transform: uppercase;
 	background: none;
-     border: 1px solid white;
-     padding: 3px 5px 3px 5px ;
-		 color: white;
+  border: 1px solid white;
+  padding: 3px 5px 3px 5px ;
+	color: white;
+	z-index: 10000;
+}
+button.action-btn:hover {
+	box-shadow : 0px 15px 25px -5px rgba(darken(black, 100%));
+	transform : scale(1.05);
+	font-weight: 500;
+	border-width: 1.2px;
 }
 
-@media only screen and (width < 1250px) {
+#lang {
+	display:block;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+}
+
+#stats {
+	display:block;
+	position: absolute;
+	top: 12%;
+	right: 5%;
+}
+
+#clear {
+	margin-top: 20px;
+	position: relative;
+	display:flex;
+}
+
+
+@media only screen and (width < 720px) {
 	.slick-arrow{
 		display:none !important;
 	}
 	.tree-block{
 		width: 100%;
 	}
+	h1{
+		text-align: left;
+		margin-left: 1%;
+		font-size: 1.7em;
+		margin-top: 0;
+		padding-bottom: 2%;
+		border-bottom: 2px solid white;
+	}
+	h2{
+		font-size: 1em;
+	}
+
+	#lang {
+		display:block;
+		position: absolute;
+		top: 3%;
+		right: 1%;
+	}
+
+	#stats {
+		display:block;
+		position: absolute;
+		top: 3%;
+		right: 10%;
+	}
+	
 }

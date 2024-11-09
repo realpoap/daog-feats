@@ -1,7 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react"
 
-import FeatBlock from "./components/FeatBlock"
-import PlayerSkills from "./components/skillSetter"
 import { LanguageContext } from "./store/languageContext"
 
 import Slider from "react-slick"
@@ -11,6 +9,9 @@ import 'collapsible-react-component/dist/index.css'
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
 import { playerFr, playerEng } from './data/master'
+
+import StatBlock from "./components/StatBlock"
+import FeatBlock from "./components/FeatBlock"
 
 
 const App = () => {
@@ -26,10 +27,11 @@ const App = () => {
     setFeats(language === 'en' ? featsEN : featsFR)
     const playerData = fetchPlayerData()
     console.log('playerData:', playerData);
-    setPlayerMasters(playerData)
+    setPlayerMasters({ playerData })
     console.log('player masters are:', playerMasters);
-    playerMasters ? loading.current = false : loading.current = true
+    Object.keys(playerMasters).length !== 0 ? loading.current = false : loading.current = true
   }, [language, userData])
+
   // console.log('base data: ', feats)
 
   const mergeMasterArrays = (keys, values) => {
@@ -50,7 +52,6 @@ const App = () => {
     const newObject = mergeMasterArrays(keys, values)
     return newObject
   }
-
 
   const handleToggleLang = () => {
     const newLanguage = language === 'en' ? 'fr' : 'en'
@@ -79,16 +80,16 @@ const App = () => {
       <>
         <div className="header">
           <h1>DAOG Skills</h1>
-          <button className='language-btn' onClick={handleToggleLang}>{language}</button>
+          <button id='lang' className='action-btn' onClick={handleToggleLang}>{language}</button>
         </div>
-        <button className='language-btn' onClick={() => { setOpen(!open) }}>
+        <button id='stats' className='action-btn' onClick={() => { setOpen(!open) }}>
           {open ? 'Hide Stats' : 'Show Stats'}
         </button>
         <Collapsible
           open={open}
           revealType='bottomFirst'
         >
-          <PlayerSkills masters={playerMasters} setUserData={setUserData} />
+          <StatBlock masters={playerMasters} setUserData={setUserData} />
         </Collapsible>
         <div className="slider-container">
 

@@ -1,7 +1,7 @@
 
 import player from '../data/master'
 
-const PlayerSkills = ({ masters, setUserData }) => {
+const StatBlock = ({ masters, setUserData }) => {
 
 	const propertiesEntries = Object.entries(masters)
 
@@ -35,7 +35,7 @@ const PlayerSkills = ({ masters, setUserData }) => {
 				propertiesEntries.map(p => {
 					return (
 						<label key={p[0]}>
-							{p[0]}
+							<span>{p[0]}</span>
 							<input
 								type='number'
 								name={p[0]}
@@ -49,10 +49,10 @@ const PlayerSkills = ({ masters, setUserData }) => {
 			}
 			<label>
 
-				<button className='language-btn' onClick={handleClear} name='clear-btn'>Clear</button>
+				<button id='clear' className='action-btn' onClick={handleClear} name='clear-btn'>Clear</button>
 			</label>
 		</div >
 	);
 };
 
-export default PlayerSkills;
+export default StatBlock;
