@@ -2,11 +2,11 @@ import { useState, useContext } from "react";
 import { LanguageContext } from "../store/languageContext"
 
 import Badge from "./Badge";
+import BadgeProxy from "./BadgeProxy";
+
 const BadgeRow = ({ main, trees, index }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
-	const { playerMasters, setPlayerMasters } = useContext(LanguageContext)
-
-	const mainCategory = trees[1]
+	const { playerMasters } = useContext(LanguageContext)
 
 
 	if (index === 0) {
@@ -37,16 +37,9 @@ const BadgeRow = ({ main, trees, index }) => {
 								value={x + 1}
 								onClick={handleClick}
 							>
-								<Badge
+								<BadgeProxy
 									id={`tooltip-${skill.title}`}
-									title={''}
-									icon={''}
-									rank={''}
-									tooltip={''}
-									color={'grey'}
-									type={''}
-									action={''}
-									isActive={false}
+									action={'x'}
 								/>
 							</li>
 						)

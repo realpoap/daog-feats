@@ -90,7 +90,7 @@ const featsEN = {
       ],
     },
     {
-      "name": "shooting",
+      "name": "ranged",
       "content": [
         {
           "id": "barrage",

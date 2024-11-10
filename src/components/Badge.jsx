@@ -34,8 +34,9 @@ const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 				data-tooltip-id={id}
 				data-tooltip-content={tooltip}
 				data-tooltip-place='bottom' >
-				<SVG className='icon' src={icon} width={128}
-					height="auto"
+				<SVG
+					className='icon'
+					src={icon}
 					title={title} />
 				<div className='action-bubble' style={{ backgroundColor: actionStyle }}>
 					{actionLetter}
