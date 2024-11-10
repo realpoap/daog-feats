@@ -23,6 +23,7 @@ export const playerFr = {
 }
 
 export const playerEng = {
+	brawl: 0,
 	crafting: 0,
 	fighting: 0,
 	defense: 0,

@@ -1,6 +1,4 @@
 
-import player from '../data/master'
-
 const StatBlock = ({ masters, setUserData }) => {
 
 	const propertiesEntries = Object.entries(masters)

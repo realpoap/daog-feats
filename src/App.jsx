@@ -9,6 +9,7 @@ import 'collapsible-react-component/dist/index.css'
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
 import { playerFr, playerEng } from './data/master'
+import { themeFr } from "./data/theme-list"
 
 import StatBlock from "./components/StatBlock"
 import FeatBlock from "./components/FeatBlock"
@@ -17,20 +18,25 @@ import FeatBlock from "./components/FeatBlock"
 const App = () => {
   const { language, setLanguage } = useContext(LanguageContext)
   const { playerMasters, setPlayerMasters } = useContext(LanguageContext)
-  const [userData, setUserData] = useState(null)
+
   const [feats, setFeats] = useState(featsEN)
   const [open, setOpen] = useState(false)
+  const [userData, setUserData] = useState(null)
 
   const loading = useRef(true)
+  const localData = localStorage.getItem('user_stats')
+
+  const themes = themeFr
+
+  useEffect(() => {
+    const data = fetchPlayerData()
+    setPlayerMasters(data)
+    //Object.keys(playerMasters).length !== 0 ? loading.current = false : loading.current = true
+  }, [language, userData])
 
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
-    const playerData = fetchPlayerData()
-    console.log('playerData:', playerData);
-    setPlayerMasters({ playerData })
-    console.log('player masters are:', playerMasters);
-    Object.keys(playerMasters).length !== 0 ? loading.current = false : loading.current = true
-  }, [language, userData])
+  }, [language])
 
   // console.log('base data: ', feats)
 
@@ -47,8 +53,7 @@ const App = () => {
 
   const fetchPlayerData = () => {
     const keys = (language === 'en' ? Object.keys(playerEng) : Object.keys(playerFr))
-    const values = userData ? Object.values(JSON.parse(localStorage.getItem('user_stats'))) : new Array(keys.length).fill(0);
-    console.log('values for masters: ', values);
+    const values = localData ? Object.values(JSON.parse(localStorage.getItem('user_stats'))) : new Array(keys.length).fill(0);
     const newObject = mergeMasterArrays(keys, values)
     return newObject
   }
@@ -70,7 +75,7 @@ const App = () => {
     arrows: true,
   }
 
-  if (loading.current) {
+  if (!loading.current) {
     return (
       <div>Loading data...</div>
     )
@@ -82,22 +87,31 @@ const App = () => {
           <h1>DAOG Skills</h1>
           <button id='lang' className='action-btn' onClick={handleToggleLang}>{language}</button>
         </div>
-        <button id='stats' className='action-btn' onClick={() => { setOpen(!open) }}>
+        <button
+          id='stats'
+          className='action-btn'
+          onClick={() => { setOpen(!open) }}>
           {open ? 'Hide Stats' : 'Show Stats'}
         </button>
         <Collapsible
           open={open}
           revealType='bottomFirst'
         >
-          <StatBlock masters={playerMasters} setUserData={setUserData} />
+          <StatBlock
+            masters={playerMasters}
+            setUserData={setUserData} />
         </Collapsible>
         <div className="slider-container">
 
           <Slider {...settings}>
-            <FeatBlock title={language === 'en' ? 'ranged' : 'tir'} trees={feats.ranged} />
-            <FeatBlock title={language === 'en' ? 'brawl' : 'bagarre'} trees={feats.fists} />
-            {/* <FeatBlock title='ranged' trees={feats.fight} />
-            <FeatBlock title='ranged' trees={feats.wizardry} /> */}
+            {themes.map((theme, i = 0) =>
+              <FeatBlock
+                key={i}
+                title={theme.theme}
+                trees={feats[theme.theme]}
+              />
+            )
+            }
           </Slider>
         </div>
       </>

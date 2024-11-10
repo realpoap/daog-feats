@@ -94,7 +94,7 @@ const featsEN = {
       "content": [
         {
           "id": "barrage",
-          "type": "shooting",
+          "type": "ranged",
           "rank": 1,
           "title": "Barrage shot",
           "action": "main",
@@ -104,7 +104,7 @@ const featsEN = {
         },
         {
           "id": "penalty",
-          "type": "shooting",
+          "type": "ranged",
           "rank": 2,
           "title": "Penalty shot",
           "action": "main",
@@ -114,7 +114,7 @@ const featsEN = {
         },
         {
           "id": "reload",
-          "type": "shooting",
+          "type": "ranged",
           "rank": 3,
           "title": "Quick reload",
           "action": "free",
@@ -124,7 +124,7 @@ const featsEN = {
         },
         {
           "id": "giant",
-          "type": "shooting",
+          "type": "ranged",
           "rank": 4,
           "title": "Giant killer",
           "action": "main",
@@ -134,7 +134,7 @@ const featsEN = {
         },
         {
           "id": "double",
-          "type": "shooting",
+          "type": "ranged",
           "rank": 5,
           "title": "Double shot",
           "action": "main",
@@ -200,7 +200,7 @@ const featsEN = {
       ],
     },
   ],
-  "fists": [
+  "brawl": [
     {
       "name": "physique",
       "content": [
@@ -312,11 +312,11 @@ const featsEN = {
       ],
     },
     {
-      "name": "martial",
+      "name": "movement",
       "content": [
         {
           "id": "backhand",
-          "type": "martial",
+          "type": "movement",
           "rank": 1,
           "title": "Backhand",
           "action": "free",
@@ -326,7 +326,7 @@ const featsEN = {
         },
         {
           "id": "kick",
-          "type": "martial",
+          "type": "movement",
           "rank": 2,
           "title": "Kick",
           "action": "main",
@@ -336,7 +336,7 @@ const featsEN = {
         },
         {
           "id": "fling",
-          "type": "martial",
+          "type": "movement",
           "rank": 3,
           "title": "Fling",
           "action": "main",
@@ -346,7 +346,7 @@ const featsEN = {
         },
         {
           "id": "wind",
-          "type": "martial",
+          "type": "movement",
           "rank": 4,
           "title": "Windwalker",
           "action": "free",
@@ -356,7 +356,7 @@ const featsEN = {
         },
         {
           "id": "downpour",
-          "type": "martial",
+          "type": "movement",
           "rank": 5,
           "title": "Downpour",
           "action": "main",

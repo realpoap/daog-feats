@@ -6,6 +6,7 @@ const FeatBlock = ({ title, trees }) => {
 			<div className='tree-block'>
 				<h2>{title}</h2>
 				<BadgeGrid
+					main={title}
 					trees={trees} />
 			</div>
 		</div>
