@@ -7,6 +7,7 @@ export const playerFr = {
 	eloquence: 0,
 	esoterisme: 0,
 	logique: 0,
+	lutte: 0,
 	magie: 0,
 	minutie: 0,
 	mouvement: 0,
@@ -23,7 +24,6 @@ export const playerFr = {
 }
 
 export const playerEng = {
-	brawl: 0,
 	crafting: 0,
 	fighting: 0,
 	defense: 0,
@@ -32,6 +32,7 @@ export const playerEng = {
 	speech: 0,
 	esoterism: 0,
 	logic: 0,
+	brawl: 0,
 	magic: 0,
 	preciseness: 0,
 	movement: 0,

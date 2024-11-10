@@ -1,4 +1,4 @@
-export const themeFr = [
+export const themeEn = [
 	{
 		"theme": "ranged",
 		"categories": ["preciseness", "ranged", "discretion"]
@@ -9,4 +9,15 @@ export const themeFr = [
 	},
 ]
 
-export default { themeFr }
+export const themeFr = [
+	{
+		"theme": "tir",
+		"categories": ["minutie", "tir", "discretion"]
+	},
+	{
+		"theme": "lutte",
+		"categories": ["physique", "lutte", "mouvement"]
+	},
+]
+
+export default { themeEn, themeFr }

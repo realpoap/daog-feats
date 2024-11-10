@@ -9,7 +9,7 @@ import 'collapsible-react-component/dist/index.css'
 import featsEN from './data/feats-en'
 import featsFR from './data/feats-fr'
 import { playerFr, playerEng } from './data/master'
-import { themeFr } from "./data/theme-list"
+import { themeEn, themeFr } from "./data/theme-list"
 
 import StatBlock from "./components/StatBlock"
 import FeatBlock from "./components/FeatBlock"
@@ -20,25 +20,24 @@ const App = () => {
   const { playerMasters, setPlayerMasters } = useContext(LanguageContext)
 
   const [feats, setFeats] = useState(featsEN)
+  const [themes, setThemes] = useState(null)
   const [open, setOpen] = useState(false)
   const [userData, setUserData] = useState(null)
 
   const loading = useRef(true)
   const localData = localStorage.getItem('user_stats')
 
-  const themes = themeFr
 
   useEffect(() => {
     const data = fetchPlayerData()
     setPlayerMasters(data)
-    //Object.keys(playerMasters).length !== 0 ? loading.current = false : loading.current = true
+    playerMasters ? loading.current = false : loading.current = true
   }, [language, userData])
 
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
+    setThemes(language === 'en' ? themeEn : themeFr)
   }, [language])
-
-  // console.log('base data: ', feats)
 
   const mergeMasterArrays = (keys, values) => {
     if (keys.length !== values.length) {
@@ -75,7 +74,7 @@ const App = () => {
     arrows: true,
   }
 
-  if (!loading.current) {
+  if (loading.current) {
     return (
       <div>Loading data...</div>
     )

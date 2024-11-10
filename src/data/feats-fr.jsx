@@ -33,7 +33,7 @@ import highpunch from '../assets/svg/high-punch.svg'
 
 
 const featsFR = {
-  "ranged": [
+  "tir": [
     {
       "name": "minutie",
       "content": [
@@ -200,7 +200,7 @@ const featsFR = {
       ],
     },
   ],
-  "fists": [
+  "lutte": [
     {
       "name": "physique",
       "content": [
@@ -257,11 +257,11 @@ const featsFR = {
       ],
     },
     {
-      "name": "brawl",
+      "name": "lutte",
       "content": [
         {
           "id": "hold",
-          "type": "brawl",
+          "type": "lutte",
           "rank": 1,
           "title": "Immobilisation",
           "action": "limitée",
@@ -271,7 +271,7 @@ const featsFR = {
         },
         {
           "id": "pinch",
-          "type": "brawl",
+          "type": "lutte",
           "rank": 2,
           "title": "Jambette",
           "action": "principale",
@@ -281,7 +281,7 @@ const featsFR = {
         },
         {
           "id": "blow",
-          "type": "brawl",
+          "type": "lutte",
           "rank": 3,
           "title": "Coup appuyé",
           "action": "principale",
@@ -291,7 +291,7 @@ const featsFR = {
         },
         {
           "id": "strangulation",
-          "type": "brawl",
+          "type": "lutte",
           "rank": 4,
           "title": "Étranglement",
           "action": "principale",
@@ -301,7 +301,7 @@ const featsFR = {
         },
         {
           "id": "neck",
-          "type": "brawl",
+          "type": "lutte",
           "rank": 5,
           "title": "Brise-nuque",
           "action": "principale",
@@ -312,11 +312,11 @@ const featsFR = {
       ],
     },
     {
-      "name": "martial",
+      "name": "mouvement",
       "content": [
         {
           "id": "backhand",
-          "type": "martial",
+          "type": "mouvement",
           "rank": 1,
           "title": "Revers",
           "action": "gratuite",
@@ -326,7 +326,7 @@ const featsFR = {
         },
         {
           "id": "kick",
-          "type": "martial",
+          "type": "mouvement",
           "rank": 2,
           "title": "Chassé",
           "action": "principale",
@@ -336,7 +336,7 @@ const featsFR = {
         },
         {
           "id": "fling",
-          "type": "martial",
+          "type": "mouvement",
           "rank": 3,
           "title": "Projection",
           "action": "principale",
@@ -346,7 +346,7 @@ const featsFR = {
         },
         {
           "id": "wind",
-          "type": "martial",
+          "type": "mouvement",
           "rank": 4,
           "title": "Passe-vent",
           "action": "gratuite",
@@ -356,7 +356,7 @@ const featsFR = {
         },
         {
           "id": "downpour",
-          "type": "martial",
+          "type": "mouvement",
           "rank": 5,
           "title": "Déluge",
           "action": "principale",

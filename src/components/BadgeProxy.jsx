@@ -31,8 +31,10 @@ const BadgeProxy = ({ action }) => {
 		<>
 			<div className={'badge grey'}>
 
-				<SVG className='icon' src={padlock} width={'128px'}
-					height="auto"
+				<SVG
+					className='icon'
+					src={padlock}
+					title={'padlock'}
 				/>
 				{/* <div className='action-bubble' style={{ backgroundColor: actionStyle }}>
 					{actionLetter}
