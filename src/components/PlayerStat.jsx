@@ -10,6 +10,7 @@ const PlayerStat = ({ stat, setProxySkillValue }) => {
 			<input
 				type={"number"}
 				min={0}
+				max={5}
 				name={stat.skill}
 				value={inputValue}
 				onChange={e => setInputValue(e.target.value)} />
