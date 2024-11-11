@@ -367,43 +367,337 @@ const featsFR = {
       ],
     }
   ],
-  "fight": [
+  "combat": [
     {
-      "name": "dodge",
+      "name": "mouvement",
       "content": [
-
+        {
+          "id": "feinte",
+          "type": "mouvement",
+          "rank": 1,
+          "title": "Feinte",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Avant une attaque adversaire ou à la place de votre attaque, vous pouvez essayer de feinter. Ajoutez votre bonus de perception à votre score d’attaque ou de défense. Si vous échouez en défense, votre adversaire double ses dégats. Si vous jouez cette technique en réaction considérée la comme une action gratuite,"
+        },
+        {
+          "id": "évasion",
+          "type": "mouvement",
+          "rank": 2,
+          "title": "Évasion",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous frappez vivement puis vous glissez sous votre adversaire et utilisez votre vitesse pour sortir du combat sans heurt. Faites votre attaque puis lancez un jet d’AGI + défense avec désavantage pour chaque ennemi au contact. Si vous réussissez vous pouvez sortir de la mêlée sans subir d’attaque de vos adversaires (1m). Vous pouvez utiliser cette action en réaction lors d'une attaque manquée contre vous."
+        },
+        {
+          "id": "équilibre",
+          "type": "mouvement",
+          "rank": 3,
+          "title": "Équilibre",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous infligez vos bonus de FOR même si vous attaquez en AGI. Vous pouvez utiliser cette action pour gagner un avantage sur la prochaine attaque ou technique."
+        },
+        {
+          "id": "interception",
+          "type": "mouvement",
+          "rank": 4,
+          "title": "Interception",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous concentrez votre attention sur un nouvel assaillant et déviez le coup d’un ennemi au contact vers cette nouvelle cible, ou bloquez la charge vous-même. Lancez un jet d’AGI avec désavantage contre l’attaque de la cible. En cas de réussite vous infligez vos dégâts + 1d4 et la cible est arrêtée dans son attaque."
+        },
+        {
+          "id": "coupbas",
+          "type": "mouvement",
+          "rank": 5,
+          "title": "Coup bas",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Lorsque vous réussissez un attaque, vous pouvez réaliser une seconde attaque d'AGI avec avantage avec votre arme secondaire ou votre poing contre un adversaire au corps a corps. Cette attaque compte comme une réaction qui peut etre réalisée plusieurs fois par tour. Vous devez avoir une arme dans votre main secondaire ou un bouclier de poing pour appliquer ces dégats (sinon 1-2 dmg bagarre)."
+        },
       ],
     },
     {
-      "name": "weapon",
+      "name": "combat",
       "content": [
-
+        {
+          "id": "charge",
+          "type": "combat",
+          "rank": 1,
+          "title": "Charge",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous avancez jusqu’à votre distance de course et frappez votre cible brutalement. Lancez une attaque en FOR avec désavantage pour battre le score de défense de votre cible, infligeant le double des degats de Force en plus de votre arme. Si vous échouez, vous subissez un désavantage sur votre défense jusqu'au début de votre prochain tour. Si vous réussissez, votre adversaire subit également un désavantage en combat jusqu'à la fin de son prochain tour."
+        },
+        {
+          "id": "appuis",
+          "type": "combat",
+          "rank": 2,
+          "title": "Appuis",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous restez leste sur vos appuis, prêt à assener un coup à vos ennemis. Vous vous tenez aux aguets pour frapper quiconque passerait proche de vous. Vous avez une attaque d'opportunité en AGI avec désavantage contre les ennemis au contact qui fuient ou qui se déplaceraient en passant à moins de 3 m de votre position, et ce même s'ils réussissent leur jet de dérobade. "
+        },
+        {
+          "id": "désarmement",
+          "type": "combat",
+          "rank": 3,
+          "title": "Désarmement",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "À la place de votre attaque, vous pouvez essayer de désarmer l’adversaire. Lancez un jet d12 + AGI + défense avec désavantage ; en cas d’échec l’adversaire peut tenter une attaque contre vous. Vous n’infligez pas de dégâts en cas de réussite mais votre adversaire est désarmé."
+        },
+        {
+          "id": "riposte",
+          "type": "combat",
+          "rank": 4,
+          "title": "Riposte",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Après avoir subi une attaque qui n’est pas un coup critique, vous pouvez tenter une riposte et battre le score de défense de votre adversaire en additionnant d12 + arme + attaque. Considérez ce jet comme une attaque normale supplémentaire qui inflige ses dégâts normalement."
+        },
+        {
+          "id": "tactiques",
+          "type": "combat",
+          "rank": 5,
+          "title": "Tactiques",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous pouver identifier à l'oeil la créature la plus faible visible dans un combat et la créature la plus forte. Une fois par combat, avant votre première action, vous pouvez utiliser cette action en limitée pour identifier la créature la plus dangereuse : lancez un jet d'ERU contre son niveau pour identifier un desavantage ou une caractéristique clef. De plus, vous savez identifier l'état de santé de votre adversaire direct."
+        },
       ],
     },
     {
-      "name": "brawl",
+      "name": "physique",
       "content": [
-
+        {
+          "id": "cohue",
+          "type": "physique",
+          "rank": 1,
+          "title": "Cohue",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous avez appris à vous battre dans des ruelles étroites et des tavernes encombrées et savez réagir face à plusieurs adversaires. Les ennemis à votre contact obtiennent un avantage de moins pour la supériorité numérique. Vous pouvez également utiliser cette technique en réaction une fois par combat pour vous retourner vers un adversaire qui vous attaque."
+        },
+        {
+          "id": "renfort",
+          "type": "combat",
+          "rank": 2,
+          "title": "Renfort",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous vous placez proche d’un allié et vous essayez d’attirer les coups ennemis vers vous. Vous subissez les prochaines attaques ennemies en réussissant un jet de défense et protégez ainsi votre allié. Vous et votre allié gagnez un avantage sur votre prochain jet de combat."
+        },
+        {
+          "id": "punition",
+          "type": "combat",
+          "rank": 3,
+          "title": "Punition",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous pouvez réaliser une attaque gratuite avec avantage contre un ennemi qui a manqué son attaque en réaction. Vous infligez vos dégats normalement"
+        },
+        {
+          "id": "assassinat",
+          "type": "combat",
+          "rank": 4,
+          "title": "Assassinat",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous pouvez realiser une attaque en furtivité avec avantage + 1 avantage si votre adversaire est deja en combat avec un allié ou si vous l'attaquez de dos. La cible doit echouer un jet de perception contre votre discrétion pour que l'attaque soit considérée discrete. Si vous réussissez l'attaque vous infligez vos dégats comme si vous aviez fait un critique."
+        },
+        {
+          "id": "puissance",
+          "type": "combat",
+          "rank": 5,
+          "title": "Puissance",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Vous pouvez relancer un jet de dégat en cas de résultat de 1. Vous pouvez utiliser cette action pour donner un bonus de 1d4 a une de vos attaques ce tour."
+        },
       ],
     }
   ],
-  "wizardry": [
+  "magie": [
     {
-      "name": "pantomime",
+      "name": "minutie",
       "content": [
-
+        {
+          "id": "lueur",
+          "type": "minutie",
+          "rank": 1,
+          "title": "Lueur",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous envoyez une légère brise d'énergie magique autour de votre corps pour générer une lumière douce, que  vous pouvez concentrer sur votre catalyseur pour l'illuminer comme s'il s'agissait d'une petite torche. Cet effect perdure jusqu'à l'utilisation d'une autre technique ou votre déconcentration, volontaire ou non. En combat vous pouvez utiliser cette action pour créeer un flash brillant sur le bout de votre catalyseur pour donner un désavantage à un ennemi vous attaquant."
+        },
+        {
+          "id": "message",
+          "type": "minutie",
+          "rank": 2,
+          "title": "Message",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous concentrez les flux magiques pour transmettre un message court à un allié visible. Le message peut comporter un maximum de #magie mots. Accessoirement, vous pouvez lancez un jet de magie pour transmettre ce message à un individu connu éloigné, avec une difficulté relative au nombre de jours de marche vous séparant (1 jour = 20, 2 jours = 25, etc,)."
+        },
+        {
+          "id": "voile",
+          "type": "minutie",
+          "rank": 3,
+          "title": "Voile",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous former une couche de magie autour de vous pour brouiller votre image. Vos adversaires ont un désavantage pour vous toucher et vous percevoir."
+        },
+        {
+          "id": "télékinésie",
+          "type": "minutie",
+          "rank": 4,
+          "title": "Télékinésie",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous ciblez un objet proche à moins de 10 m pour le faire se déplacer à votre volonté. Le poids de l'objet de peut être supérieur à votre bonus de SEN"
+        },
+        {
+          "id": "lévitation",
+          "type": "minutie",
+          "rank": 5,
+          "title": "Lévitation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous placez une force magique sous vos pieds pour léviter à quelques cm du sol. Vous pouvez vous déplacer de cette façon de votre distance de course sur un sol ferme, ou de votre bonus de SEN dans le vide. Cet effet dure jusqu'au début de votre prochain tour mais vous pouvez le prolonger en dépensant cette action à nouveau."
+        },
       ],
     },
     {
-      "name": "incantation",
+      "name": "magie",
       "content": [
-
+        {
+          "id": "zaaap",
+          "type": "magie",
+          "rank": 1,
+          "title": "Zaaap",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous projetez une pointe magique concentréee pour piquer un ennemi ou allumer un feu de brindilles. Lancez un jet de tir+magie et infligez 1d3 dmg magiques."
+        },
+        {
+          "id": "barrière",
+          "type": "magie",
+          "rank": 2,
+          "title": "Barrière",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous concentrez votre magie pour former une armure protectrice devant vous. Vous annulez #bonus de SEN dmg magiques jusqu'à votre prochain tour ou jusqu'à ce que la protection soit annulée. "
+        },
+        {
+          "id": "infusion",
+          "type": "magie",
+          "rank": 3,
+          "title": "Infusion",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous envoyez un flux de magie dans un objet ou une arme que vous touchez pour lui conférer une force magique. L'objet est considéré magique et inflige un dé de dégat le plus proche de votre score de magie juqu'à votre prochain tour."
+        },
+        {
+          "id": "contresort",
+          "type": "magie",
+          "rank": 4,
+          "title": "Contresort",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "En réaction, vous pouvez envoyer votre magie pour contrer un sort adverse. Si votre score de #magie est supérieur à la difficulté de lancer du sort ennemi, il est contré instantanément. Sinon vous devez lancer un jet de lancer et battre le score de votre adversaire."
+        },
+        {
+          "id": "transmutation",
+          "type": "magie",
+          "rank": 5,
+          "title": "Transmutation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous utilisez votre magie pour déformer un petit objet ou un membre pendant maximum bonus de SEN heures. Contre une créature, elle doit réussir un jet de SEN contre votre score de magie ou étre déformée. La cible garde sa nature intrasèque."
+        },
       ],
     },
     {
-      "name": "enchantment",
+      "name": "savoir",
       "content": [
-
+        {
+          "id": "identification",
+          "type": "savoir",
+          "rank": 1,
+          "title": "Identification",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous inspectez un objet magique ou un lieu pour déceler le type de magie employé pour l'enchanter, ainsi que la puissance du sort. Lancez un jet de perception magique sur la difficulté du sort. En cas de succès, et si vous connaissez le sort en place, vous pouvez également le nommer et expliquer ses effets. En combat vous pouvez utiliser cette action pour étudier un rituel en cours.."
+        },
+        {
+          "id": "dissipation",
+          "type": "savoir",
+          "rank": 2,
+          "title": "Dissipation",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Face à un enchantement externe, vous projetez votre magie pour défaire les liens qui le maintiennent actif. Lancez un jet de magie avec avantage si vous avez identifié le sort et connaissez son type de magie. Si vous dépasser la difficulté de lancement du sort vous pouvez le briser et annuler ses effets. En combat vous pouvez utiliser cette action pour lever un charme ou un enchantement contre le score de votre adversaire."
+        },
+        {
+          "id": "backhand",
+          "type": "savoir",
+          "rank": 3,
+          "title": "Parchemin",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous prenez un moment pour rédiger un parchemin d'un sort que vous connaissez. Lancez un jet d'apprentissage contre la difficulté du sort avec avantage pour sceller le sort au papier. Le sort ne peut pas avoir un niveau supérieur à votre bonus de SEN."
+        },
+        {
+          "id": "backhand",
+          "type": "savoir",
+          "rank": 4,
+          "title": "Préparation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous choisissez de placer votre attention lors d'un repos sur la préparation d'un sort dont le niveau doit êre inférieur à votre bonus de SEN. Lancez le jet de difficulté avec avantage. En cas de succès, vous pouvez lancer ce sort à votre tour pour une action principale sans lancer la difficulté. En combat, vous pouvez utiliser cette action pour donner avantage au lancer d'un de vos sorts ou de celui d'un allié en réaction."
+        },
+        {
+          "id": "backhand",
+          "type": "savoir",
+          "rank": 5,
+          "title": "Enchantement",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Vous ciblez un objet pour lui attacher un sort connu de niveau maximum égal à votre bonus de SEN. L'objet conserve ces effets pendant 1 jour et ne peut avoir qu'un seul enchantement associé. Lancez un jet de lancer avec avantage pour réaliser l'action. Vous pouvez utiliser cette action en combat pour amplifier les effets d'un enchantement d'un objet que vous touchez d'1d4 ou 1 tour."
+        },
       ],
     }
   ]
