@@ -367,44 +367,338 @@ const featsEN = {
       ],
     }
   ],
-  "fight": [
+ "fighting": [
     {
-      "name": "dodge",
+      "name": "movement",
       "content": [
-
-      ],
+        {
+          "id": "feint",
+          "type": "movement",
+          "rank": 1,
+          "title": "Feint",
+          "action": "main",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Before an opponent's attack or instead of your own attack, you can attempt to feint. Add your perception bonus to your attack or defense score. If you fail in defense, your opponent doubles their damage. If you use this technique as a reaction, treat it as a free action."
+        },
+        {
+          "id": "evasion",
+          "type": "movement",
+          "rank": 2,
+          "title": "Evasion",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You strike swiftly then slide under your opponent, using your speed to exit combat smoothly. Make your attack, then roll AGI + defense with disadvantage for each enemy in contact. If successful, you can leave the melee without taking attacks (1m). You can use this action as a reaction when an attack misses you."
+        },
+        {
+          "id": "balance",
+          "type": "movement",
+          "rank": 3,
+          "title": "Balance",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You apply your STR bonuses even when attacking with AGI. Use this action to gain an advantage on your next attack or technique."
+        },
+        {
+          "id": "interception",
+          "type": "movement",
+          "rank": 4,
+          "title": "Interception",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You focus your attention on a new attacker and deflect an enemy's blow towards this new target or block the charge yourself. Roll AGI with disadvantage against the target's attack. If successful, deal your damage + 1d4 and stop the attacker's advance."
+        },
+        {
+          "id": "sucker",
+          "type": "movement",
+          "rank": 5,
+          "title": "Sucker Blow",
+          "action": "main",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "When you succeed in an attack, you can perform a second AGI attack with advantage using your secondary weapon or fist against a melee opponent. This counts as a reaction that can be performed multiple times per turn. You must have a weapon in your off-hand or a fist shield to apply damage (otherwise, 1-2 brawl damage)."
+        }
+      ]
     },
     {
-      "name": "weapon",
+      "name": "combat",
       "content": [
-
-      ],
+        {
+          "id": "charge",
+          "type": "combat",
+          "rank": 1,
+          "title": "Charge",
+          "action": "main",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You advance up to your running distance and strike your target brutally. Roll a STR attack with disadvantage to beat the target's defense, dealing double your STR damage in addition to your weapon's damage. If you fail, you suffer disadvantage on defense until the start of your next turn. If successful, your opponent suffers disadvantage in combat until the end of their next turn."
+        },
+        {
+          "id": "footing",
+          "type": "combat",
+          "rank": 2,
+          "title": "Footing",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You stay light on your feet, ready to strike at your enemies. You are on guard to hit anyone who passes close to you. You have an opportunity attack with AGI disadvantage against enemies in contact who flee or move within 3m of your position, even if they succeed in their dodge roll."
+        },
+        {
+          "id": "disarm",
+          "type": "combat",
+          "rank": 3,
+          "title": "Disarm",
+          "action": "main",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "Instead of attacking, you can attempt to disarm your opponent. Roll d12 + AGI + defense with disadvantage; if you fail, the opponent can attempt an attack against you. You do not deal damage if successful, but your opponent is disarmed."
+        },
+        {
+          "id": "riposte",
+          "type": "combat",
+          "rank": 4,
+          "title": "Riposte",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "After taking a non-critical hit, you can attempt a riposte to beat your opponent's defense score by adding d12 + weapon + attack. Treat this as an additional normal attack that deals damage as usual."
+        },
+        {
+          "id": "tactics",
+          "type": "combat",
+          "rank": 5,
+          "title": "Tactics",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You can identify the weakest visible creature in combat and the strongest one. Once per combat, before your first action, use this limited action to identify the most dangerous creature: roll an INT check against its level to identify a disadvantage or key characteristic. Additionally, you can determine the health status of your direct opponent."
+        }
+      ]
     },
     {
-      "name": "brawl",
+      "name": "physical",
       "content": [
-
-      ],
+        {
+          "id": "ruckus",
+          "type": "physical",
+          "rank": 1,
+          "title": "Ruckus",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You have learned to fight in narrow alleys and crowded taverns, and know how to react against multiple opponents. Enemies in contact with you receive one less advantage for numerical superiority. You can also use this technique as a reaction once per combat to turn towards an opponent attacking you."
+        },
+        {
+          "id": "reinforcement",
+          "type": "combat",
+          "rank": 2,
+          "title": "Reinforcement",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You position yourself close to an ally and try to draw enemy attacks towards yourself. You take the next enemy attacks by succeeding on a defense roll, thereby protecting your ally. Both you and your ally gain an advantage on your next combat roll."
+        },
+        {
+          "id": "punishment",
+          "type": "combat",
+          "rank": 3,
+          "title": "Punishment",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You can perform a free attack with advantage against an enemy who missed their attack in reaction. You deal your normal damage."
+        },
+        {
+          "id": "assassination",
+          "type": "combat",
+          "rank": 4,
+          "title": "Assassination",
+          "action": "main",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You can perform a stealth attack with advantage, plus an additional advantage if your target is already engaged in combat with an ally or if you attack them from behind. The target must fail a perception check against your stealth for the attack to be considered discreet. If you succeed, you deal damage as if it were a critical hit."
+        },
+        {
+          "id": "power",
+          "type": "combat",
+          "rank": 5,
+          "title": "Power",
+          "action": "free",
+          "icon": highpunch,
+          "color": "red",
+          "tooltip": "You can reroll a damage roll if the result is a 1. You can also use this action to add a 1d4 bonus to one of your attacks this turn."
+        }
+      ]
     }
   ],
-  "wizardry": [
+  "magic": [
     {
-      "name": "pantomime",
+      "name": "preciseness",
       "content": [
-
-      ],
+        {
+          "id": "glow",
+          "type": "preciseness",
+          "rank": 1,
+          "title": "Glow",
+          "action": "free",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You send a slight magical breeze around your body to generate a soft light, which you can focus on your catalyst to illuminate it like a small torch. This effect lasts until you use another technique or lose concentration, whether voluntarily or not. In combat, you can use this action to create a bright flash at the tip of your catalyst to give a disadvantage to an enemy attacking you."
+        },
+        {
+          "id": "message",
+          "type": "preciseness",
+          "rank": 2,
+          "title": "Message",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You concentrate magical flows to send a short message to a visible ally. The message can contain a maximum of #magic words. Additionally, you can roll a magic check to send this message to a known distant individual, with difficulty based on the number of days of travel separating you (1 day = 20, 2 days = 25, etc.)."
+        },
+        {
+          "id": "veil",
+          "type": "preciseness",
+          "rank": 3,
+          "title": "Veil",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You form a layer of magic around yourself to blur your image. Your opponents have a disadvantage when trying to hit or perceive you."
+        },
+        {
+          "id": "telekinesis",
+          "type": "preciseness",
+          "rank": 4,
+          "title": "Telekinesis",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You target a nearby object within 10 meters to move it at will. The object's weight cannot exceed your SEN bonus."
+        },
+        {
+          "id": "levitation",
+          "type": "preciseness",
+          "rank": 5,
+          "title": "Levitation",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You place a magical force under your feet to levitate a few centimeters above the ground. You can move this way at your running distance on solid ground, or at your SEN bonus distance in the air. This effect lasts until the beginning of your next turn, but you can extend it by using this action again."
+        }
+      ]
     },
     {
-      "name": "incantation",
+      "name": "magic",
       "content": [
-
-      ],
+        {
+          "id": "zaaap",
+          "type": "magic",
+          "rank": 1,
+          "title": "Zaaap",
+          "action": "free",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You project a concentrated magical spike to sting an enemy or ignite a twig fire. Roll a shot+magic check and inflict 1d3 magical damage."
+        },
+        {
+          "id": "barrier",
+          "type": "magic",
+          "rank": 2,
+          "title": "Barrier",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You concentrate your magic to form a protective shield in front of you. You cancel #SEN bonus magical damage until your next turn or until the protection is broken."
+        },
+        {
+          "id": "infusion",
+          "type": "magic",
+          "rank": 3,
+          "title": "Infusion",
+          "action": "limited",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You send a flow of magic into an object or weapon you touch, granting it magical strength. The object is considered magical and deals damage equivalent to the closest die to your magic score until your next turn."
+        },
+        {
+          "id": "counterspell",
+          "type": "magic",
+          "rank": 4,
+          "title": "Counterspell",
+          "action": "free",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "As a reaction, you can send your magic to counter an enemy spell. If your #magic score is higher than the spell difficulty, it is countered instantly. Otherwise, you must roll a check to beat your opponent's score."
+        },
+        {
+          "id": "transmutation",
+          "type": "magic",
+          "rank": 5,
+          "title": "Transmutation",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You use your magic to deform a small object or a limb for a maximum of SEN bonus hours. Against a creature, it must succeed in a SEN check against your magic score or be deformed. The target retains its intrinsic nature."
+        }
+      ]
     },
     {
-      "name": "enchantment",
+      "name": "knowledge",
       "content": [
-
-      ],
+        {
+          "id": "identification",
+          "type": "knowledge",
+          "rank": 1,
+          "title": "Identification",
+          "action": "free",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You inspect a magical object or location to detect the type of magic used to enchant it, as well as the spell's strength. Roll a magical perception check against the spell's difficulty. If successful, and if you are familiar with the spell, you can also name it and explain its effects. In combat, you can use this action to study an ongoing ritual."
+        },
+        {
+          "id": "dissipation",
+          "type": "knowledge",
+          "rank": 2,
+          "title": "Dissipation",
+          "action": "free",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "Faced with an external enchantment, you project your magic to undo the bonds that keep it active. Roll a magic check with advantage if you have identified the spell and know its type of magic. If you exceed the spell's casting difficulty, you can break it and cancel its effects. In combat, you can use this action to remove a charm or enchantment against your opponent's score."
+        },
+        {
+          "id": "scroll",
+          "type": "knowledge",
+          "rank": 3,
+          "title": "Scroll",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You take a moment to write a scroll of a spell you know. Roll a learning check against the spell’s difficulty with advantage to seal the spell onto paper. The spell level cannot exceed your SEN bonus."
+        },
+        {
+          "id": "preparation",
+          "type": "knowledge",
+          "rank": 4,
+          "title": "Preparation",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "During a rest, you focus on preparing a spell whose level must be lower than your SEN bonus. Roll a difficulty check with advantage. If successful, you can cast this spell on your turn as a main action without needing to roll for difficulty. In combat, you can use this action to give advantage to the casting of one of your spells or that of an ally as a reaction."
+        },
+        {
+          "id": "enchantment",
+          "type": "knowledge",
+          "rank": 5,
+          "title": "Enchantment",
+          "action": "main",
+          "icon": highpunch,
+          "color": "purple",
+          "tooltip": "You target an object to attach a known spell of maximum level equal to your SEN bonus. The object retains these effects for one day and can only have one associated enchantment. Roll a casting check with advantage to complete the action. In combat, you can use this action to amplify the effects of an enchantment on an object you touch by 1d4 or 1 turn."
+        }
+      ]
     }
   ]
 }
