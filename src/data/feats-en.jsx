@@ -479,11 +479,11 @@ const featsEN = {
       ]
     },
     {
-      "name": "physical",
+      "name": "physique",
       "content": [
         {
           "id": "ruckus",
-          "type": "physical",
+          "type": "physique",
           "rank": 1,
           "title": "Ruckus",
           "action": "free",
@@ -493,7 +493,7 @@ const featsEN = {
         },
         {
           "id": "reinforcement",
-          "type": "combat",
+          "type": "physique",
           "rank": 2,
           "title": "Reinforcement",
           "action": "limited",
@@ -503,7 +503,7 @@ const featsEN = {
         },
         {
           "id": "punishment",
-          "type": "combat",
+          "type": "physique",
           "rank": 3,
           "title": "Punishment",
           "action": "free",
@@ -513,7 +513,7 @@ const featsEN = {
         },
         {
           "id": "assassination",
-          "type": "combat",
+          "type": "physique",
           "rank": 4,
           "title": "Assassination",
           "action": "main",
@@ -523,7 +523,7 @@ const featsEN = {
         },
         {
           "id": "power",
-          "type": "combat",
+          "type": "physique",
           "rank": 5,
           "title": "Power",
           "action": "free",
