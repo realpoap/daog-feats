@@ -50,10 +50,7 @@ h4{
 	align-items:center;
 	align-content:center;
 	justify-content: center;
-	padding: 0 0 0 5px;
 	height: auto;
-	font-size: 0.7em;
-
 }
 
 .player-block span {
@@ -223,11 +220,14 @@ button.action-btn{
 		top: 3%;
 		right: 10%;
 	}
+	.player-block {
+		display:block;
+	}
 	.player-block span {
-		margin-left:10%;
+		margin-left:0;
 	}
 	.player-block label input {
-		margin-right: 10%;
+		margin-right: 0;
 	}
 	
 }
