@@ -148,54 +148,54 @@ const featsFR = {
       "name": "discrétion",
       "content": [
         {
-          "id": "hunt",
+          "id": "chasse",
           "type": "discrétion",
           "rank": 1,
           "title": "Chasse",
           "action": "gratuite",
           "icon": hunt,
           "color": "green",
-          "tooltip": "You target a target you can see. As long as you maintain sight of it, you gain advantage on your shots against that target. Only one creature can be the target of Hunt at a time, and you can’t change the target of this action until the first creature is prone or out of combat. During exploration phases, you can use Hunt to gain food with advantage on the Survival check and an extra unit of weight."
+          "tooltip": "Vous prenez pour cible une cible que vous pouvez voir. Tant que vous gardez la vue sur elle, vous gagnez un avantage sur vos tirs contre cette cible. Seule une créature peut être la cible de Chasse à la fois et vous ne pouvez pas changer la cible de cette action tant que la première n'est pas à terre ou hors du combat. Lors des phases d'exploration, vous pouvez utiliser Chasse pour obtenir de la nourriture avec un avantage au jet de Survie et une unité de poids supplémentaire."
         },
         {
-          "id": "conceal",
+          "id": "camouflage",
           "type": "discrétion",
           "rank": 2,
-          "title": "Dissimulation",
+          "title": "Camouflage",
           "action": "principale",
           "icon": concealing,
           "color": "green",
-          "tooltip": "You choose an opportune moment to shoot and take advantage of your surroundings to go unnoticed. Your shooting roll gains a bonus equal to your stealth. If your roll is successful you are considered stealthy with your raw score."
+          "tooltip": "Vous choisissez un moment opportun pour tirer et profiter de votre environnement pour passer inaperçu. Votre jet de tir gagne un bonus égal à votre discrétion. Si votre jet est réussi vous ne brisez pas votre furtivité avec cette attaque."
         },
         {
-          "id": "suppressing",
+          "id": "suppression",
           "type": "discrétion",
           "rank": 3,
           "title": "Supression",
           "action": "principale",
           "icon": supressing,
           "color": "green",
-          "tooltip": "If you shoot at the same target as the previous turn, you can make a suppressive shot with advantage, and if it has not moved,. If successful, your damage inflicts 2x your Dexterity bonuses. The opponent suffers disadvantage on his COU rolls until his next turn."
+          "tooltip": "Si vous tirez sur la même cible qu’au tour précédent vous pouvez faire un tir de suppression avec avantageet si celle-ci ne s’est pas déplacée,. En cas de succes vos dégats infligent 2x vos bonus de Dextérité. L'adveraire subit un désavantage à ses jets de COU jusqu'à son prochain tour."
         },
         {
-          "id": "ambush",
+          "id": "ambuscade",
           "type": "discrétion",
           "rank": 4,
           "title": "Embuscade",
           "action": "principale",
           "icon": ambush,
           "color": "green",
-          "tooltip": "While stealthy, you take a free shot at a target during Initiative. If your shot was the trigger for Initiative, then you can take a second shot. This action does not break your stealth."
+          "tooltip": "En étant furtif, vous réalisez un tir gratuit contre un cible durant l'Initiative. Si votre tir était le déclencheur de l'Initiative, alors vous pouvez effectuer un second tir. Cette action ne brise pas votre discrétion."
         },
         {
-          "id": "killer",
+          "id": "tirmortel",
           "type": "discrétion",
           "rank": 5,
           "title": "Tir mortel",
           "action": "principale",
           "icon": killershot,
           "color": "green",
-          "tooltip": "You make a precise shot with disadvantage, aiming at your opponent’s vital point with your attention to detail. If your target is hit, you deal critical damage with your weapon and your opponent is knocked prone. This action does not break your stealth."
+          "tooltip": "Vous réalisez un tir précis avec désavantage en visant le point vital de votre adversaire, avec votre minutie. Si votre cible est touché, vous effectuez les dégats critiques de votre arme et votre adversaire est mis à terre. Cette action ne brise pas votre furtivité en cas de succès."
         },
       ],
     },
@@ -700,7 +700,509 @@ const featsFR = {
         },
       ],
     }
+  ],
+  "performance": [
+    {
+      "name": "éloquence",
+      "content": [
+        {
+          "id": "apaisement",
+          "type": "éloquence",
+          "rank": 1,
+          "title": "Apaisement",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous prenez le temps de discuter avec vos alliés et les rassurez par votre stature sereine et vos calembours. Lancez un jet de SOC (+ éloquence si compétence) contre la difficulté de la journée. Vous et vos alliés gagnent un avantage au prochain soin."
+        },
+        {
+          "id": "déconcentration",
+          "type": "éloquence",
+          "rank": 2,
+          "title": "Déconcentration",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous entamez une gigue destabilisante agrémentée de gestes moqueurs ou d'invectives acerbes. Lancez un jet de SOC + éloquence contre le COU d'un adversaire. En cas de succès, l'ennemi subit un désavantage à sa prochaine action, et vos alliés ont un avantage aux jets de peur contre lui. Vous pouvez réaliser cette action en réaction."
+        },
+        {
+          "id": "captivation",
+          "type": "éloquence",
+          "rank": 3,
+          "title": "Captivation",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Test de CHA+éloquence contre la difficulté de l'aventure. En cas de succès, vous donnez un dé d'avantage à un de vos alliés. Sa valeur est celle la plus proche de votre score de performance, arrondi à l'inférieure,"
+        },
+        {
+          "id": "hardiesse",
+          "type": "éloquence",
+          "rank": 4,
+          "title": "Hardiesse",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous ralliez vos amis et leur insufflez le courage par un chant mémorable et des paroles inspirantes. Vous parlez à leur amour propre et les enjoignez à donner leur meilleur. Lancez un jet de SOC + éloquence contre la difficulté de l'aventure. En cas de succès, vos camarades ont un avantage permanent à leurs jets et un bonus de COU égal à votre éloquence, jusqu'à leur premier échec. À chaque jet manqué durant la Hardiesse, vos camarades doivent lancez un jet de COU sur la même difficulté ou perdre leur avantage."
+        },
+        {
+          "id": "exhaltation",
+          "type": "éloquence",
+          "rank": 5,
+          "title": "Exhaltation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous encensez vos alliés et contez les succès à venir pour votre groupe lors d'un repos ou d'un temps calme. Lancez un jet de CHA + éloquence contre la difficulté de l'aventure. En cas de succès, vos alliés gagnent un point de chance jusqu'à leur prochain repos et un avantage sur leurs jet de COU. Vous pouvez utilisez l'exaltation en combat pour cibler un joueur à votre portée de voix et lui donner un soin agal a votre score d'éloquence et une immunité contre son prochain jet de PEUR (Ces effets s'appliquent uniquement à ce joueur)."
+        },
+      ],
+    },
+    {
+      "name": "performance",
+      "content": [
+        {
+          "id": "apaisement",
+          "type": "performance",
+          "rank": 1,
+          "title": "Inspiration",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Lors d'un temps calme avant un repos, vous usez de votre art pour faire oublier les difficultées de la journée à vos compagnons, tout en vous maintenant aux aguets. Lancez un jet de CHA (+ performance si compétence). Vous gagnez un avantage sur un prochain jet, jusqu'au matin suivant et vos alliés peuvent relancer leur jet de repos en cas de 1. Vous pouvez utiliser cette action pour donner un avantage à un allié à distance d'écoute une fois par tour."
+        },
+        {
+          "id": "provocation",
+          "type": "performance",
+          "rank": 2,
+          "title": "Provocation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous réalisez une véritable fanfare à vous seul.e et dirigez l'attention de vos adversaires vers vous. Ils doivent réussir un jet de ERU contre votre CHA + performance ou subir un désavantage en perception et réagir vivement à votre présence ou rester pantois en cas de réussite."
+        },
+        {
+          "id": "exemple",
+          "type": "performance",
+          "rank": 3,
+          "title": "Exemple",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous décidez de montrer l'exemple à vos alliés en proie à l'adversité. Lancez un jet de CHA + performance sur la difficulté de l'aventure. En cas de réussite, à chaque fois que vous réussissez un jet de dé, vous pouvez donner un dé d'avantage à un allié, et ce autant de fois que votre score de performance jusqu'à la fin du combat."
+        },
+        {
+          "id": "dépassement",
+          "type": "performance",
+          "rank": 4,
+          "title": "Dépassement",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous décidez de donner votre maximum et vous mettez dans une transe endiablée tout en chantonnant et faisant des cabrioles. Lancez un jet de COU+ performance contre la difficulté en cours ou le score d'attaque de l'ennemi le plus puissant avec lequel vous êtes engagé. En cas de succès, vous obtenez un bonus de +performance à vos jets jusqu'au début de votre prochain tour. En cas d'échec, vous faite désormais vos jets de performance avec désavantage à la place."
+        },
+        {
+          "id": "glorification",
+          "type": "éloquence",
+          "rank": 5,
+          "title": "Glorification",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous utilisez vos talents de conteur et amuseur pour rappelez à la populace les faits d'arme de vos compagnons. En présence d'une foule (ou d'un bar bien peuplé), lancez un jet de CHA + gloire contre la difficulté en cours. En cas de succès, vous et vos alliés gagnez instantanément les bénéfices d'un repos long et un point de chance temporaire. Vous pouvez utiliser cette action en combat sur vous et vos alliés pour gagner à la place un bonus de VIE temporaire égal à votre score de performance. En cas d'échec, vous n'impressionnez personne."
+        },
+      ],
+    },
+    {
+      "name": "persuasion",
+      "content": [
+        {
+          "id": "insulte",
+          "type": "persuasion",
+          "rank": 1,
+          "title": "Insulte",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous ciblez un ennemi à portée de voix et lui lancez des noms d'oiseaux, Il doit réussir un jet d'ÉRU contre votre CHA+éloquence ou avoir un désavantage à sa prochaine action"
+        },
+        {
+          "id": "suggestion",
+          "type": "persuasion",
+          "rank": 2,
+          "title": "Suggestion",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous instillez une idée dans le crane de votre ennemi, pour le faire réagir selon votre volonté. Vous lancez un jet de CHA+persuasion contre COU+ERU de votre cible. En cas d'échec elle doit utiliser une de ses actions principales pour agir selon votre suggestion."
+        },
+        {
+          "id": "sappe",
+          "type": "éloquence",
+          "rank": 3,
+          "title": "Sappe",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous instillez le doute chez vos adversaires et nuisez à leur efficacité au combat. Tous les ennemis à portée d'écoute doivent lancer un jet de COU contre votre CHA ou subir un désavantage à leurs jets de COU et ERU, Ils peuvent lancer un jet de COU au debut de leur tour pour annuler l'effet."
+        },
+        {
+          "id": "accablement",
+          "type": "éloquence",
+          "rank": 4,
+          "title": "Accablement",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous harcelez votre cible avec des mots blessants, des ritournelles moqueuses et votre prestance, jetez un jet de CHA+persuasion contre le COU de votre adversaire. En cas de succès vous lui infligez 1 dégat psychique par bonus de CHA et lui faites perdre une action principale sur son prochain tour."
+        },
+        {
+          "id": "domination",
+          "type": "éloquence",
+          "rank": 5,
+          "title": "Domination",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "yellow",
+          "tooltip": "Vous utilisez votre charisme spectaculaire pour stopper un ennemi et lui imposer votre volonté. La cible doit réussir un jet de COU contre votre CHA+persuasion ou réagir à votre ordre simple avant de finir son tour."
+        },
+      ],
+    },
+  ],
+  "survie": [
+    {
+      "name": "perception",
+      "content": [
+        {
+          "id": "depeçage",
+          "type": "perception",
+          "rank": 1,
+          "title": "Dépeçage",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous savez appréter vos proies et sélectionner les morceaux de choix. Vos jets de découpe ont avantage et vous pouvez obtenir 1 ration sur les créatures mortes. Utilisez en action gratuite pour donner +1 à votre prochaine attaque."
+        },
+        {
+          "id": "survivalisme",
+          "type": "perception",
+          "rank": 2,
+          "title": "Survivalisme",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Quand vous réalisez une action de camp lors d'un repos, vous donnez +1 rémission au groupe par compétence utilisée. Vous avez avantage à un de vos jets de mort une fois après aveir effectué cette action lors d'un repos long."
+        },
+        {
+          "id": "prédation",
+          "type": "perception",
+          "rank": 3,
+          "title": "Prédation",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous vous remémorez les caractéristiques des créatures que vous affrontez pour porter des coups efficaces. Lancez un jet d'ERU+survie pour reconnaitre une créature sur laquelle vous avez des connaissances. Vous et vos alliés informés infligez 1d4 dmg supplémentaires jusqu'à la fin du combat en cas de réussite."
+        },
+        {
+          "id": "sauvagerie",
+          "type": "perception",
+          "rank": 4,
+          "title": "Sauvagerie",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous sentez les individus jusqu'à une pièce annexe ou INS mètres et gagnez un avantage à vos jets de perception dans ces conditions. Vous reconnaissez les espèces d'individus à l'odeur."
+        },
+        {
+          "id": "Sixième sens",
+          "type": "perception",
+          "rank": 5,
+          "title": "Sixième sens",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous avez avantage en initiative et aux jets de veille. Action limitée en réaction pour gagner un avantage contre un tir ou attaque sournoise."
+        },
+      ],
+    },
+    {
+      "name": "survie",
+      "content": [
+        {
+          "id": "ressources",
+          "type": "survie",
+          "rank": 1,
+          "title": "Ressources",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous êtes prompt dans l'établissement d'un camp de base et pouvez réaliser les actions de feu et nourriture en une seule action automatique. "
+        },
+        {
+          "id": "économie",
+          "type": "survie",
+          "rank": 2,
+          "title": "Économie",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Lors d'un jet de cuisine vous pouvez augmenter le nombre de rations préparées de +1, et de +1 additionnel par désavantage que vous ajoutez à votre jet. De plus, vous collectez les ressources utilisées après leur utilisation et récupérez flèches et armes de jet éparpillées."
+        },
+        {
+          "id": "fortitude",
+          "type": "survie",
+          "rank": 3,
+          "title": "Fortitude",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous pouvez consommer de la viande avariée et des légumes pourris et résister aux poisons avec avantage à vos jets d'END. Si les aliments ont été cuits vous n'avez pas besoin de lancer de dé."
+        },
+        {
+          "id": "exploration",
+          "type": "survie",
+          "rank": 4,
+          "title": "Exploration",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous faites attention où vous mettez vos pieds et à votre environnement immédiat. Vous avez avantage en perception du danger et détection des pièges. Vous pouvez utiliser cette action en réaction d'un jet d'Initiative pour effectuer un déplacement de 3m avant le combat."
+        },
+        {
+          "id": "Tueur froid",
+          "type": "survie",
+          "rank": 5,
+          "title": "Tueur froid",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vos coups furtifs et de tir sont réalisés avec une précision terrifiante. Vous pouver relancer vos jets de dégats en cas de 1."
+        },
+      ],
+    },
+    {
+      "name": "discrétion",
+      "content": [
+        {
+          "id": "effacement",
+          "type": "discrétion",
+          "rank": 1,
+          "title": "Effacement",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Votre action de furtivité est désormais une action gratuite et confère un avantage supplémentaire."
+        },
+        {
+          "id": "traque",
+          "type": "discrétion",
+          "rank": 2,
+          "title": "Traque",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous suivez la trace de vos ennemis à travers l'environnement. Faites des jets d'INS + percepion pour progresser jusqu'à tomber sur votre cible. Vous et vos alliés avez avantage au prochain jet d'Initiative. En combat, vous pouvez utiliser cette action principale pour repérer une créature furtive."
+        },
+        {
+          "id": "voyageur",
+          "type": "discrétion",
+          "rank": 3,
+          "title": "Voyageur",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vos expériences en nature vous ont permis de développer une grande aisance en voyages. Vous avez avantage à vos jets de déplacement, survie et discrétion lorsque vous êtes dans votre milieu de prédilection (rural ou urbain)."
+        },
+        {
+          "id": "dissimulation",
+          "type": "discrétion",
+          "rank": 4,
+          "title": "Dissimulation",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous savez utiliser les éléments de votre environnement de prédilection (rural ou urbain) pour vous dissimuler. Une fois après un repos long, vous pouvez relancer un jet de furtivité dans ces conditions. En combat, vous pouver utiliser une action limitée pour donner un avantage au score de furtivité d'un joueur adjacent. "
+        },
+        {
+          "id": "leurre",
+          "type": "discrétion",
+          "rank": 5,
+          "title": "Leurre",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "green-dark",
+          "tooltip": "Vous vous fondez dans votre environnement tout en faisant croire à vos adversaires que vous maintenez votre position initiale. lancez un jet d'INS+discrétion pour effectuer un mouvement gratuit en réaction à une action adverse avant le début de votre prochain tour. De plus, vous avez avantage à vos jets de discrétion."
+        },
+      ],
+    },
+  ],
+  "ésotérisme": [
+    {
+      "name": "détection",
+      "content": [
+        {
+          "id": "assiduité",
+          "type": "détection",
+          "rank": 1,
+          "title": "Assiduité",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous êtes atentifs lors de vos recherches et pouvez relancer vos jets de fouille et d'enquête, sauf en cas de fiasco."
+        },
+        {
+          "id": "alignement",
+          "type": "détection",
+          "rank": 2,
+          "title": "Alignement",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Votre connaissance des caractères et vos sens surnaturels vous permettent de déduire l'alignement d'une créature ou d'un individu en réussissant un jet d'INS + perception."
+        },
+        {
+          "id": "faiblesses",
+          "type": "détection",
+          "rank": 3,
+          "title": "Faiblesses",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous avez étudié les différents mythes et monstres et pouver trouver les points faibles de vos ennemis connus. Lancez un jet d'Enquête contre un type de monstre pour déceler un point faible ou une propriété particulière."
+        },
+        {
+          "id": "nerfs",
+          "type": "détection",
+          "rank": 4,
+          "title": "Nerfs d'acier",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vos expériences avec le surnaturel ont renforcé votre esprit. Vous avez avantage contre les jets de PEUR et COU. Vous pouvez utiliser cette action en combat pour gagner une resistance aux dégats spectraux jusqu'à votre prochain tour."
+        },
+        {
+          "id": "Clairvoyance",
+          "type": "détection",
+          "rank": 5,
+          "title": "clairvoyance",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vos yeux et votre esprit voient au-dela des artifices : vous percez à jour les déguisements magiques et les transformations temporaires ou permanentes. En combat, vous pouvez utiliser cette action pour détecter un personnage invisible, un spectre ou un esprit, ou une créature cachée en réussissant un jet de perception."
+        },
+      ],
+    },
+    {
+      "name": "ésotérisme",
+      "content": [
+        {
+          "id": "augures",
+          "type": "ésotérisme",
+          "rank": 1,
+          "title": "Augures",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous utilisez vos dons de divination pour obtenir des signes du destin proche. Lancez un jet d'INS + divination pour obtenir des augures vagues en réponse à une question."
+        },
+        {
+          "id": "communion",
+          "type": "ésotérisme",
+          "rank": 2,
+          "title": "communion",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous posez une question aux cieux et attendez une manifestation divine. Lancez un jet de CHA + divination pour obtenir une réponse binaire mais assurée."
+        },
+        {
+          "id": "talisman",
+          "type": "ésotérisme",
+          "rank": 3,
+          "title": "Talisman",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous façonnez un talisman protecteur que vous pouvez donner, et qui éloigne les mauvais esprits. Un seul talisman peut être actif en tout temps. Il confère une protection aux dégats spectraux égal à votre bonus de SEN et les spectres doivent faire un jet de COU contre le CHA du porteur ou garder leurs distances."
+        },
+        {
+          "id": "spiritisme",
+          "type": "ésotérisme",
+          "rank": 4,
+          "title": "Spiritisme",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous purifiez un lieu ou un objet de sa présence en lançant un jet de SEN+ésotérisme. Si vous réussissez vous pouvez également donner + 1 degat/protection spectraux à un objet ou une armure que vous touchez jusqu'à la fin du combat."
+        },
+        {
+          "id": "divination",
+          "type": "ésotérisme",
+          "rank": 5,
+          "title": "Divination",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous pouvez cibler un endroit ou une créature pour observer quelaues instants de sa localisation et son apparence lors d'un repos. Ajoutez un désavantage à chaque fois si vous ne connaissez pas le nom, n'avez jamais croisé ou avez une description indirecte de la cible."
+        },
+      ],
+    },
+    {
+      "name": "perception",
+      "content": [
+        {
+          "id": "augures",
+          "type": "perception",
+          "rank": 1,
+          "title": "Augures",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous utilisez vos dons de divination pour obtenir des signes du destin proche. Lancez un jet d'INS + divination pour obtenir des augures vagues en réponse à une question."
+        },
+        {
+          "id": "vision",
+          "type": "perception",
+          "rank": 2,
+          "title": "Vision nocturne",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vos yeux se sont impregnés d'une force psychique et vous pouvez désormais capter plus de lumière, vous permettant de voir dans la pénombre. Vous pouvez voir dans le noir tant qu'il existe une faible lueur."
+        },
+        {
+          "id": "sévérité",
+          "type": "perception",
+          "rank": 3,
+          "title": "Sévérité",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous résistez aux jets de séduction et de charme avec un avantage et obtenez un bonus de CHA à vos jets d'Intimidation."
+        },
+        {
+          "id": "sensocculte",
+          "type": "perception",
+          "rank": 4,
+          "title": "Sens occulte",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Votre prescience vous permet d'anticiper les épreuves et de voir les dangers quelaues instancts avant leur apparition, vous pouvez relancer vos jets de perception et de logique, sauf en cas de 1. En combat, utilisez cette action limitée pour gagner un avantage en défense."
+        },
+        {
+          "id": "transe",
+          "type": "perception",
+          "rank": 5,
+          "title": "Transe",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous réaliser un rituel lors d'un repos pour pour vous octroyer un niveau de conscience augmenté pendant 4h. Vos sorts et vos divinations sont réalisêes avec avantage et vous pouvez relancer les jets contre les charmes et les ensorcelements qui vous ciblent. En combat, cette action utilise tout votre tour et dure #esoterisme tours."
+        },
+      ],
+    },
   ]
 }
+
 
 export default featsFR
