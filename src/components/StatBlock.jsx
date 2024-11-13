@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { LanguageContext } from "../store/languageContext";
 
 const StatBlock = ({ masters, setUserData }) => {
+
+	const { playerInfo } = useContext(LanguageContext)
 
 	const propertiesEntries = Object.entries(masters)
 
@@ -16,6 +20,7 @@ const StatBlock = ({ masters, setUserData }) => {
 		console.log(updatedList);
 
 		localStorage.setItem('user_stats', JSON.stringify(updatedList))
+		localStorage.setItem('user_info', JSON.stringify(playerInfo))
 		setUserData(updatedList)
 	}
 
@@ -35,7 +40,7 @@ const StatBlock = ({ masters, setUserData }) => {
 						<label key={p[0]}>
 							<span>{p[0]}</span>
 							<input
-								inputmode='decimal'
+								inputMode='decimal'
 								type='number'
 								name={p[0]}
 								min={0}

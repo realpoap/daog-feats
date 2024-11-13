@@ -18,6 +18,7 @@ import FeatBlock from "./components/FeatBlock"
 const App = () => {
   const { language, setLanguage } = useContext(LanguageContext)
   const { playerMasters, setPlayerMasters } = useContext(LanguageContext)
+  const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 
   const [feats, setFeats] = useState(featsEN)
   const [themes, setThemes] = useState(null)
@@ -26,18 +27,27 @@ const App = () => {
 
   const loading = useRef(true)
   const localData = localStorage.getItem('user_stats')
+  const localUser = localStorage.getItem('user_info')
 
-
+  // fetch user data
   useEffect(() => {
     const data = fetchPlayerData()
     setPlayerMasters(data)
+    if (localUser) {
+      setPlayerInfo(JSON.parse(localUser))
+    }
     playerMasters ? loading.current = false : loading.current = true
   }, [language, userData])
 
+  // change language
   useEffect(() => {
     setFeats(language === 'en' ? featsEN : featsFR)
     setThemes(language === 'en' ? themeEn : themeFr)
   }, [language])
+
+  useEffect(() => {
+    localStorage.setItem('user_info', JSON.stringify(playerInfo))
+  }, [playerInfo])
 
   const mergeMasterArrays = (keys, values) => {
     if (keys.length !== values.length) {
@@ -63,6 +73,12 @@ const App = () => {
     setFeats(language === 'en' ? featsEN : featsFR)
   }
 
+  const updatePlayerInput = (e) => {
+    e.preventDefault()
+    const property = e.target.name
+    property === 'name' ? setPlayerInfo({ ...playerInfo, name: e.target.value }) : setPlayerInfo({ ...playerInfo, level: parseInt(e.target.value) })
+  }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -83,8 +99,22 @@ const App = () => {
     return (
       <>
         <div className="header">
-          <h1>DAOG Skills</h1>
-          <button id='lang' className='action-btn' onClick={handleToggleLang}>{language}</button>
+          <h1>
+            <input
+              id="name-input"
+              className="header-input"
+              inputMode="text"
+              name="name"
+              value={playerInfo.name}
+              onChange={updatePlayerInput} />
+
+          </h1>
+          <button
+            id='lang'
+            className='action-btn'
+          >
+            {language}
+          </button>
         </div>
         <button
           id='stats'
@@ -92,6 +122,20 @@ const App = () => {
           onClick={() => { setOpen(!open) }}>
           {open ? 'Hide Stats' : 'Show Stats'}
         </button>
+        <div>
+          <label >
+            Level
+            <input
+              id="level-input"
+              className="header-input"
+              inputMode="decimal"
+              type="number"
+              name="level"
+              value={parseInt(playerInfo.level)}
+              onChange={updatePlayerInput}
+            />
+          </label>
+        </div>
         <Collapsible
           open={open}
           revealType='bottomFirst'
@@ -100,7 +144,9 @@ const App = () => {
             masters={playerMasters}
             setUserData={setUserData} />
         </Collapsible>
-        <div className="slider-container">
+        <div
+          className="slider-container"
+        >
 
           <Slider {...settings}>
             {themes.map((theme, i = 0) =>

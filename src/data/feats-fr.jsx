@@ -1150,14 +1150,14 @@ const featsFR = {
       "name": "perception",
       "content": [
         {
-          "id": "augures",
+          "id": "présence",
           "type": "perception",
           "rank": 1,
-          "title": "Augures",
+          "title": "Présence",
           "action": "principale",
           "icon": highpunch,
           "color": "blue-dark",
-          "tooltip": "Vous utilisez vos dons de divination pour obtenir des signes du destin proche. Lancez un jet d'INS + divination pour obtenir des augures vagues en réponse à une question."
+          "tooltip": "Vos sens paranormaux vous permettent de ressentir la présence de créatures surnaturelles. Votre perception agit contre les spectres, esprits et morts-vivants comme s'il s'agissaient de créatures vivantes."
         },
         {
           "id": "vision",
@@ -1198,6 +1198,340 @@ const featsFR = {
           "icon": highpunch,
           "color": "blue-dark",
           "tooltip": "Vous réaliser un rituel lors d'un repos pour pour vous octroyer un niveau de conscience augmenté pendant 4h. Vos sorts et vos divinations sont réalisêes avec avantage et vous pouvez relancer les jets contre les charmes et les ensorcelements qui vous ciblent. En combat, cette action utilise tout votre tour et dure #esoterisme tours."
+        },
+      ],
+    },
+  ],
+  "défense": [
+    {
+      "name": "combat",
+      "content": [
+        {
+          "id": "choc",
+          "type": "combat",
+          "rank": 1,
+          "title": "Choc",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Lors d'une attaque ennemie, vous usez de votre bouclier comme d'une arme et frappez dans la mêlée. Si l'attaque de votre adversaire èchoue, il subit 1d3 dégats de votre bouclier."
+        },
+        {
+          "id": "deviation",
+          "type": "combat",
+          "rank": 2,
+          "title": "Déviation",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous tendez votre bouclier pour sauver votre allié au contact ou essayez de bloquer au moment opportun votre adversaire. Vous lancez un jet d'attaque avec votre bouclier avec désavantage contre l'attaque de votre adversaire. En cas de réussite, vous bloquez l'attaque adverse."
+        },
+        {
+          "id": "vengeance",
+          "type": "combat",
+          "rank": 3,
+          "title": "Vengeance",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Attaque en action limitée avec avantage contre un adversaire apres une attaque réussie contre un allié."
+        },
+        {
+          "id": "parade",
+          "type": "combat",
+          "rank": 4,
+          "title": "Parade",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue-dark",
+          "tooltip": "Vous vous lancez dans la mêlée le bouclier en avant et prêt à frapper. Lancez un score d'attaque avec votre bouclier contre une attaque réussie adverse. En cas de succès, vous brisez l'attaque réussie et produisez une attaque avec +1d4 dégats avec votre arme contre l'adversaire. En cas d'échec, votre adversaire inflige des dégats critiques."
+        },
+        {
+          "id": "ouverture",
+          "type": "combat",
+          "rank": 5,
+          "title": "Ouverture",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous ouvrez la garde adverse et votre prochaine attaque ce tour a 2 avantages. Les alliés au contact ont un avantage supplémentaire pour toucher la cible."
+        },
+      ],
+    },
+    {
+      "name": "défense",
+      "content": [
+        {
+          "id": "couverture",
+          "type": "défense",
+          "rank": 1,
+          "title": "Couverure",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous placez votre bouclier au dessus de votre tête pour vous protéger, vous ou vos alliés. Vous pévenez les dégats de tir de la valeur du bouclier, mais réduisez votre score de défense (sans bouclier)."
+        },
+        {
+          "id": "encaisse",
+          "type": "défense",
+          "rank": 2,
+          "title": "Encaisse",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous vous campez derrière votre bouclier et subissez les attaques ennemies. Les adversaire ont un avantage pour vous toucher tant que vous gardez la position, mais vous réduisez les dégats physiques que vous recevez de la valeur de votre bouclier jusqu'au début du prochain tour. Vous ne pouvez pas attaquer dans cette position."
+        },
+        {
+          "id": "bélier",
+          "type": "défense",
+          "rank": 3,
+          "title": "Bélier",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "À la place de votre attaque, vous avancez en ligne droite jusqu’à votre distance de marche et frappez votre cible brutalement. Lancez d12 + FOR pour battre le score de défense de votre cible et vous infligez 2x bonus FOR dégâts. Si vous échouez, vous subissez un désavantage sur votre défense jusqu'au début de votre prochain tour. Si vous réussissez, votre adversaire tombe au sol et doit se relever à son prochain tour en mobilisant une action."
+        },
+        {
+          "id": "domination",
+          "type": "défense",
+          "rank": 4,
+          "title": "Domination",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Après attaque une réussie, votre prochaine attaque contre cette même cible entraine un jet d'END pour éviter un renversement"
+        },
+        {
+          "id": "protection",
+          "type": "défense",
+          "rank": 5,
+          "title": "Protection",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous effectuez votre défense avec un bonus de la Valeur de Bouclier pour reduire tous les dégats physiques et la moitié des dégats magiques."
+        },
+      ],
+    },
+    {
+      "name": "physique",
+      "content": [
+        {
+          "id": "posture",
+          "type": "physique",
+          "rank": 1,
+          "title": "Posture",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Évite une perte de durabilité sur armure en cas de jet d'AGI+physique réussi contre le score d'attaque adverse. Peut être utilisé en réaction gratuite pour gagner un avantage pour résister à un jet de renversement ou poussée."
+        },
+        {
+          "id": "mule",
+          "type": "physique",
+          "rank": 2,
+          "title": "Mûle",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Réduit la charge des armures par le bonus de FOR. Peut utiliser cette action pour retirer un désavantage sur un jet d'AGI ou MOU en réaction."
+        },
+        {
+          "id": "rempart",
+          "type": "physique",
+          "rank": 3,
+          "title": "Rempart",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous vous placez dans une position difficile ou vous bloquez le passage ennemi et protégez les arrières de vos alliés ou un emplacement. Les ennemis qui veulent se déplacer autour de vous (3m) doivent réussir un jet d’AGI ou subir une de vos attaques. Faites un jet de COU au debut de vos prochains tours avec désavantage pour chaque ennemi au corps à corps avec vous au-delà de 1. En cas d’échec vous devez quitter votre position (vous subissez une attaque de la part de l’ennemi le plus direct si vous manquez votre dérobade)."
+        },
+        {
+          "id": "duracuir",
+          "type": "physique",
+          "rank": 4,
+          "title": "Dur-à-cuir",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Vous réduisez les dégats physiques de votre bonus d'END brut. Peut utiliser l'action pour réduire les dégats de la valeur d'armure une fois par repos long."
+        },
+        {
+          "id": "indomptable",
+          "type": "physique",
+          "rank": 5,
+          "title": "Indomptable",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "blue",
+          "tooltip": "Si une attaque ennemie doit vous mettre inconscient, lance un jet d'END avec bonus de valeur d'armure contre le score d'attaque. En cas de succès vous restez de bout avec 1d3+bonus d'END VIE ou votre VIE initiale. Cette technique est utilisée en réaction."
+        },
+      ],
+    },
+  ],
+  "soin": [
+    {
+      "name": "survie",
+      "content": [
+        {
+          "id": "cueilleuir",
+          "type": "survie",
+          "rank": 1,
+          "title": "Cueilleur",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous êtes capable d'identifier les plantes et champignons avec précisions : lancez un jet d'ERU + survie pour trouver de nouvelles ressources (bonus d'ERU). De plus vos récoltes sont augmentées de 1."
+        },
+        {
+          "id": "tisane",
+          "type": "survie",
+          "rank": 2,
+          "title": "Tisane",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous préparez des infusions en usant de vos ingrédients récoltés pour apaiser vos compagnons. Vous et vos alliés gagnez un avantage en rémission ou en veille durant le repos en cours. Vous pouvez également utiliser cette action pour donner avantage à un jet de mort ou un jet de sobriété d'un allié."
+        },
+        {
+          "id": "stimulant",
+          "type": "survie",
+          "rank": 3,
+          "title": "Stimulant",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous concoctez de puissants stimulants et remèdes à partir des ingrédients en votre possession lors d'un repos. Vos compagnons ont un avantage aux jets d'END et FOR durant les prochaines 4h. Vous pouvez utiliser cette action pour gagner +survie en MOU, AGI ou FOR jusqu'à votre prochain tour."
+        },
+        {
+          "id": "poison",
+          "type": "survie",
+          "rank": 4,
+          "title": "Poison",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous préparez de terribles poisons pour enduire vos armes ou empoisonner des mets. Vous pouvez imbiber du poison sur une de vos armes qui infligera 1d4 dmg supplémentaire pour votre bonus d'ERU en cas d'èchec de jet d'END. De plus vous avantage à vos jets de résistance au poison."
+        },
+        {
+          "id": "regen",
+          "type": "survie",
+          "rank": 5,
+          "title": "Régénération",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous préparez un elixir de soin fulgurant en consommant vos ressources. Une potion de votre concoction ou une potion de soin confère de la VIE temporaire et 1d4 de régénération pour 4h."
+        },
+      ],
+    },
+    {
+      "name": "soin",
+      "content": [
+        {
+          "id": "désinfection",
+          "type": "soin",
+          "rank": 1,
+          "title": "Désinfection",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous pouvez retirer les conditions d'infection et de plaie purulente lors de vos soins. En combat, vous pouvez aussi utiliser cette action pour retirer 1 point nécrotique s'il a été obtenu ce combat."
+        },
+        {
+          "id": "affliction",
+          "type": "soin",
+          "rank": 2,
+          "title": "Affliction",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous utilisez vos connaissances pour analyser et soigner les maux qui affectent vos alliés. Lancez un jet d'ERU + soin pour retirer une affliction suivante après un repos court : paralysie, poison, brûlure, saignement"
+        },
+        {
+          "id": "coupe-feu",
+          "type": "soin",
+          "rank": 3,
+          "title": "Coupe-feu",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous soignez vos alliés ou vous même en leur conférant 1d3 VIE temporaire et une résistance au feu pendant #soin tours ou jusqu'à recevoir leurs premiers dégats de feu."
+        },
+        {
+          "id": "renouveau",
+          "type": "soin",
+          "rank": 4,
+          "title": "Renouveau",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vos soins confèrent de la VIE temporaire non-récupérable. En combat vous pouvez utilisez cette action pour vous donner un bonus de 1d3VIE et retirer une condition physique qui vous affecte."
+        },
+        {
+          "id": "vitalité",
+          "type": "soin",
+          "rank": 5,
+          "title": "Vitalité",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous repoussez les limites de la vie en conférant à votre allié un second souffle alors qu'il était inconscient : le joueur doit toujours lancer un jet de mort croissant au début de son tour mais il peut agir après s'être relever. Les attaques qu'il subit sont réduites de 1d3 dégats pour son prochain tour."
+        },
+      ],
+    },
+    {
+      "name": "science",
+      "content": [
+        {
+          "id": "assurance",
+          "type": "science",
+          "rank": 1,
+          "title": "Assurance",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Votre entraînement vous permet de soigner vos alliés efficacement. Vous pouvez relancer les jets de soin en cas de  1. En combat vous pouvez donner un bonus de +1d3 VIE à un allié inconscient, sans dépasser 0 VIE."
+        },
+        {
+          "id": "engourdissement",
+          "type": "science",
+          "rank": 2,
+          "title": "Engourdissement",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vous ciblez une créature adjacente ou vous-même : elle réduit les dégats subis de 1d3  et fait ses jets d'END avec avantage pendant #soin tours, mais réalise ses jets de morts et de combat avec désavantage. "
+        },
+        {
+          "id": "stabilisation",
+          "type": "science",
+          "rank": 3,
+          "title": "Stabilisation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vos connaissances en médecine vous permettent de secourir vos alliés tombés au combat. Lancez un jet de DEX + soin pour ramener une créature inconsciente à 1 VIE."
+        },
+        {
+          "id": "chirurgie",
+          "type": "science",
+          "rank": 4,
+          "title": "Chirurgie",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Vos compétences de médecine et vos connaissances en anatomie vous permettent de réparer les corps. Lancez un jet de DEX+soin pour guérir une affliction suivante chez une créature : nécrose, amputation, fracture. Vos dégats de saignements sont augmentés de 1 et leur difficulté est augmentée."
+        },
+        {
+          "id": "pointvital",
+          "type": "science",
+          "rank": 5,
+          "title": "Point vital",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "pink",
+          "tooltip": "Votre connaissance des organes vitaux vous permet d'effectuer une action précise et fatale. Vous pouvez utiliser cette action pour effectuer une attaque qui provoque un jet de COU. En cas d'èchec de votre adversaire il subit #soin dmg supplémentaires. En cas de touche critique la créature tombe également inconsciente."
         },
       ],
     },

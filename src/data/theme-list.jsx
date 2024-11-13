@@ -19,8 +19,8 @@ export const themeEn = [
 
 export const themeFr = [
 	{
-		"theme": "tir",
-		"categories": ["minutie", "tir", "discrétion"]
+		"theme": "performance",
+		"categories": ["éloquence", "performance", "persuasion"]
 	},
 	{
 		"theme": "lutte",
@@ -31,10 +31,30 @@ export const themeFr = [
 		"categories": ["mouvement", "combat", "physique"]
 	},
 	{
+		"theme": "soin",
+		"categories": ["survie", "soin", "science"]
+	},
+	{
 		"theme": "magie",
 		"categories": ["minutie", "magie", "savoir"]
 	},
-	
+	{
+		"theme": "défense",
+		"categories": ["combat", "défense", "physique"]
+	},
+	{
+		"theme": "ésotérisme",
+		"categories": ["perception", "ésotérisme", "détection"]
+	},
+	{
+		"theme": "survie",
+		"categories": ["perception", "survie", "discrétion"]
+	},
+	{
+		"theme": "tir",
+		"categories": ["minutie", "tir", "discrétion"]
+	},
+
 ]
 
 export default { themeEn, themeFr }
