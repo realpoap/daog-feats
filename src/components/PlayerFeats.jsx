@@ -55,7 +55,7 @@ function PlayerFeats() {
 	return (
 		<div className="player-feats-block">
 			{<div>
-				<h2>Principale</h2>
+				<h2>Principales</h2>
 				{list
 					.filter(e => e.action === 'principale')
 					.sort((a, b) => {

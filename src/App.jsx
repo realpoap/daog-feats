@@ -23,7 +23,7 @@ const App = () => {
 
   const [feats, setFeats] = useState(featsEN)
   const [themes, setThemes] = useState(null)
-  const [nav, setNav] = useState('feats')
+  const [nav, setNav] = useState('actions')
   const [userData, setUserData] = useState(null)
 
   const loading = useRef(true)
