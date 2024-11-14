@@ -21,11 +21,14 @@ h1{
 	font-size: 2em;
 	display: flex;
 	flex-direction: column;
+
 }
 
 h2{
-	margin-bottom: 10px;
-	font-family: 1em;
+	font-size: 1em;
+	margin-top: 0.5em;
+	letter-spacing: 0.1em;
+	width: 100%;
 }
 
 h4{
@@ -83,7 +86,7 @@ h4{
 	justify-content: space-around;
 	max-height: 90vh;
 	flex-basis: 100%;
-	margin: 5% 0 5% 0;
+	margin: 5% 0 10% 0;
 }
 
 .player-block label {
@@ -124,6 +127,8 @@ h4{
 	text-transform: uppercase;
 	font-weight: 300;
 	align-self: center;
+	margin-top: 0;
+	margin-bottom: 0.2em;
 }
 
 .skill{
@@ -225,9 +230,10 @@ button.action-btn{
 }
 
 #clear {
-	margin-top: 20px;
+	top: 1em;
+	margin: 0.5em;
 	position: relative;
-	display:flex;
+	display: flex;
 }
 
 
@@ -247,7 +253,8 @@ button.action-btn{
 		border-bottom: 2px solid white;
 	}
 	h2{
-		font-size: 1em;
+		font-size: 0.8em;
+		
 	}
 
 	#lang {
