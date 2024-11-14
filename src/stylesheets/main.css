@@ -17,10 +17,12 @@
 }
 
 h1{
-	margin: 10px 0 0 0;
+	margin: 0;
 	font-size: 2em;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 0.1em;
+	border-bottom: 1.5px solid white;
 
 }
 
@@ -29,6 +31,7 @@ h2{
 	margin-top: 0.5em;
 	letter-spacing: 0.1em;
 	width: 100%;
+
 }
 
 h4{
@@ -44,7 +47,7 @@ h4{
 
 #name-input {
 	text-transform: capitalize;
-	width: max-content;
+	width: 65%;
 }
 
 #level-input {
@@ -113,7 +116,7 @@ h4{
 	margin-left: 10px;
 	width: 10%;
 	flex-wrap: wrap;
-	background: linear-gradient(to bottom, #555 0%, #666 100%);
+	background: none;
   border: none;
   padding: 1px 0px 1px 5px ;
 	color: white;
@@ -146,7 +149,7 @@ h4{
 	flex-direction: row;
 	align-self:center;
 	align-items: center;
-	width: 100%;
+	width: 95vw;
 	/* border: 2px solid purple; */
 }
 
@@ -245,15 +248,11 @@ button.action-btn{
 	}
 	h1{
 		text-align: left;
-		margin-left: 1%;
-		font-size: 1.7em;
+		font-size: 1.5em;
 		margin-top: 0;
-		padding-bottom: 2%;
-		border-bottom: 2px solid white;
 	}
 	h2{
 		font-size: 0.8em;
-		
 	}
 
 	#lang {
@@ -274,9 +273,11 @@ button.action-btn{
 	}
 	.player-block span {
 		margin-left:0;
+		font-size: 0.7em;
 	}
 	.player-block label input {
 		margin-right: 0;
+		font-size: 0.7em;
 	}
 	
 }

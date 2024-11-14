@@ -493,7 +493,7 @@ const featsFR = {
         },
         {
           "id": "renfort",
-          "type": "combat",
+          "type": "physique",
           "rank": 2,
           "title": "Renfort",
           "action": "limitée",
@@ -503,7 +503,7 @@ const featsFR = {
         },
         {
           "id": "punition",
-          "type": "combat",
+          "type": "physique",
           "rank": 3,
           "title": "Punition",
           "action": "gratuite",
@@ -513,7 +513,7 @@ const featsFR = {
         },
         {
           "id": "assassinat",
-          "type": "combat",
+          "type": "physique",
           "rank": 4,
           "title": "Assassinat",
           "action": "principale",
@@ -523,7 +523,7 @@ const featsFR = {
         },
         {
           "id": "puissance",
-          "type": "combat",
+          "type": "physique",
           "rank": 5,
           "title": "Puissance",
           "action": "gratuite",

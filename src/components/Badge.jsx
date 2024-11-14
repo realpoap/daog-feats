@@ -1,3 +1,4 @@
+import ReactDOMServer from 'react-dom/server';
 import { Tooltip } from 'react-tooltip'
 import SVG from 'react-inlinesvg';
 
@@ -32,8 +33,17 @@ const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 			<div
 				className={isActive ? coloredClass : 'badge'}
 				data-tooltip-id={id}
-				data-tooltip-content={tooltip}
 				data-tooltip-place='bottom'
+				data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
+					<>
+						<h6 className='tooltip-title'>{title}</h6>
+						<p className='tooltip-subtitle'>{type} - {action}</p>
+						<p
+							className='action-bubble'
+							style={{ backgroundColor: actionStyle }}
+						>{actionLetter}</p>
+						<p className='tooltip-content'>{tooltip}</p>
+					</>)}
 			>
 				<SVG
 					className='icon'
@@ -55,7 +65,8 @@ const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 				<div>
 					<Tooltip
 						className='feat-tooltip'
-						id={id} />
+						id={id}
+					/>
 				</div>
 			</div >
 		</>
