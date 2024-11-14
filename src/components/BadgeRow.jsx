@@ -23,6 +23,10 @@ const BadgeRow = ({ main, trees, index }) => {
 		const value = event.currentTarget.value
 		let prunedArray = playerInfo.feats
 
+		const maxCount = playerInfo.level
+		console.log(prunedArray.length - 1, '/', maxCount);
+
+
 		// properties of selected feat
 		const object = {
 			theme: event.currentTarget.getAttribute('data-theme'),
@@ -39,7 +43,6 @@ const BadgeRow = ({ main, trees, index }) => {
 		const isSelected = activeIndex === value
 		console.log('exist on array:', existOnArray, '| already selected:', isSelected, '| theme:', object.theme)
 
-
 		// if newly selected, delete all other inputs in that slot
 		if (!isSelected && !existOnArray) {
 			prunedArray = prunedArray.filter(i => (i.theme !== object.theme || i.rank !== object.rank))
@@ -55,10 +58,20 @@ const BadgeRow = ({ main, trees, index }) => {
 			prunedArray = prunedArray.filter(i => i.title !== object.title)
 			//console.log('because exists, removed:', prunedArray);
 		}
-		setPlayerInfo({ ...playerInfo, feats: prunedArray })
-		isSelected ? setActiveIndex(0) : setActiveIndex(value)
+
+		if (prunedArray.length - 1 <= maxCount) {
+			setPlayerInfo({ ...playerInfo, feats: prunedArray })
+			isSelected ? setActiveIndex(0) : setActiveIndex(value)
+		} else {
+			window.alert(`You need to level up (max = ${maxCount}).`)
+		}
 
 	}
+
+
+
+
+
 
 	return (
 		<div className="skill-row">
@@ -83,12 +96,15 @@ const BadgeRow = ({ main, trees, index }) => {
 
 						return (
 							<li
+								className="skill"
+
 								key={`key-${skill.title}`}
 								value={x + 1}
 								onClick={handleClick}
 								data-theme={main}
 								data-title={skill.title}
 								data-type={skill.type}
+								data-color={skill.color}
 								data-rank={skill.rank}
 								data-action={skill.action}
 								data-tooltip={skill.tooltip}

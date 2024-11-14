@@ -104,9 +104,27 @@ const App = () => {
               id="name-input"
               className="header-input"
               inputMode="text"
+              placeholder={playerInfo.name === '' ? 'Nom' : playerInfo.name}
               name="name"
               value={playerInfo.name}
               onChange={updatePlayerInput} />
+
+            <label id="level-input">
+              Niveau -
+              <input
+                className="header-input"
+                inputMode="decimal"
+                type="number"
+                name="level"
+                value={parseInt(playerInfo.level)}
+                onChange={updatePlayerInput}
+              />
+              {<div>
+                <ul className='user-feats-list'>
+                  {playerInfo.feats.map(f => <li key={`list-${f.title}`} style={{ backgroundColor: `${f.color}` }}></li>)}
+                </ul>
+              </div>}
+            </label>
 
           </h1>
           <button
@@ -123,25 +141,7 @@ const App = () => {
           {open ? 'Hide Stats' : 'Show Stats'}
         </button>
         <div>
-          <label >
-            Level
-            <input
-              id="level-input"
-              className="header-input"
-              inputMode="decimal"
-              type="number"
-              name="level"
-              value={parseInt(playerInfo.level)}
-              onChange={updatePlayerInput}
-            />
-          </label>
-          {<div>
-            Techniques :
-            <ul>
 
-              {playerInfo.feats.map(f => <li key={`list-${f.title}`}>{f.title}</li>)}
-            </ul>
-          </div>}
         </div>
         <Collapsible
           open={open}
