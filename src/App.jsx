@@ -13,6 +13,7 @@ import { themeEn, themeFr } from "./data/theme-list"
 
 import StatBlock from "./components/StatBlock"
 import FeatBlock from "./components/FeatBlock"
+import PlayerFeats from "./components/PlayerFeats"
 
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
 
   const [feats, setFeats] = useState(featsEN)
   const [themes, setThemes] = useState(null)
-  const [open, setOpen] = useState(false)
+  const [nav, setNav] = useState('feats')
   const [userData, setUserData] = useState(null)
 
   const loading = useRef(true)
@@ -134,27 +135,35 @@ const App = () => {
             {language}
           </button>
         </div >
-        <button
-          id='stats'
-          className='action-btn'
-          onClick={() => { setOpen(!open) }}>
-          {open ? 'Hide Stats' : 'Show Stats'}
-        </button>
+        <nav>
+          <button
+            id='stats'
+            className='action-btn'
+            onClick={() => { setNav('stats') }}>
+            Stats
+          </button>
+          <button
+            id='feats'
+            className='action-btn'
+            onClick={() => { setNav('actions') }}>
+            Actions
+          </button>
+          <button
+            id='skills'
+            className='action-btn'
+            onClick={() => { setNav('feats') }}>
+            Feats
+          </button>
+        </nav>
         <div>
 
         </div>
-        <Collapsible
-          open={open}
-          revealType='bottomFirst'
-        >
-          <StatBlock
-            masters={playerMasters}
-            setUserData={setUserData} />
-        </Collapsible>
-        <div
-          className="slider-container"
-        >
+        {nav === 'stats' && <StatBlock
+          masters={playerMasters}
+          setUserData={setUserData} />}
 
+        {nav === 'actions' && <PlayerFeats />}
+        {nav === 'feats' && <div className="slider-container">
           <Slider {...settings}>
             {themes.map((theme, i = 0) =>
               <FeatBlock
@@ -165,7 +174,9 @@ const App = () => {
             )
             }
           </Slider>
-        </div>
+        </div>}
+
+
       </>
     )
   }

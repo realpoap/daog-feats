@@ -39,12 +39,12 @@ export const themeFr = [
 		"categories": ["minutie", "magie", "savoir"]
 	},
 	{
-		"theme": "défense",
-		"categories": ["combat", "défense", "physique"]
-	},
-	{
 		"theme": "ésotérisme",
 		"categories": ["perception", "ésotérisme", "détection"]
+	},
+	{
+		"theme": "défense",
+		"categories": ["combat", "défense", "physique"]
 	},
 	{
 		"theme": "survie",

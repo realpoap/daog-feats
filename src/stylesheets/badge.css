@@ -48,6 +48,7 @@ p.action-bubble{
 	text-transform: uppercase;
 	font-size: 1em;
 	margin:0;
+	letter-spacing: 0.1em;
 }
 
 .tooltip-subtitle{
@@ -63,7 +64,7 @@ p.action-bubble{
 	text-transform: none;
 	text-align: justify;
 	text-justify: inter-character;
-    text-align-last: center;
+    text-align-last: left;
 }
 
 body {
@@ -164,7 +165,7 @@ li.skill{
 
 
 
-@media only screen and (width < 720px) {
+@media only screen and (width < 600px) {
 
 	.feat-tooltip {
 		min-width: 50vw;
@@ -198,8 +199,8 @@ li.skill{
 
 
 .yellow {
-	background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
-	color: #ffb300;
+	background: linear-gradient(to bottom right, #ffeb3b 0%, #eca601 100%);
+	color: #ffbd23;
 }
 
 .orange {
@@ -223,18 +224,18 @@ li.skill{
 }
 
 .teal {
-	    background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
+	background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
     color: #34a297;
 }
 
 .blue {
-	    background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
-    color: #259af3;
+	background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
+  color: #259af3;
 }
 
 .blue-dark {
-	    background: linear-gradient(to bottom right, #1976D2 0%, #283593 100%);
-    color: #1c68c5;
+	background: linear-gradient(to bottom right, #4152d1 0%, #1d2779 100%);
+    color: #4879e0;
 }
 
 .green {
@@ -262,6 +263,10 @@ li.skill{
     color: #4d4d4d;
 }
 
+.white {
+	background: linear-gradient(to bottom right, #f4f4f4 0%, #b7b7b7 100%);
+    color: #ffffff;
+}
 
 footer {
   text-align: center;

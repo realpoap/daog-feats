@@ -24,7 +24,7 @@ const BadgeRow = ({ main, trees, index }) => {
 		let prunedArray = playerInfo.feats
 
 		const maxCount = playerInfo.level
-		console.log(prunedArray.length - 1, '/', maxCount);
+		console.log(prunedArray.length, '/', maxCount);
 
 
 		// properties of selected feat
@@ -59,7 +59,7 @@ const BadgeRow = ({ main, trees, index }) => {
 			//console.log('because exists, removed:', prunedArray);
 		}
 
-		if (prunedArray.length - 1 <= maxCount) {
+		if (prunedArray.length <= maxCount) {
 			setPlayerInfo({ ...playerInfo, feats: prunedArray })
 			isSelected ? setActiveIndex(0) : setActiveIndex(value)
 		} else {

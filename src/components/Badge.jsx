@@ -26,8 +26,6 @@ const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 			actionStyle = 'red'
 	}
 
-
-
 	return (
 		<>
 			<div
