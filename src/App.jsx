@@ -121,7 +121,7 @@ const App = () => {
               />
               {<div>
                 <ul className='user-feats-list'>
-                  {playerInfo.feats.map(f => <li key={`list-${f.title}`} style={{ backgroundColor: `${f.color}` }}></li>)}
+                  {playerInfo.feats.map(f => <li key={`list-${f.title}`} className={f.color} ></li>)}
                 </ul>
               </div>}
             </label>
@@ -133,7 +133,7 @@ const App = () => {
           >
             {language}
           </button>
-        </div>
+        </div >
         <button
           id='stats'
           className='action-btn'

@@ -1265,7 +1265,7 @@ const featsFR = {
           "id": "couverture",
           "type": "défense",
           "rank": 1,
-          "title": "Couverure",
+          "title": "Couverture",
           "action": "limitée",
           "icon": highpunch,
           "color": "blue",
