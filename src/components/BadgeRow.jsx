@@ -4,10 +4,11 @@ import { LanguageContext } from "../store/languageContext"
 import Badge from "./Badge";
 import BadgeProxy from "./BadgeProxy";
 
+
 const BadgeRow = ({ main, trees, index }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const { playerMasters } = useContext(LanguageContext)
-
+	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 
 	if (index === 0) {
 		return (
@@ -18,8 +19,45 @@ const BadgeRow = ({ main, trees, index }) => {
 	}
 
 	const handleClick = (event) => {
+		// value of index
 		const value = event.currentTarget.value
-		activeIndex === value ? setActiveIndex(0) : setActiveIndex(value)
+		let prunedArray = playerInfo.feats
+
+		// properties of selected feat
+		const object = {
+			theme: event.currentTarget.getAttribute('data-theme'),
+			title: event.currentTarget.getAttribute('data-title'),
+			type: event.currentTarget.getAttribute('data-type'),
+			rank: event.currentTarget.getAttribute('data-rank'),
+			color: event.currentTarget.getAttribute('data-color'),
+			action: event.currentTarget.getAttribute('data-action'),
+			tooltip: event.currentTarget.getAttribute('data-tooltip')
+		}
+		//console.log(object.title, '|', object.type, '|', object.rank);
+
+		const existOnArray = playerInfo.feats.some((e) => e.title === object.title)
+		const isSelected = activeIndex === value
+		console.log('exist on array:', existOnArray, '| already selected:', isSelected, '| theme:', object.theme)
+
+
+		// if newly selected, delete all other inputs in that slot
+		if (!isSelected && !existOnArray) {
+			prunedArray = prunedArray.filter(i => (i.theme !== object.theme || i.rank !== object.rank))
+			prunedArray.push(object)
+		}
+		// if was not selected but already existed (bug fix case)
+		if (!isSelected && existOnArray) {
+			prunedArray = prunedArray.filter(i => i.title !== object.title)
+			//console.log('because exists, removed:', prunedArray);
+		}
+		// clear that title if is already selected and in array
+		if (isSelected && existOnArray) {
+			prunedArray = prunedArray.filter(i => i.title !== object.title)
+			//console.log('because exists, removed:', prunedArray);
+		}
+		setPlayerInfo({ ...playerInfo, feats: prunedArray })
+		isSelected ? setActiveIndex(0) : setActiveIndex(value)
+
 	}
 
 	return (
@@ -34,8 +72,6 @@ const BadgeRow = ({ main, trees, index }) => {
 							<li
 								key={`skill-${skill.title}`}
 								className="skill"
-								value={x + 1}
-								onClick={handleClick}
 							>
 								<BadgeProxy
 									id={`tooltip-${skill.title}`}
@@ -47,13 +83,19 @@ const BadgeRow = ({ main, trees, index }) => {
 
 						return (
 							<li
-								key={`skill-${skill.title}`}
-								className="skill"
+								key={`key-${skill.title}`}
 								value={x + 1}
 								onClick={handleClick}
+								data-theme={main}
+								data-title={skill.title}
+								data-type={skill.type}
+								data-rank={skill.rank}
+								data-action={skill.action}
+								data-tooltip={skill.tooltip}
 							>
 								<Badge
-									id={`tooltip-${skill.title}`}
+									id={`badge-${skill.title}`}
+									className="skill"
 									title={skill.title}
 									icon={skill.icon}
 									rank={skill.rank}
@@ -61,14 +103,15 @@ const BadgeRow = ({ main, trees, index }) => {
 									color={skill.color}
 									type={skill.type}
 									action={skill.action}
-									isActive={activeIndex === x + 1}
+									isActive={
+										activeIndex === x + 1 || (playerInfo.feats.some((e) => e.title === skill.title) && activeIndex !== x + 1)}
 								/>
 							</li>
 						)
 					}
 				})}
 			</div>
-		</div>
+		</div >
 	);
 };
 

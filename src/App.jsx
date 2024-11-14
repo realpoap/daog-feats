@@ -135,6 +135,13 @@ const App = () => {
               onChange={updatePlayerInput}
             />
           </label>
+          {<div>
+            Techniques :
+            <ul>
+
+              {playerInfo.feats.map(f => <li key={`list-${f.title}`}>{f.title}</li>)}
+            </ul>
+          </div>}
         </div>
         <Collapsible
           open={open}

@@ -11,7 +11,8 @@ const LanguageProvider = ({ children }) => {
 		useState(
 			{
 				name: '',
-				level: 1
+				level: 1,
+				feats: [{}]
 			}
 		)
 

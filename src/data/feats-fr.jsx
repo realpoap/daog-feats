@@ -837,7 +837,7 @@ const featsFR = {
         },
         {
           "id": "sappe",
-          "type": "éloquence",
+          "type": "persuasion",
           "rank": 3,
           "title": "Sappe",
           "action": "limitée",
@@ -847,7 +847,7 @@ const featsFR = {
         },
         {
           "id": "accablement",
-          "type": "éloquence",
+          "type": "persuasion",
           "rank": 4,
           "title": "Accablement",
           "action": "principale",
@@ -857,7 +857,7 @@ const featsFR = {
         },
         {
           "id": "domination",
-          "type": "éloquence",
+          "type": "persuasion",
           "rank": 5,
           "title": "Domination",
           "action": "principale",

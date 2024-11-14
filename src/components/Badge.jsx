@@ -33,21 +33,29 @@ const Badge = ({ id, tooltip, icon, title, color, type, action, isActive }) => {
 				className={isActive ? coloredClass : 'badge'}
 				data-tooltip-id={id}
 				data-tooltip-content={tooltip}
-				data-tooltip-place='bottom' >
+				data-tooltip-place='bottom'
+			>
 				<SVG
 					className='icon'
 					src={icon}
 					title={title} />
-				<div className='action-bubble' style={{ backgroundColor: actionStyle }}>
+				<div
+					className='action-bubble'
+					style={{ backgroundColor: actionStyle }}
+				>
 					{actionLetter}
 				</div>
-				<div className="circle">
+				<div
+					className="circle">
 				</div>
-				<div className='ribbon'>
+				<div
+					className='ribbon'>
 					{title}
 				</div>
 				<div>
-					<Tooltip className='feat-tooltip' id={id} />
+					<Tooltip
+						className='feat-tooltip'
+						id={id} />
 				</div>
 			</div >
 		</>

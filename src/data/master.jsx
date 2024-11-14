@@ -17,7 +17,7 @@ export const playerFr = {
 	persuasion: 0,
 	physique: 0,
 	savoir: 0,
-	sciences: 0,
+	science: 0,
 	soin: 0,
 	survie: 0,
 	tir: 0,
