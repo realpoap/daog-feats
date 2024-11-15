@@ -58,7 +58,7 @@ function PlayerActions() {
 		},
 		{
 			title: 'Furtivité',
-			action: 'gratuite',
+			action: 'limitée',
 			type: 'Base',
 			tooltip: "Vous vous fondez dans les ombres et devenez invisible aux yeux de vos ennemis."
 		},
