@@ -915,7 +915,7 @@ const featsFR = {
           "title": "Dépeçage",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous savez appréter vos proies et sélectionner les morceaux de choix. Vos jets de découpe ont avantage et vous pouvez obtenir 1 ration sur les créatures mortes. Utilisez en action gratuite pour donner +1 à votre prochaine attaque."
         },
         {
@@ -925,7 +925,7 @@ const featsFR = {
           "title": "Survivalisme",
           "action": "principale",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Quand vous réalisez une action de camp lors d'un repos, vous donnez +1 rémission au groupe par compétence utilisée. Vous avez avantage à un de vos jets de mort une fois après aveir effectué cette action lors d'un repos long."
         },
         {
@@ -935,7 +935,7 @@ const featsFR = {
           "title": "Prédation",
           "action": "limitée",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous vous remémorez les caractéristiques des créatures que vous affrontez pour porter des coups efficaces. Lancez un jet d'ERU+survie pour reconnaitre une créature sur laquelle vous avez des connaissances. Vous et vos alliés informés infligez 1d4 dmg supplémentaires jusqu'à la fin du combat en cas de réussite."
         },
         {
@@ -945,7 +945,7 @@ const featsFR = {
           "title": "Sauvagerie",
           "action": "limitée",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous sentez les individus jusqu'à une pièce annexe ou INS mètres et gagnez un avantage à vos jets de perception dans ces conditions. Vous reconnaissez les espèces d'individus à l'odeur."
         },
         {
@@ -955,7 +955,7 @@ const featsFR = {
           "title": "Sixième sens",
           "action": "limitée",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous avez avantage en initiative et aux jets de veille. Action limitée en réaction pour gagner un avantage contre un tir ou attaque sournoise."
         },
       ],
@@ -970,7 +970,7 @@ const featsFR = {
           "title": "Ressources",
           "action": "principale",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous êtes prompt dans l'établissement d'un camp de base et pouvez réaliser les actions de feu et nourriture en une seule action automatique. "
         },
         {
@@ -980,7 +980,7 @@ const featsFR = {
           "title": "Économie",
           "action": "principale",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Lors d'un jet de cuisine vous pouvez augmenter le nombre de rations préparées de +1, et de +1 additionnel par désavantage que vous ajoutez à votre jet. De plus, vous collectez les ressources utilisées après leur utilisation et récupérez flèches et armes de jet éparpillées."
         },
         {
@@ -990,7 +990,7 @@ const featsFR = {
           "title": "Fortitude",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous pouvez consommer de la viande avariée et des légumes pourris et résister aux poisons avec avantage à vos jets d'END. Si les aliments ont été cuits vous n'avez pas besoin de lancer de dé."
         },
         {
@@ -1000,7 +1000,7 @@ const featsFR = {
           "title": "Exploration",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous faites attention où vous mettez vos pieds et à votre environnement immédiat. Vous avez avantage en perception du danger et détection des pièges. Vous pouvez utiliser cette action en réaction d'un jet d'Initiative pour effectuer un déplacement de 3m avant le combat."
         },
         {
@@ -1010,7 +1010,7 @@ const featsFR = {
           "title": "Tueur froid",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vos coups furtifs et de tir sont réalisés avec une précision terrifiante. Vous pouver relancer vos jets de dégats en cas de 1."
         },
       ],
@@ -1025,7 +1025,7 @@ const featsFR = {
           "title": "Effacement",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Votre action de furtivité est désormais une action gratuite et confère un avantage supplémentaire."
         },
         {
@@ -1035,7 +1035,7 @@ const featsFR = {
           "title": "Traque",
           "action": "principale",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous suivez la trace de vos ennemis à travers l'environnement. Faites des jets d'INS + percepion pour progresser jusqu'à tomber sur votre cible. Vous et vos alliés avez avantage au prochain jet d'Initiative. En combat, vous pouvez utiliser cette action principale pour repérer une créature furtive."
         },
         {
@@ -1045,7 +1045,7 @@ const featsFR = {
           "title": "Voyageur",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vos expériences en nature vous ont permis de développer une grande aisance en voyages. Vous avez avantage à vos jets de déplacement, survie et discrétion lorsque vous êtes dans votre milieu de prédilection (rural ou urbain)."
         },
         {
@@ -1055,7 +1055,7 @@ const featsFR = {
           "title": "Dissimulation",
           "action": "limitée",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous savez utiliser les éléments de votre environnement de prédilection (rural ou urbain) pour vous dissimuler. Une fois après un repos long, vous pouvez relancer un jet de furtivité dans ces conditions. En combat, vous pouver utiliser une action limitée pour donner un avantage au score de furtivité d'un joueur adjacent. "
         },
         {
@@ -1065,7 +1065,7 @@ const featsFR = {
           "title": "Leurre",
           "action": "limitée",
           "icon": highpunch,
-          "color": "green-dark",
+          "color": "teal",
           "tooltip": "Vous vous fondez dans votre environnement tout en faisant croire à vos adversaires que vous maintenez votre position initiale. lancez un jet d'INS+discrétion pour effectuer un mouvement gratuit en réaction à une action adverse avant le début de votre prochain tour. De plus, vous avez avantage à vos jets de discrétion."
         },
       ],
@@ -1240,11 +1240,11 @@ const featsFR = {
   ],
   "défense": [
     {
-      "name": "combat",
+      "name": "logique",
       "content": [
         {
           "id": "choc",
-          "type": "combat",
+          "type": "logique",
           "rank": 1,
           "title": "Choc",
           "action": "gratuite",
@@ -1254,7 +1254,7 @@ const featsFR = {
         },
         {
           "id": "deviation",
-          "type": "combat",
+          "type": "logique",
           "rank": 2,
           "title": "Déviation",
           "action": "limitée",
@@ -1264,7 +1264,7 @@ const featsFR = {
         },
         {
           "id": "vengeance",
-          "type": "combat",
+          "type": "logique",
           "rank": 3,
           "title": "Vengeance",
           "action": "limitée",
@@ -1274,7 +1274,7 @@ const featsFR = {
         },
         {
           "id": "parade",
-          "type": "combat",
+          "type": "logique",
           "rank": 4,
           "title": "Parade",
           "action": "gratuite",
@@ -1284,7 +1284,7 @@ const featsFR = {
         },
         {
           "id": "ouverture",
-          "type": "combat",
+          "type": "logique",
           "rank": 5,
           "title": "Ouverture",
           "action": "limitée",
@@ -1410,7 +1410,7 @@ const featsFR = {
       "name": "survie",
       "content": [
         {
-          "id": "cueilleuir",
+          "id": "cueilleur",
           "type": "survie",
           "rank": 1,
           "title": "Cueilleur",
@@ -1571,7 +1571,341 @@ const featsFR = {
         },
       ],
     },
-  ]
+  ],
+  "négoce": [
+    {
+      "name": "logique",
+      "content": [
+        {
+          "id": "sincérité",
+          "type": "logique",
+          "rank": 1,
+          "title": "Sincérité",
+          "action": "gratutie",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez reconnaitre si l'on vous cache quelque chose et si votre interlocuteur se joue de vous. Faites un jet d'INS avec avantage pour savoir si ce que l'on vient de vous dire est un mensonge ou une omission déguisée. Vous avez avantage sur vos jets de persuasion tant que vous dites la vérité."
+        },
+        {
+          "id": "marchandage",
+          "type": "logique",
+          "rank": 2,
+          "title": "Marchandage",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez comment obtenir le meilleur prix de vos biens et gagnez une somme supplémentaire sur votre vente totale. Lancez un d10 MA par bonus de SOC."
+        },
+        {
+          "id": "rumeurs",
+          "type": "logique",
+          "rank": 3,
+          "title": "Rumeurs",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Le flot de commérage et rumeurs locales constitue une treille lisible pour vous. Vous avez avantage à vos jets de SOC et ERU pour chaque journée passée dans une communauté. Cet avantage est remis à 0 en cas de départ, emprisonnement ou tout autre évènement mettant fin à votre implication dans le bouche-à-oreille."
+        },
+        {
+          "id": "négociation",
+          "type": "logique",
+          "rank": 4,
+          "title": "Négociation",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Votre art diplomatique vous permet d'accéder aux sphères d'autorité et de proposer des requêtes et d'éviter les écueils classiques des négociations. Vous pouvez relancer une fois vos jets de SOC manqués."
+        },
+        {
+          "id": "rebondissement",
+          "type": "logique",
+          "rank": 5,
+          "title": "Rebondissement",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Votre esprit d'organisation et votre génie vous permette de concevoir des plans tordueux pour arriver à vos fins. Vous pouvez réaliser cette action une fois par jour et par repos pour gagner un avantage sur un jet d'ERU+logique unique à réaliser au moment de votre choix dans le futur contre la difficulté de l'aventure. En cas de succès, vous obtenez la résolution de votre plan ou d'une énigme, à déterminer avec le narrateur."
+        },
+      ],
+    },
+    {
+      "name": "négoce",
+      "content": [
+        {
+          "id": "Faux-fuyant",
+          "type": "négoce",
+          "rank": 1,
+          "title": "Faux-fuyant",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez vous sortir de situations compromettantes ou des noeuds de discussion, engendrés par vous ou vos camarades. Vous pouvez lancer un jet de SOC+négoce avec avantage en utilisant la SOC la plus basse de votre groupe."
+        },
+        {
+          "id": "comédie",
+          "type": "négoce",
+          "rank": 2,
+          "title": "Comédie",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "En honnête bonimenteur, vous savez vous mettre en scène pour vendre vos biens mais aussi pour vous attirer des faveurs. Vos jets de mensonge et persuasion sont fait avec un bonus égal à votre score de performance lorsque vous vous donnez en spectacle devant une foule ou une assemblée."
+        },
+        {
+          "id": "intrigue",
+          "type": "négoce",
+          "rank": 3,
+          "title": "Intrigue",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez obtenir les informations plus ou moins secrètes d'un marchand, d'un groupe ou d'un courtisan. Moyennant 1MO vous pouvez lancer un jet de SOC pour obtenir une information pertinente au sujet d'un lieu, d'une situation ou d'un évènement qui vous échappe."
+        },
+        {
+          "id": "Prestance",
+          "type": "négoce",
+          "rank": 4,
+          "title": "prestance",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez vous présenter sous votre meilleur jour. Tant que vous étes propre et habillé convenablement, vos jets de SOC et CHA sont fait avec avantage."
+        },
+        {
+          "id": "laissez-passer",
+          "type": "négoce",
+          "rank": 5,
+          "title": "Laissez-passer",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "teal",
+          "tooltip": "Vous savez qui dirige les services de la ville et qui détient le pouvoir : en cas de situation difficile (emprisonnement, condamnation, accès refusé, etc.) vous pouvez lancer un jet de CHA+négoce pour obtenir l'aide de la ville ou d'une figure d'autorité. Vous pouvez payer 1MO par joueur impliqué au lieu de jeter le dé pour cette action. "
+        },
+      ],
+    },
+    {
+      "name": "persuasion",
+      "content": [
+        {
+          "id": "mensonge",
+          "type": "persuasion",
+          "rank": 1,
+          "title": "Mensonge",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous êtes doué pour masquer votre vraie pensée, et vous avez avantage sur vos jets de CHA et SOC tant que vous mentez."
+        },
+        {
+          "id": "charme",
+          "type": "persuasion",
+          "rank": 2,
+          "title": "Charme",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez charmer vos interlouteurs d'un sourire ou d'un regard. Lanez un jet de CHA + persuasion à la place d'un jet de SOC ou ERU lors d'une discussion ou d'une rencontre pour charmer votre interlocuteur et obtenir des informations ou son aide. Lors d'un combat vous pouvez utiliser cette action limitée pour tenter de charmer un ennemi, avec désavantage, et lui retirer une action principale."
+        },
+        {
+          "id": "corruption",
+          "type": "persuasion",
+          "rank": 3,
+          "title": "Corruption",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Vous savez comment graisser la pate des commerçants, gardes et personnes d'influence pour obtenir vos faveurs. Vous pouvez glisser de l'argent à chaque interlocuteur pour réduire un jet de CHA ou SOC de 1 par 10 MA déboursés. En combat vous pouvez offrir votre bourse à concurrence de 1d10MO par adversaire pour stopper le combat, après avoir réussi un jet de SOC."
+        },
+        {
+          "id": "déguisement",
+          "type": "persuasion",
+          "rank": 4,
+          "title": "Déguisement",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "En usant d'habits ou d'accessoires vous pouvez modifier votre apparence ce qui, associé à vos dons naturels, vous permet de vous rendre méconnaissable. Vous déguiser est une action que vous pouvez réaliser en repos et qui vous permet de lancer tous vos jets de CHA et SOC en utilisant votre performance."
+        },
+        {
+          "id": "tromperie",
+          "type": "persuasion",
+          "rank": 5,
+          "title": "Tromperie",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "silver",
+          "tooltip": "Après avoir étudier votre cible, vous étes capable de l'incarner jusqu'à berner ses proches. Durant un repos vous pouvez préparer votre tromperie, et les bonus de Déguisement peuvent s'appliquer le cas échéant. Vous avez un avantage sur vos jets de persuasion égal au nombre de jours passés à étudier la personne que vous incarnez."
+        },
+      ],
+    },
+  ],
+  "artisanat": [
+    {
+      "name": "savoir",
+      "content": [
+        {
+          "id": "croquis",
+          "type": "savoir",
+          "rank": 1,
+          "title": "Croquis",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Capable de prendre notes des formes et proportions rapidement, vous optenez un avantage à vos jets de fabrication et réparation si vous possédez un croquis associé. Vous pouvez également croquer des portraits et scenes."
+        },
+        {
+          "id": "décoration",
+          "type": "savoir",
+          "rank": 2,
+          "title": "Décoration",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous apprétez une pièce ou un individu pour lui donner un peu plus de charme. Lancez un jet d'INS pour donner un avantage à une estimation ou un jet de CHA."
+        },
+        {
+          "id": "patron",
+          "type": "savoir",
+          "rank": 3,
+          "title": "Patron",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous êtes capable de réaliser des modèles extrêmement détaillés d'objets et d'idées. Vous pouvez faire un patron en action d'entrainement afin de le transmettre à un artisan ou de l'utiliser pour réaliser vous même un objet. Il ne s'agit que d'une question de temps et de ressource pour l'artisan, votre patron otant toute difficulté à la tache."
+        },
+        {
+          "id": "analyse",
+          "type": "savoir",
+          "rank": 4,
+          "title": "Analyse",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous avez une bonne compréhension des courants artistiques et de l'émergence des tendances. Vous avez un avantage à vos jets de négoce pour les objets dans vos champs d'expertises."
+        },
+        {
+          "id": "chefdoeuvre",
+          "type": "savoir",
+          "rank": 5,
+          "title": "Chef-d'oeuvre",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Les objets que vous créez sont emplis d'un charme particulier et démontrent d'une technique à couper le souffle. Vos créations se vendent à +minutie MO que le prix courant."
+        },
+      ],
+    },
+    {
+      "name": "artisanat",
+      "content": [
+        {
+          "id": "rafistolage",
+          "type": "artisanat",
+          "rank": 1,
+          "title": "Rafistolage",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous êtes capable de redonner une forme douteuse mais fonctionnelle à une pièce d'équipement détruite en réussissant un jet d'artisanat (DEX). La pièce d'équipement a 0 de durabilité peut maintenant être portée mais n'importe quel choc ou perte de durabilité la rendra impossible à rafistoler à l'avenir."
+        },
+        {
+          "id": "réparation",
+          "type": "artisanat",
+          "rank": 2,
+          "title": "Réparation",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous utilisez vos outils pour réparer une pièce d'équipement ou un outil dans votre champ de compétence. En cas de réussite de jet d'artisanat, vous donnez +1 à la durabilité actuelle de l'objet jusqu'à concurrence de son maximum."
+        },
+        {
+          "id": "façonnage",
+          "type": "artisanat",
+          "rank": 3,
+          "title": "Façonnage",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous créez un objet de votre choix dont vous avez un croquis, dans votre champ d'expertise, et en usant des ressources nécessaires. Cette action peut être une action d'entrainement pour réaliser l'objet avec succès."
+        },
+        {
+          "id": "efficacité",
+          "type": "artisanat",
+          "rank": 4,
+          "title": "Efficacité",
+          "action": "gratuite",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Les gestes de votre métier vous sont entrés dans la peau. Vous pouvez relancer un jet d'artisanat manqué, même en cas de 1."
+        },
+        {
+          "id": "piece",
+          "type": "artisanat",
+          "rank": 5,
+          "title": "Pièce maîtresse",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous reforgez ou améliorez un objet déjà existant pour lui conférer de nouvelles propriétés, alléger son poids ou améliorer sa durabilité. Lancez un jet d'artisanat avec les ressources nécessaires. En cas d'échec vous perdez les ressources."
+        },
+      ],
+    },
+    {
+      "name": "science",
+      "content": [
+        {
+          "id": "sabotage",
+          "type": "science",
+          "rank": 1,
+          "title": "Sabotage",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous modifiez un objet mécanique ou assemblé pour le briser en cas d'utilisation ou pour lui retirer sa durabilité (bonus d'ERU). Lancez un jet de minutie afin de réaliser l'action avec succès. Le score devient la difficulté de perception du sabotage."
+        },
+        {
+          "id": "désamorçage",
+          "type": "science",
+          "rank": 2,
+          "title": "Désamorçage",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous avez connaissance des pièges mécaniques et pouvez les rendre inoffensifs. Vous avez avantage à vos jets de DEX pour désamorcer les pièges et mécanismes."
+        },
+        {
+          "id": "Conversion",
+          "type": "science",
+          "rank": 3,
+          "title": "conversion",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous modifiez un objet existant en lui apportant des spécificités mécaniques ou l'associant à une autre pièce. Réalisez un jet d'artisanat avec minutie. En cas d'échec, les objets utilisés perdent 1 durabilité."
+        },
+        {
+          "id": "piégeage",
+          "type": "science",
+          "rank": 4,
+          "title": "Piégeage",
+          "action": "limitée",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous pouvez créer des pièges mécaniques ou traffiquer un mécanisme existant pour le piéger. Lors d'un repos vous pouvez créer un piége avec vos ressources en lançant un jet de minutie. En combat vous pouvez poser un piege avec une action limitée."
+        },
+        {
+          "id": "automate",
+          "type": "science",
+          "rank": 5,
+          "title": "Automate",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "brown",
+          "tooltip": "Vous êtes capable de créer de nouveaux objets et inventer des mécanismes novateurs. En usant des ressources nécessaires, vous pouvez créer des automates et des équipements mobiles avec un jet d'artisanat. Vous pouvez utiliser les énergies disponibles pour animer vos automates en fonction de vos champs d'expertise (vapeur, poudre, magie, fluides)."
+        },
+      ],
+    },
+  ],
 }
 
 
