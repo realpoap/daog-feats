@@ -105,11 +105,11 @@ const BadgeRow = ({ main, trees, index }) => {
 						if (!skill || skill.rank === undefined  || skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
 							return (
 								<li
-									key={`skill-${skill.title}`}
+									key={`skill-${main}-${t.name}.${index}`}
 									className="skill"
 								>
 									<BadgeProxy
-										id={`tooltip-${skill.title}`}
+										id={`tooltip-${main}-${t.name}.${index}`}
 										action={'x'}
 									/>
 								</li>
