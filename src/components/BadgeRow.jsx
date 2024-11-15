@@ -95,14 +95,14 @@ const BadgeRow = ({ main, trees, index }) => {
 								
 							const filteredContent = t.content.filter(e => !e.attackType || e.attackType === playerInfo.attackType)
 							console.log('filtered content', filteredContent);
-							skill = filteredContent[index - 1]
+							skill = filteredContent.find(e.rank === index)
 							
 						} else { // else don't bother
 							skill = t.content[index - 1]
 						}
 
 						// if does not have enough skills in this mastering, return blocked badge
-						if (!skill || skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
+						if (!skill || skill.rank === undefined  || skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
 							return (
 								<li
 									key={`skill-${skill.title}`}
