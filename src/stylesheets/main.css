@@ -47,7 +47,7 @@ h4{
 
 #name-input {
 	text-transform: capitalize;
-	width: 65%;
+	width: 85%;
 }
 
 #level-input {
@@ -90,7 +90,8 @@ h4{
 .player-feats-block {
 	display: flex;
 	flex-direction: row;
-	width: 80vw;
+	width: 100vw;
+	padding: 0 1em;
 	align-items: start;
 	justify-content: space-between;
 }
