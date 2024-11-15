@@ -74,8 +74,11 @@ const BadgeRow = ({ main, trees, index }) => {
 		console.log(index);
 
 		return (
+			<div className='skill-row'>
+				<h4 className="index"></h4>
 			<div className='title-row'>
 				{trees.map(t => <h6 className="skill-title" key={t.name}>{t.name}</h6>)}
+			</div>
 			</div>
 		)
 	} else {
