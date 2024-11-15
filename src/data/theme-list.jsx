@@ -25,8 +25,16 @@ export const themeFr = [
 		"categories": ["mouvement", "combat", "physique"]
 	},
 	{
+		"theme": "artisanat",
+		"categories": ["savoir", "artisanat", "science"]
+	},
+	{
 		"theme": "lutte",
 		"categories": ["physique", "lutte", "mouvement"]
+	},
+	{
+		"theme": "négoce",
+		"categories": ["persuasion", "négoce", "logique"]
 	},
 	{
 		"theme": "performance",
@@ -53,19 +61,9 @@ export const themeFr = [
 		"categories": ["minutie", "magie", "savoir"]
 	},	
 	{
-		"theme": "artisanat",
-		"categories": ["savoir", "artisanat", "science"]
-	},
-	{
 		"theme": "soin",
 		"categories": ["survie", "soin", "science"]
 	},
-	{
-		"theme": "négoce",
-		"categories": ["persuasion", "négoce", "logique"]
-	},
-	
-	
 
 ]
 
