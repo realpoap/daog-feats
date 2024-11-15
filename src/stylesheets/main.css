@@ -90,8 +90,7 @@ h4{
 .player-feats-block {
 	display: flex;
 	flex-direction: row;
-	width: 100vw;
-	padding: 0 1em;
+	width: 95vw;
 	align-items: start;
 	justify-content: space-between;
 }
