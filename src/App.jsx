@@ -105,6 +105,7 @@ const App = () => {
               id="name-input"
               className="header-input"
               inputMode="text"
+              type='text'
               placeholder={playerInfo.name === '' ? 'Nom' : playerInfo.name}
               name="name"
               value={playerInfo.name}
