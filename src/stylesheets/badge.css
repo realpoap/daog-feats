@@ -267,6 +267,10 @@ li.skill{
 	background: linear-gradient(to bottom right, #f4f4f4 0%, #b7b7b7 100%);
     color: #ffffff;
 }
+.brown {
+	background: linear-gradient(to bottom right, #f4f4f4 0%, #b7b7b7 100%);
+    color: #ffffff;
+}
 
 footer {
   text-align: center;
