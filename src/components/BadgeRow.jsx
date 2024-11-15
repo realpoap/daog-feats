@@ -95,7 +95,7 @@ const BadgeRow = ({ main, trees, index }) => {
 								
 							const filteredContent = t.content.filter(e => !e.attackType || e.attackType === playerInfo.attackType)
 							console.log('filtered content', filteredContent);
-							skill = filteredContent.find(e.rank === index)
+							skill = filteredContent.find(e => e.rank === index)
 							
 						} else { // else don't bother
 							skill = t.content[index - 1]
