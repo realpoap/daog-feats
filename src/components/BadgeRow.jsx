@@ -102,7 +102,7 @@ const BadgeRow = ({ main, trees, index }) => {
 						}
 
 						// if does not have enough skills in this mastering, return blocked badge
-						if (skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main] || !skill.rank) {
+						if (!skill || skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
 							return (
 								<li
 									key={`skill-${skill.title}`}
