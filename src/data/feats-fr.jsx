@@ -1581,7 +1581,7 @@ const featsFR = {
           "type": "logique",
           "rank": 1,
           "title": "Sincérité",
-          "action": "gratutie",
+          "action": "gratuite",
           "icon": highpunch,
           "color": "silver",
           "tooltip": "Vous savez reconnaitre si l'on vous cache quelque chose et si votre interlocuteur se joue de vous. Faites un jet d'INS avec avantage pour savoir si ce que l'on vient de vous dire est un mensonge ou une omission déguisée. Vous avez avantage sur vos jets de persuasion tant que vous dites la vérité."
