@@ -27,6 +27,10 @@ export const themeFr = [
 		"categories": ["physique", "lutte", "mouvement"]
 	},
 	{
+		"theme": "artisanat",
+		"categories": ["savoir", "artisanat", "science"]
+	},
+	{
 		"theme": "combat",
 		"categories": ["mouvement", "combat", "physique"]
 	},
@@ -44,7 +48,11 @@ export const themeFr = [
 	},
 	{
 		"theme": "défense",
-		"categories": ["combat", "défense", "physique"]
+		"categories": ["logique", "défense", "physique"]
+	},
+	{
+		"theme": "négoce",
+		"categories": ["persuasion", "négoce", "logique"]
 	},
 	{
 		"theme": "survie",
