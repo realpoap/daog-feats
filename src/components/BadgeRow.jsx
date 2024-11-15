@@ -91,29 +91,18 @@ const BadgeRow = ({ main, trees, index }) => {
 						// if there is a skill with an attackType, make sure there is only the one we need
 						if (t.content.some(e => e.attackType)) {
 							console.log('attackTypes exists');
-							if (playerInfo.attackType === '') {
-								return (
-								<li
-									key={`skill-locked-attack-${index}`}
-									className="skill"
-								>
-									<BadgeProxy
-										action={'x'}
-									/>
-								</li>
-							)
-							} else {
+							
 								
 							const filteredContent = t.content.filter(e => !e.attackType || e.attackType === playerInfo.attackType)
 							console.log('filtered content', filteredContent);
 							skill = filteredContent[index - 1]
-							}
+							
 						} else { // else don't bother
 							skill = t.content[index - 1]
 						}
 
 						// if does not have enough skills in this mastering, return blocked badge
-						if (skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
+						if (skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main] || !skill.rank) {
 							return (
 								<li
 									key={`skill-${skill.title}`}
