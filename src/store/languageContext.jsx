@@ -12,6 +12,7 @@ const LanguageProvider = ({ children }) => {
 			{
 				name: '',
 				level: 1,
+				attackType: '',
 				feats: []
 			}
 		)

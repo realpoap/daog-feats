@@ -13,7 +13,7 @@ import { themeEn, themeFr } from "./data/theme-list"
 
 import StatBlock from "./components/StatBlock"
 import FeatBlock from "./components/FeatBlock"
-import PlayerFeats from "./components/PlayerFeats"
+import PlayerActions from "./components/PlayerActions"
 
 
 const App = () => {
@@ -135,6 +135,7 @@ const App = () => {
             {language}
           </button>
         </div >
+
         <nav>
           <button
             id='stats'
@@ -155,19 +156,17 @@ const App = () => {
             Feats
           </button>
         </nav>
-        <div>
 
-        </div>
         {nav === 'stats' && <StatBlock
           masters={playerMasters}
           setUserData={setUserData} />}
 
-        {nav === 'actions' && <PlayerFeats />}
+        {nav === 'actions' && <PlayerActions />}
         {nav === 'feats' && <div className="slider-container">
           <Slider {...settings}>
             {themes.map((theme, i = 0) =>
               <FeatBlock
-                key={i}
+                key={`featblock-${i}`}
                 title={theme.theme}
                 trees={feats[theme.theme]}
               />

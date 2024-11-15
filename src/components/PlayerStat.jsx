@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PlayerStat = ({ stat, setProxySkillValue }) => {
+const PlayerStat = ({ stat }) => {
 	const [inputValue, setInputValue] = useState(0)
 	//setInputValue(stat.value)
 

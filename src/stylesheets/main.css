@@ -81,17 +81,32 @@ h4{
 /* .feats-list > li:not(:last-child)::after{
 	content: ',';
 } */
+.player-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 .player-feats-block {
 	display: flex;
 	flex-direction: row;
 	width: 80vw;
 	align-items: start;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .player-feats-block>div{
 	width: 30%;
+}
+.attack-type {
+	margin-top:1em;
+	width: 80%;
+	text-align: center;
+	font-style: italic;
+	font-size: 0.7em;
+}
+.attack-type>label{
+	margin-left: 0.5em;
 }
 
 .player-feats-block>div>h2{

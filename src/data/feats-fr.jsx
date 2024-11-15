@@ -419,7 +419,19 @@ const featsFR = {
           "action": "principale",
           "icon": highpunch,
           "color": "red",
+          "attackType": "AGI",
           "tooltip": "Lorsque vous réussissez un attaque, vous pouvez réaliser une seconde attaque d'AGI avec avantage avec votre arme secondaire ou votre poing contre un adversaire au corps a corps. Cette attaque compte comme une réaction qui peut etre réalisée plusieurs fois par tour. Vous devez avoir une arme dans votre main secondaire ou un bouclier de poing pour appliquer ces dégats (sinon 1-2 dmg bagarre)."
+        },
+        {
+          "id": "tourbilon",
+          "type": "mouvement",
+          "rank": 5,
+          "title": "Tourbillon",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "attackType": "FOR",
+          "tooltip": "Vous observez les ennemis autour de vous et décidez de prolonger votre attaque pour toucher le plus de cibles. Choisissez le nombre de cibles que vous souhaitez frapper: lancez votre première attaque de façon normale, puis lancez un désavantage par ennemi prévu, cumulatifs. Chacune des attaques se base sur le premier score d’attaque + les d4 de désavantage associés à chaque ennemi. Vous ne pouvez faire cette action que durant votre tour."
         },
       ],
     },
@@ -454,7 +466,19 @@ const featsFR = {
           "action": "principale",
           "icon": highpunch,
           "color": "red",
+          "attackType": "AGI",
           "tooltip": "À la place de votre attaque, vous pouvez essayer de désarmer l’adversaire. Lancez un jet d12 + AGI + défense avec désavantage ; en cas d’échec l’adversaire peut tenter une attaque contre vous. Vous n’infligez pas de dégâts en cas de réussite mais votre adversaire est désarmé."
+        },
+        {
+          "id": "frappelourde",
+          "type": "combat",
+          "rank": 3,
+          "title": "Frappe lourde",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "attackType": "FOR",
+          "tooltip": "Vous réalisez une attaque à deux mains avec désavantage pour doubler les bonus de FOR."
         },
         {
           "id": "riposte",
@@ -519,6 +543,18 @@ const featsFR = {
           "action": "principale",
           "icon": highpunch,
           "color": "red",
+          "attackType": "AGI",
+          "tooltip": "Vous pouvez realiser une attaque en furtivité avec avantage + 1 avantage si votre adversaire est deja en combat avec un allié ou si vous l'attaquez de dos. La cible doit echouer un jet de perception contre votre discrétion pour que l'attaque soit considérée discrete. Si vous réussissez l'attaque vous infligez vos dégats comme si vous aviez fait un critique."
+        },
+        {
+          "id": "martelement",
+          "type": "physique",
+          "rank": 4,
+          "title": "Martelement",
+          "action": "principale",
+          "icon": highpunch,
+          "color": "red",
+          "attackType": "FOR",
           "tooltip": "Vous pouvez realiser une attaque en furtivité avec avantage + 1 avantage si votre adversaire est deja en combat avec un allié ou si vous l'attaquez de dos. La cible doit echouer un jet de perception contre votre discrétion pour que l'attaque soit considérée discrete. Si vous réussissez l'attaque vous infligez vos dégats comme si vous aviez fait un critique."
         },
         {

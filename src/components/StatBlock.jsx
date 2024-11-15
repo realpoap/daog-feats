@@ -5,6 +5,7 @@ const StatBlock = ({ masters, setUserData }) => {
 
 	const { playerInfo } = useContext(LanguageContext)
 
+
 	const propertiesEntries = Object.entries(masters)
 
 	const handleChange = (e) => {
@@ -30,7 +31,6 @@ const StatBlock = ({ masters, setUserData }) => {
 		localStorage.removeItem('user_stats')
 		setUserData(null)
 	}
-
 
 	return (
 		<div className='player-block'>

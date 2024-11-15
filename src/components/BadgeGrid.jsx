@@ -6,7 +6,7 @@ const BadgesGrid = ({ main, trees }) => {
 		{ length: 6 },
 		(_, i) => (
 			<BadgeRow
-				key={i}
+				key={`badgerow-${i}`}
 				main={main}
 				trees={trees}
 				index={i} />

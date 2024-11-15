@@ -10,12 +10,14 @@ const BadgeRow = ({ main, trees, index }) => {
 	const { playerMasters } = useContext(LanguageContext)
 	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 
-	if (index === 0) {
-		return (
-			<div className='title-row'>
-				{trees.map(t => <h6 className="skill-title" key={t.name}>{t.name}</h6>)}
-			</div>
-		)
+	const checkPossibleSkill = (skills) => {
+		if (skills.some((e) => e.attackType === playerInfo.attackType)) {
+			const filteredSkill = skills.find((e) => e.attackType === playerInfo.attackType)
+			return filteredSkill
+		} else {
+			return skills
+		}
+
 	}
 
 	const handleClick = (event) => {
@@ -67,68 +69,87 @@ const BadgeRow = ({ main, trees, index }) => {
 		}
 
 	}
+	// if first row of table (index 0 of array), write title
+	if (index === 0) {
+		console.log(index);
 
-
-
-
-
-
-	return (
-		<div className="skill-row">
-			<h4 className="index">{index}</h4>
-			<div className='tree-row'>
-				{trees.map((t, x) => {
-
-					const skill = t.content[index - 1]
-					if (skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
-						return (
-							<li
-								key={`skill-${skill.title}`}
-								className="skill"
-							>
-								<BadgeProxy
-									id={`tooltip-${skill.title}`}
-									action={'x'}
-								/>
-							</li>
-						)
-					} else {
-
-						return (
-							<li
-								className="skill"
-
-								key={`key-${skill.title}`}
-								value={x + 1}
-								onClick={handleClick}
-								data-theme={main}
-								data-title={skill.title}
-								data-type={skill.type}
-								data-color={skill.color}
-								data-rank={skill.rank}
-								data-action={skill.action}
-								data-tooltip={skill.tooltip}
-							>
-								<Badge
-									id={`badge-${skill.title}`}
-									className="skill"
-									title={skill.title}
-									icon={skill.icon}
-									rank={skill.rank}
-									tooltip={skill.tooltip}
-									color={skill.color}
-									type={skill.type}
-									action={skill.action}
-									isActive={
-										activeIndex === x + 1 || (playerInfo.feats.some((e) => e.title === skill.title) && activeIndex !== x + 1)}
-								/>
-							</li>
-						)
-					}
-				})}
+		return (
+			<div className='title-row'>
+				{trees.map(t => <h6 className="skill-title" key={t.name}>{t.name}</h6>)}
 			</div>
-		</div >
-	);
+		)
+	} else {
+
+		return (
+			<div className="skill-row">
+				<h4 className="index">{index}</h4>
+				<div className='tree-row'>
+					{trees.map((t, x) => {
+
+
+						let skill = {}
+						// if there is a skill with an attackType, make sure there is only the one we need
+						if (t.content.some(e => e.attackType)) {
+							console.log('attackTypes exists');
+							const filteredContent = t.content.filter(e => !e.attackType || e.attackType === playerInfo.attackType)
+							console.log('filtered content', filteredContent);
+							skill = filteredContent[index - 1]
+						} else { // else don't bother
+							skill = t.content[index - 1]
+						}
+
+						// if does not have enough skills in this mastering, return blocked badge
+						if (skill.rank > playerMasters[skill.type] || skill.rank > playerMasters[main]) {
+							return (
+								<li
+									key={`skill-${skill.title}`}
+									className="skill"
+								>
+									<BadgeProxy
+										id={`tooltip-${skill.title}`}
+										action={'x'}
+									/>
+								</li>
+							)
+						} else {
+							return (
+								<li
+									className="skill"
+
+									key={`key-${skill.title}-${index}`}
+									value={x + 1}
+									onClick={handleClick}
+									data-theme={main}
+									data-title={skill.title}
+									data-type={skill.type}
+									data-color={skill.color}
+									data-rank={skill.rank}
+									data-action={skill.action}
+									data-tooltip={skill.tooltip}
+								>
+									<Badge
+										id={`badge-${skill.title}`}
+										className="skill"
+										title={skill.title}
+										icon={skill.icon}
+										rank={skill.rank}
+										tooltip={skill.tooltip}
+										color={skill.color}
+										type={skill.type}
+										action={skill.action}
+										isActive={
+											activeIndex === x + 1 || (playerInfo.feats.some((e) => e.title === skill.title) && activeIndex !== x + 1)}
+									/>
+								</li>
+							)
+						}
+					}
+					)}
+				</div>
+			</div >
+		);
+	}
+
 };
 
 export default BadgeRow;
