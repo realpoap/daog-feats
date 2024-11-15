@@ -234,7 +234,7 @@ li.skill{
 }
 
 .blue-dark {
-	background: linear-gradient(to bottom right, #4152d1 0%, #1d2779 100%);
+	background: linear-gradient(to bottom right, #6a5acd 0%, #6f00ff 100%);
     color: #4879e0;
 }
 
@@ -268,8 +268,8 @@ li.skill{
     color: #ffffff;
 }
 .brown {
-	background: linear-gradient(to bottom right, #f4f4f4 0%, #b7b7b7 100%);
-    color: #ffffff;
+	background: linear-gradient(to bottom right, #954535 0%, #7c0a02 100%);
+    color: #701c1c ;
 }
 
 footer {
