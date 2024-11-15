@@ -1583,7 +1583,7 @@ const featsFR = {
           "title": "Sincérité",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez reconnaitre si l'on vous cache quelque chose et si votre interlocuteur se joue de vous. Faites un jet d'INS avec avantage pour savoir si ce que l'on vient de vous dire est un mensonge ou une omission déguisée. Vous avez avantage sur vos jets de persuasion tant que vous dites la vérité."
         },
         {
@@ -1593,7 +1593,7 @@ const featsFR = {
           "title": "Marchandage",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez comment obtenir le meilleur prix de vos biens et gagnez une somme supplémentaire sur votre vente totale. Lancez un d10 MA par bonus de SOC."
         },
         {
@@ -1603,7 +1603,7 @@ const featsFR = {
           "title": "Rumeurs",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Le flot de commérage et rumeurs locales constitue une treille lisible pour vous. Vous avez avantage à vos jets de SOC et ERU pour chaque journée passée dans une communauté. Cet avantage est remis à 0 en cas de départ, emprisonnement ou tout autre évènement mettant fin à votre implication dans le bouche-à-oreille."
         },
         {
@@ -1613,7 +1613,7 @@ const featsFR = {
           "title": "Négociation",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Votre art diplomatique vous permet d'accéder aux sphères d'autorité et de proposer des requêtes et d'éviter les écueils classiques des négociations. Vous pouvez relancer une fois vos jets de SOC manqués."
         },
         {
@@ -1623,7 +1623,7 @@ const featsFR = {
           "title": "Rebondissement",
           "action": "principale",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Votre esprit d'organisation et votre génie vous permette de concevoir des plans tordueux pour arriver à vos fins. Vous pouvez réaliser cette action une fois par jour et par repos pour gagner un avantage sur un jet d'ERU+logique unique à réaliser au moment de votre choix dans le futur contre la difficulté de l'aventure. En cas de succès, vous obtenez la résolution de votre plan ou d'une énigme, à déterminer avec le narrateur."
         },
       ],
@@ -1638,7 +1638,7 @@ const featsFR = {
           "title": "Faux-fuyant",
           "action": "principale",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez vous sortir de situations compromettantes ou des noeuds de discussion, engendrés par vous ou vos camarades. Vous pouvez lancer un jet de SOC+négoce avec avantage en utilisant la SOC la plus basse de votre groupe."
         },
         {
@@ -1648,7 +1648,7 @@ const featsFR = {
           "title": "Comédie",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "En honnête bonimenteur, vous savez vous mettre en scène pour vendre vos biens mais aussi pour vous attirer des faveurs. Vos jets de mensonge et persuasion sont fait avec un bonus égal à votre score de performance lorsque vous vous donnez en spectacle devant une foule ou une assemblée."
         },
         {
@@ -1658,7 +1658,7 @@ const featsFR = {
           "title": "Intrigue",
           "action": "principale",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez obtenir les informations plus ou moins secrètes d'un marchand, d'un groupe ou d'un courtisan. Moyennant 1MO vous pouvez lancer un jet de SOC pour obtenir une information pertinente au sujet d'un lieu, d'une situation ou d'un évènement qui vous échappe."
         },
         {
@@ -1668,7 +1668,7 @@ const featsFR = {
           "title": "prestance",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez vous présenter sous votre meilleur jour. Tant que vous étes propre et habillé convenablement, vos jets de SOC et CHA sont fait avec avantage."
         },
         {
@@ -1693,7 +1693,7 @@ const featsFR = {
           "title": "Mensonge",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous êtes doué pour masquer votre vraie pensée, et vous avez avantage sur vos jets de CHA et SOC tant que vous mentez."
         },
         {
@@ -1703,7 +1703,7 @@ const featsFR = {
           "title": "Charme",
           "action": "limitée",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez charmer vos interlouteurs d'un sourire ou d'un regard. Lanez un jet de CHA + persuasion à la place d'un jet de SOC ou ERU lors d'une discussion ou d'une rencontre pour charmer votre interlocuteur et obtenir des informations ou son aide. Lors d'un combat vous pouvez utiliser cette action limitée pour tenter de charmer un ennemi, avec désavantage, et lui retirer une action principale."
         },
         {
@@ -1713,7 +1713,7 @@ const featsFR = {
           "title": "Corruption",
           "action": "principale",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Vous savez comment graisser la pate des commerçants, gardes et personnes d'influence pour obtenir vos faveurs. Vous pouvez glisser de l'argent à chaque interlocuteur pour réduire un jet de CHA ou SOC de 1 par 10 MA déboursés. En combat vous pouvez offrir votre bourse à concurrence de 1d10MO par adversaire pour stopper le combat, après avoir réussi un jet de SOC."
         },
         {
@@ -1723,7 +1723,7 @@ const featsFR = {
           "title": "Déguisement",
           "action": "gratuite",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "En usant d'habits ou d'accessoires vous pouvez modifier votre apparence ce qui, associé à vos dons naturels, vous permet de vous rendre méconnaissable. Vous déguiser est une action que vous pouvez réaliser en repos et qui vous permet de lancer tous vos jets de CHA et SOC en utilisant votre performance."
         },
         {
@@ -1733,7 +1733,7 @@ const featsFR = {
           "title": "Tromperie",
           "action": "principale",
           "icon": highpunch,
-          "color": "silver",
+          "color": "gold",
           "tooltip": "Après avoir étudier votre cible, vous étes capable de l'incarner jusqu'à berner ses proches. Durant un repos vous pouvez préparer votre tromperie, et les bonus de Déguisement peuvent s'appliquer le cas échéant. Vous avez un avantage sur vos jets de persuasion égal au nombre de jours passés à étudier la personne que vous incarnez."
         },
       ],
