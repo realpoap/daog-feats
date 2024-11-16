@@ -126,7 +126,7 @@ li.skill{
 		top: 20%;
 		fill: currentColor;
 		fill-opacity: 1;
-		filter: drop-shadow(0.5px 1px 0.5px rgb(0 0 0 / 0.5));
+		filter: drop-shadow(inset -2px -2px 1px rgb(0 0 0 / 0.5));
 	}
 	.circle {
 		width: 4em;

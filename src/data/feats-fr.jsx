@@ -1,3 +1,4 @@
+//ranged
 import bowman from '../assets/svg/bowman.svg'
 import bowstring from '../assets/svg/bow-string.svg'
 import target from '../assets/svg/bullseye.svg'
@@ -14,6 +15,7 @@ import giantkiller from '../assets/svg/charged-arrow.svg'
 import friendly from '../assets/svg/branch-arrow.svg'
 import bleed from '../assets/svg/drop.svg'
 
+//brawl
 import wind from '../assets/svg/backup.svg'
 import balance from '../assets/svg/boot-stomp.svg'
 import neck from '../assets/svg/distraction.svg'
@@ -27,10 +29,44 @@ import boxing from '../assets/svg/boxing-glove.svg'
 import dump from '../assets/svg/acrobatic.svg'
 import downpour from '../assets/svg/icicles-aura.svg'
 import bootkick from '../assets/svg/boot-kick.svg'
-import backpain from '../assets/svg/back-pain.svg'
+import skelet from '../assets/svg/skeleton-inside.svg'
 import highpunch from '../assets/svg/high-punch.svg'
 
+//fight
+import power from '../assets/svg/mighty-force.svg'
+import hammering from '../assets/svg/hammer-drop.svg'
+import vortex from '../assets/svg/spinning-sword.svg'
+import suckerblow from '../assets/svg/rogue.svg'
+import barfight from '../assets/svg/broken-bottle.svg'
+import allforone from '../assets/svg/all-for-one.svg'
+import charging from '../assets/svg/charging-bull.svg'
+import thunderblade from '../assets/svg/thunder-blade.svg'
+import backpain from '../assets/svg/back-pain.svg'
+import backstab from '../assets/svg/backstab.svg'
+import conqueror from '../assets/svg/conqueror.svg'
+import split from '../assets/svg/split-body.svg'
 
+
+
+//crafting
+import anvil from '../assets/svg/anvil-impact.svg'
+
+//magic
+import candle from '../assets/svg/candle-flame.svg'
+import zaap from '../assets/svg/bolt-spell-cast.svg'
+import aura from '../assets/svg/aura.svg'
+import ghost from '../assets/svg/ghost-ally.svg'
+import glowing from '../assets/svg/glowing-hands.svg'
+import magicshield from '../assets/svg/magic-shield.svg'
+import book from '../assets/svg/spell-book.svg'
+import scroll from '../assets/svg/scroll-unfurled.svg'
+import telepathy from '../assets/svg/telepathy.svg'
+import infusion from '../assets/svg/sparkling-sabre.svg'
+import wisdom from '../assets/svg/wisdom.svg'
+import pentagram from '../assets/svg/pentagram-rose.svg'
+import magicpalm from '../assets/svg/magic-palm.svg'
+import windhole from '../assets/svg/wind-hole.svg'
+import monkey from '../assets/svg/monkey.svg'
 
 const featsFR = {
   "tir": [
@@ -250,7 +286,7 @@ const featsFR = {
           "rank": 5,
           "title": "Souplesse",
           "action": "principale",
-          "icon": backpain,
+          "icon": skelet,
           "color": "orange",
           "tooltip": "You get behind your opponent or grab him from the ground to lift him up and turn him behind you. Roll a STR check with disadvantage against your target’s defense. As his body crashes to the ground, he takes 3d4 damage + his armor + your STR bonus. The opponent is stunned at the start of his next turn and must succeed at an END check to regain his senses the following turn. You have no disadvantage on the STR check if you immobilize the target."
         },
@@ -417,7 +453,7 @@ const featsFR = {
           "rank": 5,
           "title": "Coup bas",
           "action": "principale",
-          "icon": highpunch,
+          "icon": suckerblow,
           "color": "red",
           "attackType": "AGI",
           "tooltip": "Lorsque vous réussissez un attaque, vous pouvez réaliser une seconde attaque d'AGI avec avantage avec votre arme secondaire ou votre poing contre un adversaire au corps a corps. Cette attaque compte comme une réaction qui peut etre réalisée plusieurs fois par tour. Vous devez avoir une arme dans votre main secondaire ou un bouclier de poing pour appliquer ces dégats (sinon 1-2 dmg bagarre)."
@@ -428,7 +464,7 @@ const featsFR = {
           "rank": 5,
           "title": "Tourbillon",
           "action": "principale",
-          "icon": highpunch,
+          "icon": vortex,
           "color": "red",
           "attackType": "FOR",
           "tooltip": "Vous observez les ennemis autour de vous et décidez de prolonger votre attaque pour toucher le plus de cibles. Choisissez le nombre de cibles que vous souhaitez frapper: lancez votre première attaque de façon normale, puis lancez un désavantage par ennemi prévu, cumulatifs. Chacune des attaques se base sur le premier score d’attaque + les d4 de désavantage associés à chaque ennemi. Vous ne pouvez faire cette action que durant votre tour."
@@ -444,17 +480,17 @@ const featsFR = {
           "rank": 1,
           "title": "Charge",
           "action": "principale",
-          "icon": highpunch,
+          "icon": charging,
           "color": "red",
-          "tooltip": "Vous avancez jusqu’à votre distance de course et frappez votre cible brutalement. Lancez une attaque en FOR avec désavantage pour battre le score de défense de votre cible, infligeant le double des degats de Force en plus de votre arme. Si vous échouez, vous subissez un désavantage sur votre défense jusqu'au début de votre prochain tour. Si vous réussissez, votre adversaire subit également un désavantage en combat jusqu'à la fin de son prochain tour."
+          "tooltip": "Vous avancez jusqu’à votre distance de course et frappez votre cible brutalement. Lancez une attaque en FOR avec avantage. Si vous échouez à votre attaque, vous subissez un désavantage sur votre défense jusqu'au début de votre prochain tour."
         },
         {
-          "id": "appuis",
+          "id": "reflexe",
           "type": "combat",
           "rank": 2,
-          "title": "Appuis",
+          "title": "Réflexes",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": thunderblade,
           "color": "red",
           "tooltip": "Vous restez leste sur vos appuis, prêt à assener un coup à vos ennemis. Vous vous tenez aux aguets pour frapper quiconque passerait proche de vous. Vous avez une attaque d'opportunité en AGI avec désavantage contre les ennemis au contact qui fuient ou qui se déplaceraient en passant à moins de 3 m de votre position, et ce même s'ils réussissent leur jet de dérobade. "
         },
@@ -475,7 +511,7 @@ const featsFR = {
           "rank": 3,
           "title": "Frappe lourde",
           "action": "principale",
-          "icon": highpunch,
+          "icon": hammering,
           "color": "red",
           "attackType": "FOR",
           "tooltip": "Vous réalisez une attaque à deux mains avec désavantage pour doubler les bonus de FOR."
@@ -496,7 +532,7 @@ const featsFR = {
           "rank": 5,
           "title": "Tactiques",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": conqueror,
           "color": "red",
           "tooltip": "Vous pouver identifier à l'oeil la créature la plus faible visible dans un combat et la créature la plus forte. Une fois par combat, avant votre première action, vous pouvez utiliser cette action en limitée pour identifier la créature la plus dangereuse : lancez un jet d'ERU contre son niveau pour identifier un desavantage ou une caractéristique clef. De plus, vous savez identifier l'état de santé de votre adversaire direct."
         },
@@ -511,7 +547,7 @@ const featsFR = {
           "rank": 1,
           "title": "Cohue",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": barfight,
           "color": "red",
           "tooltip": "Vous avez appris à vous battre dans des ruelles étroites et des tavernes encombrées et savez réagir face à plusieurs adversaires. Les ennemis à votre contact obtiennent un avantage de moins pour la supériorité numérique. Vous pouvez également utiliser cette technique en réaction une fois par combat pour vous retourner vers un adversaire qui vous attaque."
         },
@@ -521,7 +557,7 @@ const featsFR = {
           "rank": 2,
           "title": "Renfort",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": allforone,
           "color": "red",
           "tooltip": "Vous vous placez proche d’un allié et vous essayez d’attirer les coups ennemis vers vous. Vous subissez les prochaines attaques ennemies en réussissant un jet de défense et protégez ainsi votre allié. Vous et votre allié gagnez un avantage sur votre prochain jet de combat."
         },
@@ -531,7 +567,7 @@ const featsFR = {
           "rank": 3,
           "title": "Punition",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": split,
           "color": "red",
           "tooltip": "Vous pouvez réaliser une attaque gratuite avec avantage contre un ennemi qui a manqué son attaque en réaction. Vous infligez vos dégats normalement"
         },
@@ -541,7 +577,7 @@ const featsFR = {
           "rank": 4,
           "title": "Assassinat",
           "action": "principale",
-          "icon": highpunch,
+          "icon": backstab,
           "color": "red",
           "attackType": "AGI",
           "tooltip": "Vous pouvez realiser une attaque en furtivité avec avantage + 1 avantage si votre adversaire est deja en combat avec un allié ou si vous l'attaquez de dos. La cible doit echouer un jet de perception contre votre discrétion pour que l'attaque soit considérée discrete. Si vous réussissez l'attaque vous infligez vos dégats comme si vous aviez fait un critique."
@@ -552,7 +588,7 @@ const featsFR = {
           "rank": 4,
           "title": "Martelement",
           "action": "principale",
-          "icon": highpunch,
+          "icon": backpain,
           "color": "red",
           "attackType": "FOR",
           "tooltip": "Vous pouvez realiser une attaque en furtivité avec avantage + 1 avantage si votre adversaire est deja en combat avec un allié ou si vous l'attaquez de dos. La cible doit echouer un jet de perception contre votre discrétion pour que l'attaque soit considérée discrete. Si vous réussissez l'attaque vous infligez vos dégats comme si vous aviez fait un critique."
@@ -563,7 +599,7 @@ const featsFR = {
           "rank": 5,
           "title": "Puissance",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": power,
           "color": "red",
           "tooltip": "Vous pouvez relancer un jet de dégat en cas de résultat de 1. Vous pouvez utiliser cette action pour donner un bonus de 1d4 a une de vos attaques ce tour."
         },
@@ -580,7 +616,7 @@ const featsFR = {
           "rank": 1,
           "title": "Lueur",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": candle,
           "color": "purple",
           "tooltip": "Vous envoyez une légère brise d'énergie magique autour de votre corps pour générer une lumière douce, que  vous pouvez concentrer sur votre catalyseur pour l'illuminer comme s'il s'agissait d'une petite torche. Cet effect perdure jusqu'à l'utilisation d'une autre technique ou votre déconcentration, volontaire ou non. En combat vous pouvez utiliser cette action pour créeer un flash brillant sur le bout de votre catalyseur pour donner un désavantage à un ennemi vous attaquant."
         },
@@ -590,7 +626,7 @@ const featsFR = {
           "rank": 2,
           "title": "Message",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": telepathy,
           "color": "purple",
           "tooltip": "Vous concentrez les flux magiques pour transmettre un message court à un allié visible. Le message peut comporter un maximum de #magie mots. Accessoirement, vous pouvez lancez un jet de magie pour transmettre ce message à un individu connu éloigné, avec une difficulté relative au nombre de jours de marche vous séparant (1 jour = 20, 2 jours = 25, etc,)."
         },
@@ -600,9 +636,9 @@ const featsFR = {
           "rank": 3,
           "title": "Voile",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": ghost,
           "color": "purple",
-          "tooltip": "Vous former une couche de magie autour de vous pour brouiller votre image. Vos adversaires ont un désavantage pour vous toucher et vous percevoir."
+          "tooltip": "Vous formez une couche de magie autour de vous pour brouiller votre image. Vos adversaires ont un désavantage pour vous toucher et vous percevoir."
         },
         {
           "id": "télékinésie",
@@ -610,7 +646,7 @@ const featsFR = {
           "rank": 4,
           "title": "Télékinésie",
           "action": "principale",
-          "icon": highpunch,
+          "icon": glowing,
           "color": "purple",
           "tooltip": "Vous ciblez un objet proche à moins de 10 m pour le faire se déplacer à votre volonté. Le poids de l'objet de peut être supérieur à votre bonus de SEN"
         },
@@ -620,7 +656,7 @@ const featsFR = {
           "rank": 5,
           "title": "Lévitation",
           "action": "principale",
-          "icon": highpunch,
+          "icon": aura,
           "color": "purple",
           "tooltip": "Vous placez une force magique sous vos pieds pour léviter à quelques cm du sol. Vous pouvez vous déplacer de cette façon de votre distance de course sur un sol ferme, ou de votre bonus de SEN dans le vide. Cet effet dure jusqu'au début de votre prochain tour mais vous pouvez le prolonger en dépensant cette action à nouveau."
         },
@@ -635,7 +671,7 @@ const featsFR = {
           "rank": 1,
           "title": "Zaaap",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": zaap,
           "color": "purple",
           "tooltip": "Vous projetez une pointe magique concentréee pour piquer un ennemi ou allumer un feu de brindilles. Lancez un jet de tir+magie et infligez 1d3 dmg magiques."
         },
@@ -645,7 +681,7 @@ const featsFR = {
           "rank": 2,
           "title": "Barrière",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": magicshield,
           "color": "purple",
           "tooltip": "Vous concentrez votre magie pour former une armure protectrice devant vous. Vous annulez #bonus de SEN dmg magiques jusqu'à votre prochain tour ou jusqu'à ce que la protection soit annulée. "
         },
@@ -655,7 +691,7 @@ const featsFR = {
           "rank": 3,
           "title": "Infusion",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": infusion,
           "color": "purple",
           "tooltip": "Vous envoyez un flux de magie dans un objet ou une arme que vous touchez pour lui conférer une force magique. L'objet est considéré magique et inflige un dé de dégat le plus proche de votre score de magie juqu'à votre prochain tour."
         },
@@ -665,7 +701,7 @@ const featsFR = {
           "rank": 4,
           "title": "Contresort",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": magicpalm,
           "color": "purple",
           "tooltip": "En réaction, vous pouvez envoyer votre magie pour contrer un sort adverse. Si votre score de #magie est supérieur à la difficulté de lancer du sort ennemi, il est contré instantanément. Sinon vous devez lancer un jet de lancer et battre le score de votre adversaire."
         },
@@ -675,7 +711,7 @@ const featsFR = {
           "rank": 5,
           "title": "Transmutation",
           "action": "principale",
-          "icon": highpunch,
+          "icon": monkey,
           "color": "purple",
           "tooltip": "Vous utilisez votre magie pour déformer un petit objet ou un membre pendant maximum bonus de SEN heures. Contre une créature, elle doit réussir un jet de SEN contre votre score de magie ou étre déformée. La cible garde sa nature intrasèque."
         },
@@ -690,7 +726,7 @@ const featsFR = {
           "rank": 1,
           "title": "Identification",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": book,
           "color": "purple",
           "tooltip": "Vous inspectez un objet magique ou un lieu pour déceler le type de magie employé pour l'enchanter, ainsi que la puissance du sort. Lancez un jet de perception magique sur la difficulté du sort. En cas de succès, et si vous connaissez le sort en place, vous pouvez également le nommer et expliquer ses effets. En combat vous pouvez utiliser cette action pour étudier un rituel en cours.."
         },
@@ -700,37 +736,37 @@ const featsFR = {
           "rank": 2,
           "title": "Dissipation",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": windhole,
           "color": "purple",
           "tooltip": "Face à un enchantement externe, vous projetez votre magie pour défaire les liens qui le maintiennent actif. Lancez un jet de magie avec avantage si vous avez identifié le sort et connaissez son type de magie. Si vous dépasser la difficulté de lancement du sort vous pouvez le briser et annuler ses effets. En combat vous pouvez utiliser cette action pour lever un charme ou un enchantement contre le score de votre adversaire."
         },
         {
-          "id": "backhand",
+          "id": "parchemin",
           "type": "savoir",
           "rank": 3,
           "title": "Parchemin",
           "action": "principale",
-          "icon": highpunch,
+          "icon": scroll,
           "color": "purple",
           "tooltip": "Vous prenez un moment pour rédiger un parchemin d'un sort que vous connaissez. Lancez un jet d'apprentissage contre la difficulté du sort avec avantage pour sceller le sort au papier. Le sort ne peut pas avoir un niveau supérieur à votre bonus de SEN."
         },
         {
-          "id": "backhand",
+          "id": "preparation",
           "type": "savoir",
           "rank": 4,
           "title": "Préparation",
           "action": "principale",
-          "icon": highpunch,
+          "icon": wisdom,
           "color": "purple",
           "tooltip": "Vous choisissez de placer votre attention lors d'un repos sur la préparation d'un sort dont le niveau doit êre inférieur à votre bonus de SEN. Lancez le jet de difficulté avec avantage. En cas de succès, vous pouvez lancer ce sort à votre tour pour une action principale sans lancer la difficulté. En combat, vous pouvez utiliser cette action pour donner avantage au lancer d'un de vos sorts ou de celui d'un allié en réaction."
         },
         {
-          "id": "backhand",
+          "id": "enchantement",
           "type": "savoir",
           "rank": 5,
           "title": "Enchantement",
           "action": "principale",
-          "icon": highpunch,
+          "icon": pentagram,
           "color": "purple",
           "tooltip": "Vous ciblez un objet pour lui attacher un sort connu de niveau maximum égal à votre bonus de SEN. L'objet conserve ces effets pendant 1 jour et ne peut avoir qu'un seul enchantement associé. Lancez un jet de lancer avec avantage pour réaliser l'action. Vous pouvez utiliser cette action en combat pour amplifier les effets d'un enchantement d'un objet que vous touchez d'1d4 ou 1 tour."
         },
@@ -1814,7 +1850,7 @@ const featsFR = {
           "rank": 2,
           "title": "Réparation",
           "action": "principale",
-          "icon": highpunch,
+          "icon": anvil,
           "color": "brown",
           "tooltip": "Vous utilisez vos outils pour réparer une pièce d'équipement ou un outil dans votre champ de compétence. En cas de réussite de jet d'artisanat, vous donnez +1 à la durabilité actuelle de l'objet jusqu'à concurrence de son maximum."
         },

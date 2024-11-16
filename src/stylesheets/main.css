@@ -21,7 +21,7 @@ body{
 }
 
 h1{
-	margin: 0;
+	margin: 0 0.5em;
 	font-size: 2em;
 	display: flex;
 	flex-direction: column;
@@ -107,7 +107,7 @@ h4{
 	width: 80%;
 	text-align: center;
 	font-style: italic;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 .attack-type>label{
 	margin-left: 0.5em;
@@ -217,7 +217,7 @@ span.action {
 	flex-direction: row;
 	align-self:center;
 	align-items: center;
-	width: 95vw;
+	width: 60vw;
 	/* border: 2px solid purple; */
 }
 
@@ -227,7 +227,7 @@ span.action {
   align-self: flex-end;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 95%;
 	height:fit-content
 	/* border: 2px solid greenyellow; */
 }
@@ -249,7 +249,6 @@ span.action {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 600px;
 	flex:1;
 }
 
@@ -319,7 +318,9 @@ button.action-btn{
 	.player-feats-block>div{
 		width: 100%;
 	}
-	
+	.skill-row{
+		width:100vw;
+	}
 	.tree-block{
 		width: 100%;
 	}
