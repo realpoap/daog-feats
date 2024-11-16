@@ -30,7 +30,7 @@ import dump from '../assets/svg/acrobatic.svg'
 import downpour from '../assets/svg/icicles-aura.svg'
 import bootkick from '../assets/svg/boot-kick.svg'
 import skelet from '../assets/svg/skeleton-inside.svg'
-import highpunch from '../assets/svg/high-punch.svg'
+import highpunch from '../assets/svg/slap.svg'
 
 //fight
 import power from '../assets/svg/mighty-force.svg'
@@ -45,11 +45,48 @@ import backpain from '../assets/svg/back-pain.svg'
 import backstab from '../assets/svg/backstab.svg'
 import conqueror from '../assets/svg/conqueror.svg'
 import split from '../assets/svg/split-body.svg'
+import riposte from '../assets/svg/riposte.svg'
+import muscleup from '../assets/svg/muscle-up.svg'
+import ricochet from '../assets/svg/ricochet.svg'
+import sprint from '../assets/svg/sprint.svg'
+import swordclash from '../assets/svg/sword-clash.svg'
+import desarm from '../assets/svg/drop-weapon.svg'
+
+// healing
+import collect from '../assets/svg/berries-bowl.svg'
+import coffee from '../assets/svg/coffee-mug.svg'
+import anatomy from '../assets/svg/anatomy.svg'
+import poison from '../assets/svg/poison-bottle.svg'
+import stimulant from '../assets/svg/miracle-medecine.svg'
+import transfuse from '../assets/svg/transfuse.svg'
+import firehand from '../assets/svg/fire-spell-cast.svg'
+import deadlystrike from '../assets/svg/deadly-strike.svg'
+import armbandage from '../assets/svg/arm-bandage.svg'
+import healingpotion from '../assets/svg/heart-bottle.svg'
+import vitalpoint from '../assets/svg/internal-injury.svg'
+import desinfect from '../assets/svg/healing.svg'
+import stabilize from '../assets/svg/bleeding-heart.svg'
+import plaster from '../assets/svg/sticking-plaster.svg'
+import coma from '../assets/svg/coma.svg'
 
 
 
 //crafting
 import anvil from '../assets/svg/anvil-impact.svg'
+import repair from '../assets/svg/auto-repair.svg'
+import swiss from '../assets/svg/swiss-army-knife.svg'
+import sabotage from '../assets/svg/broken-axe.svg'
+import metalarm from '../assets/svg/mechanical-arm.svg'
+import trap from '../assets/svg/wolf-trap.svg'
+import lovemachine from '../assets/svg/love-mystery.svg'
+import patron from '../assets/svg/inspiration.svg'
+import sketch from '../assets/svg/pencil-brush.svg'
+import desarmorce from '../assets/svg/hair-strands.svg'
+import decoration from '../assets/svg/bow-tie-ribbon.svg'
+import runesword from '../assets/svg/diamond-hilt.svg'
+import jewelbox from '../assets/svg/ring-box.svg'
+import efficiency from '../assets/svg/gear-hammer.svg'
+import analyse from '../assets/svg/fleur-de-lys.svg'
 
 //magic
 import candle from '../assets/svg/candle-flame.svg'
@@ -413,7 +450,7 @@ const featsFR = {
           "rank": 1,
           "title": "Feinte",
           "action": "principale",
-          "icon": highpunch,
+          "icon": ricochet,
           "color": "red",
           "tooltip": "Avant une attaque adversaire ou à la place de votre attaque, vous pouvez essayer de feinter. Ajoutez votre bonus de perception à votre score d’attaque ou de défense. Si vous échouez en défense, votre adversaire double ses dégats. Si vous jouez cette technique en réaction considérée la comme une action gratuite,"
         },
@@ -423,19 +460,19 @@ const featsFR = {
           "rank": 2,
           "title": "Évasion",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": sprint,
           "color": "red",
           "tooltip": "Vous frappez vivement puis vous glissez sous votre adversaire et utilisez votre vitesse pour sortir du combat sans heurt. Faites votre attaque puis lancez un jet d’AGI + défense avec désavantage pour chaque ennemi au contact. Si vous réussissez vous pouvez sortir de la mêlée sans subir d’attaque de vos adversaires (1m). Vous pouvez utiliser cette action en réaction lors d'une attaque manquée contre vous."
         },
         {
-          "id": "équilibre",
+          "id": "tension",
           "type": "mouvement",
           "rank": 3,
-          "title": "Équilibre",
+          "title": "Tension",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": muscleup,
           "color": "red",
-          "tooltip": "Vous infligez vos bonus de FOR même si vous attaquez en AGI. Vous pouvez utiliser cette action pour gagner un avantage sur la prochaine attaque ou technique."
+          "tooltip": "Vos bonus de FOR sont appliqués à votre attaque d'AGI, mais vous n'effectuez qu'un seul coup. Vous pouvez utiliser cette action pour relancer un jet de renversement ou de chute."
         },
         {
           "id": "interception",
@@ -443,7 +480,7 @@ const featsFR = {
           "rank": 4,
           "title": "Interception",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": swordclash,
           "color": "red",
           "tooltip": "Vous concentrez votre attention sur un nouvel assaillant et déviez le coup d’un ennemi au contact vers cette nouvelle cible, ou bloquez la charge vous-même. Lancez un jet d’AGI avec désavantage contre l’attaque de la cible. En cas de réussite vous infligez vos dégâts + 1d4 et la cible est arrêtée dans son attaque."
         },
@@ -500,7 +537,7 @@ const featsFR = {
           "rank": 3,
           "title": "Désarmement",
           "action": "principale",
-          "icon": highpunch,
+          "icon": desarm,
           "color": "red",
           "attackType": "AGI",
           "tooltip": "À la place de votre attaque, vous pouvez essayer de désarmer l’adversaire. Lancez un jet d12 + AGI + défense avec désavantage ; en cas d’échec l’adversaire peut tenter une attaque contre vous. Vous n’infligez pas de dégâts en cas de réussite mais votre adversaire est désarmé."
@@ -522,7 +559,7 @@ const featsFR = {
           "rank": 4,
           "title": "Riposte",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": riposte,
           "color": "red",
           "tooltip": "Après avoir subi une attaque qui n’est pas un coup critique, vous pouvez tenter une riposte et battre le score de défense de votre adversaire en additionnant d12 + arme + attaque. Considérez ce jet comme une attaque normale supplémentaire qui inflige ses dégâts normalement."
         },
@@ -1451,7 +1488,7 @@ const featsFR = {
           "rank": 1,
           "title": "Cueilleur",
           "action": "principale",
-          "icon": highpunch,
+          "icon": collect,
           "color": "pink",
           "tooltip": "Vous êtes capable d'identifier les plantes et champignons avec précisions : lancez un jet d'ERU + survie pour trouver de nouvelles ressources (bonus d'ERU). De plus vos récoltes sont augmentées de 1."
         },
@@ -1461,7 +1498,7 @@ const featsFR = {
           "rank": 2,
           "title": "Tisane",
           "action": "principale",
-          "icon": highpunch,
+          "icon": coffee,
           "color": "pink",
           "tooltip": "Vous préparez des infusions en usant de vos ingrédients récoltés pour apaiser vos compagnons. Vous et vos alliés gagnez un avantage en rémission ou en veille durant le repos en cours. Vous pouvez également utiliser cette action pour donner avantage à un jet de mort ou un jet de sobriété d'un allié."
         },
@@ -1471,7 +1508,7 @@ const featsFR = {
           "rank": 3,
           "title": "Stimulant",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": stimulant,
           "color": "pink",
           "tooltip": "Vous concoctez de puissants stimulants et remèdes à partir des ingrédients en votre possession lors d'un repos. Vos compagnons ont un avantage aux jets d'END et FOR durant les prochaines 4h. Vous pouvez utiliser cette action pour gagner +survie en MOU, AGI ou FOR jusqu'à votre prochain tour."
         },
@@ -1481,7 +1518,7 @@ const featsFR = {
           "rank": 4,
           "title": "Poison",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": poison,
           "color": "pink",
           "tooltip": "Vous préparez de terribles poisons pour enduire vos armes ou empoisonner des mets. Vous pouvez imbiber du poison sur une de vos armes qui infligera 1d4 dmg supplémentaire pour votre bonus d'ERU en cas d'èchec de jet d'END. De plus vous avantage à vos jets de résistance au poison."
         },
@@ -1491,7 +1528,7 @@ const featsFR = {
           "rank": 5,
           "title": "Régénération",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": transfuse,
           "color": "pink",
           "tooltip": "Vous préparez un elixir de soin fulgurant en consommant vos ressources. Une potion de votre concoction ou une potion de soin confère de la VIE temporaire et 1d4 de régénération pour 4h."
         },
@@ -1506,7 +1543,7 @@ const featsFR = {
           "rank": 1,
           "title": "Désinfection",
           "action": "principale",
-          "icon": highpunch,
+          "icon": desinfect,
           "color": "pink",
           "tooltip": "Vous pouvez retirer les conditions d'infection et de plaie purulente lors de vos soins. En combat, vous pouvez aussi utiliser cette action pour retirer 1 point nécrotique s'il a été obtenu ce combat."
         },
@@ -1516,7 +1553,7 @@ const featsFR = {
           "rank": 2,
           "title": "Affliction",
           "action": "principale",
-          "icon": highpunch,
+          "icon": armbandage,
           "color": "pink",
           "tooltip": "Vous utilisez vos connaissances pour analyser et soigner les maux qui affectent vos alliés. Lancez un jet d'ERU + soin pour retirer une affliction suivante après un repos court : paralysie, poison, brûlure, saignement"
         },
@@ -1526,7 +1563,7 @@ const featsFR = {
           "rank": 3,
           "title": "Coupe-feu",
           "action": "principale",
-          "icon": highpunch,
+          "icon": firehand,
           "color": "pink",
           "tooltip": "Vous soignez vos alliés ou vous même en leur conférant 1d3 VIE temporaire et une résistance au feu pendant #soin tours ou jusqu'à recevoir leurs premiers dégats de feu."
         },
@@ -1536,7 +1573,7 @@ const featsFR = {
           "rank": 4,
           "title": "Renouveau",
           "action": "principale",
-          "icon": highpunch,
+          "icon": healingpotion,
           "color": "pink",
           "tooltip": "Vos soins confèrent de la VIE temporaire non-récupérable. En combat vous pouvez utilisez cette action pour vous donner un bonus de 1d3VIE et retirer une condition physique qui vous affecte."
         },
@@ -1546,7 +1583,7 @@ const featsFR = {
           "rank": 5,
           "title": "Vitalité",
           "action": "principale",
-          "icon": highpunch,
+          "icon": deadlystrike,
           "color": "pink",
           "tooltip": "Vous repoussez les limites de la vie en conférant à votre allié un second souffle alors qu'il était inconscient : le joueur doit toujours lancer un jet de mort croissant au début de son tour mais il peut agir après s'être relever. Les attaques qu'il subit sont réduites de 1d3 dégats pour son prochain tour."
         },
@@ -1561,7 +1598,7 @@ const featsFR = {
           "rank": 1,
           "title": "Assurance",
           "action": "principale",
-          "icon": highpunch,
+          "icon": plaster,
           "color": "pink",
           "tooltip": "Votre entraînement vous permet de soigner vos alliés efficacement. Vous pouvez relancer les jets de soin en cas de  1. En combat vous pouvez donner un bonus de +1d3 VIE à un allié inconscient, sans dépasser 0 VIE."
         },
@@ -1571,7 +1608,7 @@ const featsFR = {
           "rank": 2,
           "title": "Engourdissement",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": coma,
           "color": "pink",
           "tooltip": "Vous ciblez une créature adjacente ou vous-même : elle réduit les dégats subis de 1d3  et fait ses jets d'END avec avantage pendant #soin tours, mais réalise ses jets de morts et de combat avec désavantage. "
         },
@@ -1581,7 +1618,7 @@ const featsFR = {
           "rank": 3,
           "title": "Stabilisation",
           "action": "principale",
-          "icon": highpunch,
+          "icon": stabilize,
           "color": "pink",
           "tooltip": "Vos connaissances en médecine vous permettent de secourir vos alliés tombés au combat. Lancez un jet de DEX + soin pour ramener une créature inconsciente à 1 VIE."
         },
@@ -1591,7 +1628,7 @@ const featsFR = {
           "rank": 4,
           "title": "Chirurgie",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": anatomy,
           "color": "pink",
           "tooltip": "Vos compétences de médecine et vos connaissances en anatomie vous permettent de réparer les corps. Lancez un jet de DEX+soin pour guérir une affliction suivante chez une créature : nécrose, amputation, fracture. Vos dégats de saignements sont augmentés de 1 et leur difficulté est augmentée."
         },
@@ -1601,7 +1638,7 @@ const featsFR = {
           "rank": 5,
           "title": "Point vital",
           "action": "principale",
-          "icon": highpunch,
+          "icon": vitalpoint,
           "color": "pink",
           "tooltip": "Votre connaissance des organes vitaux vous permet d'effectuer une action précise et fatale. Vous pouvez utiliser cette action pour effectuer une attaque qui provoque un jet de COU. En cas d'èchec de votre adversaire il subit #soin dmg supplémentaires. En cas de touche critique la créature tombe également inconsciente."
         },
@@ -1785,7 +1822,7 @@ const featsFR = {
           "rank": 1,
           "title": "Croquis",
           "action": "principale",
-          "icon": highpunch,
+          "icon": sketch,
           "color": "brown",
           "tooltip": "Capable de prendre notes des formes et proportions rapidement, vous optenez un avantage à vos jets de fabrication et réparation si vous possédez un croquis associé. Vous pouvez également croquer des portraits et scenes."
         },
@@ -1795,7 +1832,7 @@ const featsFR = {
           "rank": 2,
           "title": "Décoration",
           "action": "principale",
-          "icon": highpunch,
+          "icon": decoration,
           "color": "brown",
           "tooltip": "Vous apprétez une pièce ou un individu pour lui donner un peu plus de charme. Lancez un jet d'INS pour donner un avantage à une estimation ou un jet de CHA."
         },
@@ -1805,7 +1842,7 @@ const featsFR = {
           "rank": 3,
           "title": "Patron",
           "action": "principale",
-          "icon": highpunch,
+          "icon": patron,
           "color": "brown",
           "tooltip": "Vous êtes capable de réaliser des modèles extrêmement détaillés d'objets et d'idées. Vous pouvez faire un patron en action d'entrainement afin de le transmettre à un artisan ou de l'utiliser pour réaliser vous même un objet. Il ne s'agit que d'une question de temps et de ressource pour l'artisan, votre patron otant toute difficulté à la tache."
         },
@@ -1815,7 +1852,7 @@ const featsFR = {
           "rank": 4,
           "title": "Analyse",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": analyse,
           "color": "brown",
           "tooltip": "Vous avez une bonne compréhension des courants artistiques et de l'émergence des tendances. Vous avez un avantage à vos jets de négoce pour les objets dans vos champs d'expertises."
         },
@@ -1825,7 +1862,7 @@ const featsFR = {
           "rank": 5,
           "title": "Chef-d'oeuvre",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": jewelbox,
           "color": "brown",
           "tooltip": "Les objets que vous créez sont emplis d'un charme particulier et démontrent d'une technique à couper le souffle. Vos créations se vendent à +minutie MO que le prix courant."
         },
@@ -1840,7 +1877,7 @@ const featsFR = {
           "rank": 1,
           "title": "Rafistolage",
           "action": "principale",
-          "icon": highpunch,
+          "icon": swiss,
           "color": "brown",
           "tooltip": "Vous êtes capable de redonner une forme douteuse mais fonctionnelle à une pièce d'équipement détruite en réussissant un jet d'artisanat (DEX). La pièce d'équipement a 0 de durabilité peut maintenant être portée mais n'importe quel choc ou perte de durabilité la rendra impossible à rafistoler à l'avenir."
         },
@@ -1850,7 +1887,7 @@ const featsFR = {
           "rank": 2,
           "title": "Réparation",
           "action": "principale",
-          "icon": anvil,
+          "icon": repair,
           "color": "brown",
           "tooltip": "Vous utilisez vos outils pour réparer une pièce d'équipement ou un outil dans votre champ de compétence. En cas de réussite de jet d'artisanat, vous donnez +1 à la durabilité actuelle de l'objet jusqu'à concurrence de son maximum."
         },
@@ -1860,7 +1897,7 @@ const featsFR = {
           "rank": 3,
           "title": "Façonnage",
           "action": "principale",
-          "icon": highpunch,
+          "icon": anvil,
           "color": "brown",
           "tooltip": "Vous créez un objet de votre choix dont vous avez un croquis, dans votre champ d'expertise, et en usant des ressources nécessaires. Cette action peut être une action d'entrainement pour réaliser l'objet avec succès."
         },
@@ -1870,7 +1907,7 @@ const featsFR = {
           "rank": 4,
           "title": "Efficacité",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": efficiency,
           "color": "brown",
           "tooltip": "Les gestes de votre métier vous sont entrés dans la peau. Vous pouvez relancer un jet d'artisanat manqué, même en cas de 1."
         },
@@ -1880,7 +1917,7 @@ const featsFR = {
           "rank": 5,
           "title": "Pièce maîtresse",
           "action": "principale",
-          "icon": highpunch,
+          "icon": runesword,
           "color": "brown",
           "tooltip": "Vous reforgez ou améliorez un objet déjà existant pour lui conférer de nouvelles propriétés, alléger son poids ou améliorer sa durabilité. Lancez un jet d'artisanat avec les ressources nécessaires. En cas d'échec vous perdez les ressources."
         },
@@ -1895,7 +1932,7 @@ const featsFR = {
           "rank": 1,
           "title": "Sabotage",
           "action": "principale",
-          "icon": highpunch,
+          "icon": sabotage,
           "color": "brown",
           "tooltip": "Vous modifiez un objet mécanique ou assemblé pour le briser en cas d'utilisation ou pour lui retirer sa durabilité (bonus d'ERU). Lancez un jet de minutie afin de réaliser l'action avec succès. Le score devient la difficulté de perception du sabotage."
         },
@@ -1905,7 +1942,7 @@ const featsFR = {
           "rank": 2,
           "title": "Désamorçage",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": desarmorce,
           "color": "brown",
           "tooltip": "Vous avez connaissance des pièges mécaniques et pouvez les rendre inoffensifs. Vous avez avantage à vos jets de DEX pour désamorcer les pièges et mécanismes."
         },
@@ -1915,7 +1952,7 @@ const featsFR = {
           "rank": 3,
           "title": "conversion",
           "action": "principale",
-          "icon": highpunch,
+          "icon": metalarm,
           "color": "brown",
           "tooltip": "Vous modifiez un objet existant en lui apportant des spécificités mécaniques ou l'associant à une autre pièce. Réalisez un jet d'artisanat avec minutie. En cas d'échec, les objets utilisés perdent 1 durabilité."
         },
@@ -1925,7 +1962,7 @@ const featsFR = {
           "rank": 4,
           "title": "Piégeage",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": trap,
           "color": "brown",
           "tooltip": "Vous pouvez créer des pièges mécaniques ou traffiquer un mécanisme existant pour le piéger. Lors d'un repos vous pouvez créer un piége avec vos ressources en lançant un jet de minutie. En combat vous pouvez poser un piege avec une action limitée."
         },
@@ -1935,7 +1972,7 @@ const featsFR = {
           "rank": 5,
           "title": "Automate",
           "action": "principale",
-          "icon": highpunch,
+          "icon": lovemachine,
           "color": "brown",
           "tooltip": "Vous êtes capable de créer de nouveaux objets et inventer des mécanismes novateurs. En usant des ressources nécessaires, vous pouvez créer des automates et des équipements mobiles avec un jet d'artisanat. Vous pouvez utiliser les énergies disponibles pour animer vos automates en fonction de vos champs d'expertise (vapeur, poudre, magie, fluides)."
         },
