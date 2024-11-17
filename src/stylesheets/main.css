@@ -102,17 +102,6 @@ h4{
 }
 
 
-.attack-type {
-	margin-top:1em;
-	width: 80%;
-	text-align: center;
-	font-style: italic;
-	font-size: 0.7em;
-
-}
-.attack-type>label{
-	margin-left: 0.5em;
-}
 
 
 
@@ -192,8 +181,7 @@ span.action {
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     justify-content: space-around;
-    max-height: 90vh;
-    margin: 5% 0 5% 0;
+		margin-bottom: 1em;
 }
 
 .player-block label {
@@ -211,7 +199,7 @@ span.action {
 	display: flex;
 	width: 80%;
 	border-bottom: 0.5px solid #555;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 .player-block label input {
@@ -225,6 +213,24 @@ span.action {
 	color: white;
 	height: min-content;
 	font-size: 1em;
+}
+
+.attack-type {
+	font-style: italic;
+	font-size: 0.7em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: baseline;
+	width: 50vw;
+	margin: 1em 0;
+}
+
+#stat-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 
@@ -334,10 +340,8 @@ button.action-btn{
 } */
 
 #clear {
-	top: 1em;
-	margin: 0.5em;
-	position: relative;
-	display: flex;
+	display:block;
+	position: absolute;
 }
 
 .slick-arrow{

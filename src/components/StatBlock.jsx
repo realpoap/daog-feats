@@ -36,9 +36,9 @@ const StatBlock = ({ masters, setUserData }) => {
 	}
 
 	return (
-		<div className='player-block'>
+		<div id="stat-block">
 			<div className="attack-type">
-				Attaque avec
+				<p>Attaque avec</p>
 				<label>
 					AGI
 					<input
@@ -60,29 +60,31 @@ const StatBlock = ({ masters, setUserData }) => {
 					/>
 				</label>
 			</div>
-			{
-				propertiesEntries.map(p => {
-					return (
-						<label key={p[0]}>
-							<span>{p[0]}</span>
-							<input
-								inputMode='decimal'
-								type='number'
-								name={p[0]}
-								min={0}
-								max={5}
-								value={p[1]}
-								onChange={e => handleChange(e)}
-							/>
-						</label>
-					)
-				})
-			}
+			<div className='player-block'>
+				{
+					propertiesEntries.map(p => {
+						return (
+							<label key={p[0]}>
+								<span>{p[0]}</span>
+								<input
+									inputMode='decimal'
+									type='number'
+									name={p[0]}
+									min={0}
+									max={5}
+									value={p[1]}
+									onChange={e => handleChange(e)}
+								/>
+							</label>
+						)
+					})
+				}
+			</div >
 			<label>
 
 				<button id='clear' className='action-btn' onClick={handleClear} name='clear-btn'>Clear</button>
 			</label>
-		</div >
+		</div>
 	);
 };
 
