@@ -1,9 +1,25 @@
+import { useContext } from 'react';
 import Collapsible from 'react-collapsible';
+import { LanguageContext } from '../store/languageContext';
 
-function ActionsBlock({ type, list }) {
+function ActionsBlock({ type, list, action, number, useAction }) {
+	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 	return (
 		<div>
-			<h2>{type}s</h2>
+			<h2>{type}s <input
+				type='number'
+				inputMode="decimal"
+				min={0}
+				value={number}
+				onChange={(e) => setPlayerInfo({ ...playerInfo, [action]: e.target.value })}
+			/>
+				<button
+					id='use-main'
+					name={action}
+					className='action-btn'
+					onClick={useAction}>
+					Use 1
+				</button></h2>
 			{list
 				.filter(e => e.action === type)
 				.sort((a, b) => {

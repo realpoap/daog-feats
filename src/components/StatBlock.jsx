@@ -3,7 +3,7 @@ import { LanguageContext } from "../store/languageContext";
 
 const StatBlock = ({ masters, setUserData }) => {
 
-	const { playerInfo } = useContext(LanguageContext)
+	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 
 
 	const propertiesEntries = Object.entries(masters)
@@ -29,11 +29,37 @@ const StatBlock = ({ masters, setUserData }) => {
 		console.log('removing local storage data');
 
 		localStorage.removeItem('user_stats')
+		let user = JSON.parse(localStorage.getItem('user_info'))
+		user.attackType = ''
+		localStorage.setItem('user_info', JSON.stringify(user))
 		setUserData(null)
 	}
 
 	return (
 		<div className='player-block'>
+			<div className="attack-type">
+				Attaque avec
+				<label>
+					AGI
+					<input
+						type='radio'
+						name="attack"
+						value='AGI'
+						checked={playerInfo.attackType === 'AGI'}
+						onChange={(e) => setPlayerInfo({ ...playerInfo, attackType: e.target.value })}
+					/>
+				</label>
+				<label>
+					FOR
+					<input
+						type='radio'
+						name="attack"
+						value='FOR'
+						checked={playerInfo.attackType === 'FOR'}
+						onChange={(e) => setPlayerInfo({ ...playerInfo, attackType: e.target.value })}
+					/>
+				</label>
+			</div>
 			{
 				propertiesEntries.map(p => {
 					return (

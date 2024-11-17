@@ -90,6 +90,31 @@ h4{
 	flex-direction: column;
 	align-items: center;
 }
+.player-actions>p{
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: center;
+	padding: 0 1em;
+}
+
+#reset{
+	margin:1em;
+}
+
+
+.attack-type {
+	margin-top:1em;
+	width: 80%;
+	text-align: center;
+	font-style: italic;
+	font-size: 0.7em;
+
+}
+.attack-type>label{
+	margin-left: 0.5em;
+}
+
+
 
 .player-feats-block {
 	display: flex;
@@ -102,16 +127,6 @@ h4{
 .player-feats-block>div{
 	width: 30%;
 }
-.attack-type {
-	margin-top:1em;
-	width: 80%;
-	text-align: center;
-	font-style: italic;
-	font-size: 0.8em;
-}
-.attack-type>label{
-	margin-left: 0.5em;
-}
 
 .player-feats-block>div>h2{
 	text-transform: uppercase;
@@ -119,6 +134,23 @@ h4{
 	margin-bottom: 0.5em;
 	padding-bottom: 0.1em;
 	border-bottom: 1px solid white;
+	display: flex;
+	align-items: baseline;
+	width: 75vw;
+	
+}
+.player-feats-block input {
+	width: 3em;
+	background: none;
+	color: white;
+	margin-left: 1em;
+	text-align: left;
+	font-weight: 700;
+	border: none;
+}
+.player-feats-block button {
+	position:absolute;
+	right:1.5em;
 }
 .player-feats-block>div>li{
 	display: flex;
@@ -138,17 +170,20 @@ span.action {
 .Collapsible {
 	display: flex;
 	flex-direction: column;
-	padding-left: 0.5em;
+	padding: 0 1em 0 0.5em;
 	margin-top: 0.1em;
 }
 .Collapsible__trigger{
-	font-size: 1em;
+	font-size: 0.9em;
 	margin:0;
 	font-weight: 600;
 }
 .Collapsible__contentInner{
-	border-top: 1px solid white;
+	border-top: 0.5px dashed white;
+	border-bottom: 0.5px dashed white;
 	padding: 0.5em 0 0.5em 0;
+	font-size: 0.9em;
+	margin:0.5em 0 1em 0;
 }
 
 .player-block {

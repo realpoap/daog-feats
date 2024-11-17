@@ -2,10 +2,9 @@ import { useState } from "react";
 
 const PlayerStat = ({ stat }) => {
 	const [inputValue, setInputValue] = useState(0)
-	//setInputValue(stat.value)
 
 	return (
-		<>
+		<div>
 			{stat.skill}:
 			<input
 				type={"number"}
@@ -14,7 +13,7 @@ const PlayerStat = ({ stat }) => {
 				name={stat.skill}
 				value={inputValue}
 				onChange={e => setInputValue(e.target.value)} />
-		</>
+		</div>
 	);
 };
 

@@ -1,10 +1,14 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { LanguageContext } from "../store/languageContext"
 
 import ActionsBlock from "./ActionsBlock";
 
 function PlayerActions() {
-	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
+	const { playerInfo } = useContext(LanguageContext)
+	const [actionM, setActionM] = useState(0)
+	const [actionL, setActionL] = useState(0)
+	const [actionF, setActionF] = useState(0)
+
 	const basics = [
 		{
 			title: 'Attaque',
@@ -47,7 +51,7 @@ function PlayerActions() {
 			title: 'Aide',
 			action: 'limitée',
 			type: 'Base',
-			tooltip: "Vous assistez votre compagnon dans une situation difficile et lui octroyez un avantage pour l'action envisagée s'il l'entreprend."
+			tooltip: "Vous assistez votre compagnon dans une situation difficile et lui octroyez un avantage pour l'action envisagée, s'il l'entreprend."
 		},
 
 		{
@@ -70,40 +74,77 @@ function PlayerActions() {
 
 		},
 	]
-	let list = playerInfo.feats.concat(basics)
 
-	console.log('playerInfo attackType', playerInfo.attackType);
+	useEffect(() => {
+		setActionM(playerInfo.main)
+		setActionL(playerInfo.limited)
+		setActionF(playerInfo.free)
+	}, [playerInfo])
+
+	const resetActions = () => {
+		setActionM(playerInfo.main)
+		setActionL(playerInfo.limited)
+		setActionF(playerInfo.free)
+		console.log('actions resetted to player values');
+	}
+
+	const useAction = (e) => {
+		e.preventDefault()
+		if (e.target.name === 'main' && actionM > 0) {
+			console.log('main -1');
+			setActionM(actionM - 1)
+		}
+		else if (e.target.name === 'limited' && actionL > 0) {
+			console.log('limited -1');
+			setActionL(actionL - 1)
+		}
+		else if (e.target.name === 'free' && actionF > 0) {
+			console.log('free -1');
+			setActionF(actionF - 1)
+		} else {
+			console.log("can't do that");
+			window.alert("no more actions available")
+		}
+	}
+
+	let list = playerInfo.feats.concat(basics)
 
 	return (
 		<div className="player-actions">
-			<div className="attack-type">Attaque avec
-				<label>
-					AGI
-					<input
-						type='radio'
-						name="attack"
-						value='AGI'
-						checked={playerInfo.attackType === 'AGI'}
-						onChange={(e) => setPlayerInfo({ ...playerInfo, attackType: e.target.value })}
-					/>
-				</label>
-				<label>
-					FOR
-					<input
-						type='radio'
-						name="attack"
-						value='FOR'
-						checked={playerInfo.attackType === 'FOR'}
-						onChange={(e) => setPlayerInfo({ ...playerInfo, attackType: e.target.value })}
-					/>
-				</label>
-				<p>Préparez vos techniques à votre tour, même si elles sont gratuites.</p>
-			</div>
-			<div className="player-feats-block">
+			<p>Préparez vos <b>techniques</b> à votre tour, et ce même si elles sont gratuites. Au début de votre tour vous récupérez toutes vos actions.</p>
+			<button
+				id='reset'
+				className='action-btn'
+				onClick={resetActions}>
+				start your turn
+			</button>
 
-				<ActionsBlock type="principale" list={list} />
-				<ActionsBlock type="limitée" list={list} />
-				<ActionsBlock type="gratuite" list={list} />
+			<div className="player-feats-block">
+				{(actionM > 0) &&
+					<ActionsBlock
+						type="principale"
+						list={list}
+						action={'main'}
+						number={actionM}
+						useAction={useAction}
+					/>}
+				{(actionL > 0 || actionM > 0) && <>
+					<ActionsBlock
+						type="limitée"
+						list={list}
+						action={'limited'}
+						number={actionL}
+						useAction={useAction}
+					/>
+				</>}
+				{(actionF > 0 || actionL > 0 || actionM > 0) && <ActionsBlock
+					type="gratuite"
+					list={list}
+					action={'free'}
+					number={actionF}
+					useAction={useAction}
+				/>}
+
 			</div>
 		</div >
 	)
