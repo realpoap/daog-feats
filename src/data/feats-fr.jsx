@@ -69,6 +69,23 @@ import stabilize from '../assets/svg/bleeding-heart.svg'
 import plaster from '../assets/svg/sticking-plaster.svg'
 import coma from '../assets/svg/coma.svg'
 
+//defense
+import crackedhelm from '../assets/svg/cracked-helm.svg'
+import shieldbash from '../assets/svg/shield-bash.svg'
+import choc from '../assets/svg/spiked-shield.svg'
+import deviation from '../assets/svg/shield-impact.svg'
+import pummeled from '../assets/svg/pummeled.svg'
+import vengeance from '../assets/svg/one-eyed.svg'
+import parade from '../assets/svg/shield-reflect.svg'
+import cover from '../assets/svg/attached-shield.svg'
+import domination from '../assets/svg/armor-punch.svg'
+import protection from '../assets/svg/armor-upgrade.svg'
+import stomp from '../assets/svg/quake-stomp.svg'
+import tough from '../assets/svg/black-knight-helm.svg'
+import rempart from '../assets/svg/surrounded-shield.svg'
+import opening from '../assets/svg/winged-shield.svg'
+import armor from '../assets/svg/breastplate.svg'
+
 
 
 //crafting
@@ -1321,7 +1338,7 @@ const featsFR = {
           "rank": 1,
           "title": "Choc",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": choc,
           "color": "blue",
           "tooltip": "Lors d'une attaque ennemie, vous usez de votre bouclier comme d'une arme et frappez dans la mêlée. Si l'attaque de votre adversaire èchoue, il subit 1d3 dégats de votre bouclier."
         },
@@ -1331,7 +1348,7 @@ const featsFR = {
           "rank": 2,
           "title": "Déviation",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": deviation,
           "color": "blue",
           "tooltip": "Vous tendez votre bouclier pour sauver votre allié au contact ou essayez de bloquer au moment opportun votre adversaire. Vous lancez un jet d'attaque avec votre bouclier avec désavantage contre l'attaque de votre adversaire. En cas de réussite, vous bloquez l'attaque adverse."
         },
@@ -1341,7 +1358,7 @@ const featsFR = {
           "rank": 3,
           "title": "Vengeance",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": vengeance,
           "color": "blue",
           "tooltip": "Attaque en action limitée avec avantage contre un adversaire apres une attaque réussie contre un allié."
         },
@@ -1351,7 +1368,7 @@ const featsFR = {
           "rank": 4,
           "title": "Parade",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": parade,
           "color": "blue-dark",
           "tooltip": "Vous vous lancez dans la mêlée le bouclier en avant et prêt à frapper. Lancez un score d'attaque avec votre bouclier contre une attaque réussie adverse. En cas de succès, vous brisez l'attaque réussie et produisez une attaque avec +1d4 dégats avec votre arme contre l'adversaire. En cas d'échec, votre adversaire inflige des dégats critiques."
         },
@@ -1361,7 +1378,7 @@ const featsFR = {
           "rank": 5,
           "title": "Ouverture",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": opening,
           "color": "blue",
           "tooltip": "Vous ouvrez la garde adverse et votre prochaine attaque ce tour a 2 avantages. Les alliés au contact ont un avantage supplémentaire pour toucher la cible."
         },
@@ -1376,7 +1393,7 @@ const featsFR = {
           "rank": 1,
           "title": "Couverture",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": cover,
           "color": "blue",
           "tooltip": "Vous placez votre bouclier au dessus de votre tête pour vous protéger, vous ou vos alliés. Vous pévenez les dégats de tir de la valeur du bouclier, mais réduisez votre score de défense (sans bouclier)."
         },
@@ -1386,7 +1403,7 @@ const featsFR = {
           "rank": 2,
           "title": "Encaisse",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": pummeled,
           "color": "blue",
           "tooltip": "Vous vous campez derrière votre bouclier et subissez les attaques ennemies. Les adversaire ont un avantage pour vous toucher tant que vous gardez la position, mais vous réduisez les dégats physiques que vous recevez de la valeur de votre bouclier jusqu'au début du prochain tour. Vous ne pouvez pas attaquer dans cette position."
         },
@@ -1396,7 +1413,7 @@ const featsFR = {
           "rank": 3,
           "title": "Bélier",
           "action": "principale",
-          "icon": highpunch,
+          "icon": shieldbash,
           "color": "blue",
           "tooltip": "À la place de votre attaque, vous avancez en ligne droite jusqu’à votre distance de marche et frappez votre cible brutalement. Lancez d12 + FOR pour battre le score de défense de votre cible et vous infligez 2x bonus FOR dégâts. Si vous échouez, vous subissez un désavantage sur votre défense jusqu'au début de votre prochain tour. Si vous réussissez, votre adversaire tombe au sol et doit se relever à son prochain tour en mobilisant une action."
         },
@@ -1406,7 +1423,7 @@ const featsFR = {
           "rank": 4,
           "title": "Domination",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": domination,
           "color": "blue",
           "tooltip": "Après attaque une réussie, votre prochaine attaque contre cette même cible entraine un jet d'END pour éviter un renversement"
         },
@@ -1416,7 +1433,7 @@ const featsFR = {
           "rank": 5,
           "title": "Protection",
           "action": "principale",
-          "icon": highpunch,
+          "icon": protection,
           "color": "blue",
           "tooltip": "Vous effectuez votre défense avec un bonus de la Valeur de Bouclier pour reduire tous les dégats physiques et la moitié des dégats magiques."
         },
@@ -1431,7 +1448,7 @@ const featsFR = {
           "rank": 1,
           "title": "Posture",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": stomp,
           "color": "blue",
           "tooltip": "Évite une perte de durabilité sur armure en cas de jet d'AGI+physique réussi contre le score d'attaque adverse. Peut être utilisé en réaction gratuite pour gagner un avantage pour résister à un jet de renversement ou poussée."
         },
@@ -1441,7 +1458,7 @@ const featsFR = {
           "rank": 2,
           "title": "Mûle",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": armor,
           "color": "blue",
           "tooltip": "Réduit la charge des armures par le bonus de FOR. Peut utiliser cette action pour retirer un désavantage sur un jet d'AGI ou MOU en réaction."
         },
@@ -1451,7 +1468,7 @@ const featsFR = {
           "rank": 3,
           "title": "Rempart",
           "action": "limitée",
-          "icon": highpunch,
+          "icon": rempart,
           "color": "blue",
           "tooltip": "Vous vous placez dans une position difficile ou vous bloquez le passage ennemi et protégez les arrières de vos alliés ou un emplacement. Les ennemis qui veulent se déplacer autour de vous (3m) doivent réussir un jet d’AGI ou subir une de vos attaques. Faites un jet de COU au debut de vos prochains tours avec désavantage pour chaque ennemi au corps à corps avec vous au-delà de 1. En cas d’échec vous devez quitter votre position (vous subissez une attaque de la part de l’ennemi le plus direct si vous manquez votre dérobade)."
         },
@@ -1461,7 +1478,7 @@ const featsFR = {
           "rank": 4,
           "title": "Dur-à-cuir",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": tough,
           "color": "blue",
           "tooltip": "Vous réduisez les dégats physiques de votre bonus d'END brut. Peut utiliser l'action pour réduire les dégats de la valeur d'armure une fois par repos long."
         },
@@ -1471,7 +1488,7 @@ const featsFR = {
           "rank": 5,
           "title": "Indomptable",
           "action": "gratuite",
-          "icon": highpunch,
+          "icon": crackedhelm,
           "color": "blue",
           "tooltip": "Si une attaque ennemie doit vous mettre inconscient, lance un jet d'END avec bonus de valeur d'armure contre le score d'attaque. En cas de succès vous restez de bout avec 1d3+bonus d'END VIE ou votre VIE initiale. Cette technique est utilisée en réaction."
         },
