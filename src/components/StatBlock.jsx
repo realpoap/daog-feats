@@ -67,8 +67,8 @@ const StatBlock = ({ masters, setUserData }) => {
 							<label key={p[0]}>
 								<span>{p[0]}</span>
 								<input
-									inputMode='decimal'
 									type='number'
+									inputMode="numeric"
 									name={p[0]}
 									min={0}
 									max={5}

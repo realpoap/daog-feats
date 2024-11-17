@@ -146,13 +146,14 @@ function PlayerActions() {
 						useAction={useAction}
 					/>
 				</>}
-				{(actionF > 0 || actionL > 0 || actionM > 0) && <ActionsBlock
-					type="gratuite"
-					list={list}
-					action={'free'}
-					number={actionF}
-					useAction={useAction}
-				/>}
+				{(actionF > 0 || actionL > 0 || actionM > 0) &&
+					<ActionsBlock
+						type="gratuite"
+						list={list}
+						action={'free'}
+						number={actionF}
+						useAction={useAction}
+					/>}
 
 			</div>
 		</div >

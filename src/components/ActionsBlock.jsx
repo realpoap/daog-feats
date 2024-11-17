@@ -8,7 +8,7 @@ function ActionsBlock({ type, list, action, number, useAction }) {
 		<div>
 			<h2>{type}s <input
 				type='number'
-				inputMode="decimal"
+				inputMode='numeric'
 				min={0}
 				value={number}
 				onChange={(e) => setPlayerInfo({ ...playerInfo, [action]: e.target.value })}

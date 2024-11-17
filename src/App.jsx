@@ -115,7 +115,7 @@ const App = () => {
               Niveau -
               <input
                 className="header-input"
-                inputMode="decimal"
+                inputMode="numeric"
                 type="number"
                 name="level"
                 value={parseInt(playerInfo.level)}
