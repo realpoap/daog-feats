@@ -341,7 +341,7 @@ button.action-btn{
 
 #clear {
 	display:block;
-	position: absolute;
+	position: relative;
 }
 
 .slick-arrow{

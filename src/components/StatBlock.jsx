@@ -79,11 +79,8 @@ const StatBlock = ({ masters, setUserData }) => {
 						)
 					})
 				}
-			</div >
-			<label>
-
-				<button id='clear' className='action-btn' onClick={handleClear} name='clear-btn'>Clear</button>
-			</label>
+			</div>
+			<button id='clear' className='action-btn' onClick={handleClear} name='clear-btn'>Clear</button>
 		</div>
 	);
 };
