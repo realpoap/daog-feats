@@ -4,7 +4,7 @@ import { LanguageContext } from "../store/languageContext"
 import ActionsBlock from "./ActionsBlock";
 
 function PlayerActions() {
-	const { playerInfo } = useContext(LanguageContext)
+	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 	const [actionM, setActionM] = useState(0)
 	const [actionL, setActionL] = useState(0)
 	const [actionF, setActionF] = useState(0)
@@ -76,9 +76,9 @@ function PlayerActions() {
 	]
 
 	useEffect(() => {
-		playerInfo.main ? setActionM(playerInfo.main) : setActionM(1)
-		playerInfo.limited ? setActionL(playerInfo.limited) : setActionL(0)
-		playerInfo.free ? setActionF(playerInfo.free) : setActionF(1)
+		playerInfo.main ? setActionM(playerInfo.main) : setPlayerInfo({ ...playerInfo, main: 1 })
+		playerInfo.limited ? setActionL(playerInfo.limited) : setPlayerInfo({ ...playerInfo, limited: 0 })
+		playerInfo.free ? setActionF(playerInfo.free) : setPlayerInfo({ ...playerInfo, free: 1 })
 	}, [playerInfo])
 
 	const resetActions = () => {
