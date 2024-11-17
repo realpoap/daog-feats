@@ -76,8 +76,8 @@ function PlayerActions() {
 	]
 
 	useEffect(() => {
-		playerInfo.main ? setActionM(playerInfo.main) : setActionF(1)
-		playerInfo.limited ? setActionL(playerInfo.limited) : setActionF(0)
+		playerInfo.main ? setActionM(playerInfo.main) : setActionM(1)
+		playerInfo.limited ? setActionL(playerInfo.limited) : setActionL(0)
 		playerInfo.free ? setActionF(playerInfo.free) : setActionF(1)
 	}, [playerInfo])
 
