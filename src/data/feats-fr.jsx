@@ -135,7 +135,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": bowman,
           "color": "green",
-          "tooltip": "You prepare your shot for the enemy to appear. You can make one shot at the target during its turn, with no penalty during your turn. Use your INS score instead of your DEX in this situation. Weapons that need to be reloaded still suffer this penalty."
+          "tooltip": "Vous préparez votre tir pour l’apparition de l’ennemi. Vous pouvez faire un tir contre la cible lors de son tour, sans malus pendant votre tour suivant. Les armes devant être rechargées subissent tout de même ce malus."
         },
         {
           "id": "rechange",
@@ -145,7 +145,7 @@ const featsFR = {
           "action": "limitée",
           "icon": bowstring,
           "color": "green",
-          "tooltip": "You handle your broken weapon and quickly find a way to repair it using a rope or a dedicated tool. Roll a DEX save with disadvantage: if successful your weapon is functional again and you can fire within the turn if it is loaded and you have enough actions."
+          "tooltip": "Vous manipulez votre arme brisée et trouvez rapidement un moyen de la réparer en utilisant une corde ou un outil dédié. Lancez un jet de DEX avec désavantage : en cas de réussite votre arme est à nouveau fonctionnelle et vous pouvez tirer dans le tour si elle est chargée et que vous avez assez d'action."
         },
         {
           "id": "bleed",
@@ -155,7 +155,7 @@ const featsFR = {
           "action": "principale",
           "icon": bleed,
           "color": "green",
-          "tooltip": "You choose an exposed part of your target to inflict a deep wound. Make a shot with disadvantage that causes 1d3 additional bleeds. The target suffers a penalty to its bleed resistance rolls equal to your thoroughness score."
+          "tooltip": "Vous choisissez une partie exposée de votre cible pour lui infliger une blessure profonde. Faites un tir avec désavantage qui provoque 1d3 saignements supplémentaire. La cible subit un malus a ses jets de resistance aux saignements égal a votre score de minutie."
         },
         {
           "id": "aim",
@@ -165,7 +165,7 @@ const featsFR = {
           "action": "principale",
           "icon": target,
           "color": "green",
-          "tooltip": "You relax your body and steady your breathing as you wait for the best moment to fire. Your shot is made with advantage, ignoring adverse conditions if you use 2 primary actions, and deals weapon damage + DEX bonus + your thoroughness score. The target hit must either succeed at a COU save or move away from you to take cover or flee."
+          "tooltip": "Vous relaxez votre corps et posez votre respiration alors que vous attendez le meilleur instant pour tirer. Votre tir est fait avec avantage  et ignore les conditions defavorables si vous utilisez 2 actions principaes, et inflige les dégâts de l’arme + bonus de DEX + votre score de minutie. La cible touchée doit réussir un jet de COU ou s'éloigner de vous pour se mettre a couvert ou fuir."
         },
         {
           "id": "friendly",
@@ -175,7 +175,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": friendly,
           "color": "green",
-          "tooltip": "You can shoot without disadvantage to and from melee range, even if your allies are in contact with the enemy. Immediately after shooting, you can take a free leap action, making an AGI check."
+          "tooltip": "Vous pouvez tirer sans désavantage vers et depuis une mêlée, même si vos alliés sont au contact de l'ennemi. Tout de suite après avoir tiré, vous pouvez faire une action de bond gratuite en lançant un jet d'AGI."
         }
       ],
     },
@@ -190,7 +190,7 @@ const featsFR = {
           "action": "principale",
           "icon": arrowflight,
           "color": "green",
-          "tooltip": "You can move during your turns as long as you maintain a barrage of fire. Enemy creatures that attempt to approach within range must succeed at an AGI save against your shooting score or suffer 1 + your DEX bonus."
+          "tooltip": "Vous pouvez vous déplacer durant vos tours tant que vous maintenez un tir de barrage. Les créatures ennemies qui voudraient approcher à portée de tir doivent réussir un jet d’AGI contre votre score de tir ou subir 1 + votre bonus de DEX."
         },
         {
           "id": "penalty",
@@ -200,7 +200,7 @@ const featsFR = {
           "action": "principale",
           "icon": penalty,
           "color": "green",
-          "tooltip": "You target a limb on your target to hinder its progress. You make your shot with disadvantage by aiming at the legs to give -5 MOV and disadvantage on combat and AGI rolls if successful..."
+          "tooltip": "Vous ciblez un membre sur votre cible pour nuire à sa progression. Vous effectuez votre tir avec désavantage en visant les jambes pour donner -5 MOU et désavantage aux jets de combat et AGI en cas de succès."
         },
         {
           "id": "reload",
@@ -210,7 +210,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": quiver,
           "color": "green",
-          "tooltip": "You know your weapon and are able to reload with your eyes closed. You reduce the number of reload turns required by 1 for every ten DEX. If the reload time is then 0, you can fire in the same turn as you would with a bow."
+          "tooltip": "Vous connaissez votre arme et êtes capable de recharger les yeux fermés. Vous diminuez de 1 le nombre de tours de rechargement requis par dizaine de DEX. Si le temps de rechargement est alors de 0, vous pouvez tirer dans le même tour comme dans le cas d'un arc."
         },
         {
           "id": "giant",
@@ -220,7 +220,7 @@ const featsFR = {
           "action": "principale",
           "icon": giantkiller,
           "color": "green",
-          "tooltip": "When facing a large or larger creature, you muster up your courage to deal heavy damage while waiting to get close enough to your enemy. Roll a normal shooting roll with advantage depending on the size of the enemy. You deal your damage + shooting score (+ STR bonus if you are wielding a bow or throwing weapon), and reroll the damage die if you roll a 1. (Follow the rules for huge creatures if they apply: if you are at close range, roll a fear roll instead of your to hit roll.)"
+          "tooltip": "Face à une créature large ou plus grande vous prenez votre courage à deux mains pour infliger des dégâts lourds en attendant d’etre assez proche de votre ennemi. Jetez un jet de tir normal avec avantage selon la taille de l’ennemi. Vous infligez vos dégâts +  score de tir (+ bonus de FOR si vous maniez un arc ou une arme à lancer), et relancez le dé de dégat en cas de 1. (Suivez les règles de créature immense si elles s'appliquent: si vous êtes à courte distance, lancez un jet de peur à la place de votre jet pour toucher)."
         },
         {
           "id": "double",
@@ -230,7 +230,7 @@ const featsFR = {
           "action": "principale",
           "icon": doubleshot,
           "color": "green",
-          "tooltip": "You place two bolts in your weapon and fire both at once, adjusting your movement. Your shot suffers disadvantage to hit, but you roll twice your damage if successful. OR You use your other hand to wield a second weapon. You roll two rolls to hit (one for each weapon). You can choose different targets for your 2 shots, but you then fire with disadvantage on each roll."
+          "tooltip": "Vous placez deux traits dans votre arme et tirez les deux conjointement en adaptant votre geste. Votre tir subit un désavantage pour toucher mais vous lancez 2 fois vos dégâts en cas de réussite. OU Vous utilisez votre autre main pour manier une seconde arme. Vous lancez deux jets pour toucher (un pour chaque arme). Vous pouvez choisir des cibles différentes pour vos 2 tirs, mais vous tirez alors avec un désavantage sur chacun des jets."
         }
       ],
     },
@@ -302,7 +302,7 @@ const featsFR = {
           "action": "principale",
           "icon": boxing,
           "color": "orange",
-          "tooltip": "You give your opponent a well-placed shoulder blow to push them. Roll an attack against the opponent's DEF with 1d4 advantage for each ten STR above your opponent's. If successful, your target is pushed back a few meters and is no longer engaged in melee with you. It will suffer a DEF disadvantage until the start of its next turn."
+          "tooltip": "Vous mettez un coup d’épaule bien placé à votre adversaire afin de le pousser. Lancez un jet d'attaque contre la DEF adverse avec 1d4 avantage pour chaque dizaine en FOR au dessus de celle de votre adversaire. En cas de réussite votre cible est repoussée de quelques mètres et n’est plus engagée au corps à corps avec vous. Elle subira un désavantage en DEF jusqu’au début de son prochain tour. "
         },
         {
           "id": "throw",
@@ -312,7 +312,7 @@ const featsFR = {
           "action": "principale",
           "icon": thrown,
           "color": "orange",
-          "tooltip": "You must immobilize your opponent to perform this technique or make an AGI attack roll. You grab your opponent and push up on your thighs to throw him away. You can throw your opponent at other targets. The opponent is sent a distance equal to your STR bonus and takes 1d3 damage + STR bonus (those hit by the target of the throw take 1d3 damage)."
+          "tooltip": "Vous devez immobiliser l'adversaire pour réaliser cette technique ou réussir un jet d'attaque AGI. Vous saisissez votre adversaire et vous poussez sur vos cuisses pour le projeter au loin. Vous pouvez lancer votre adversaire sur d’autres cibles. L’adversaire est envoyé à une distance égale à votre bonus de FOR et subit 1d3 dégâts + bonus de FOR (ceux qui sont touchés par la cible du jeté subissent 1d3 dégats)."
         },
         {
           "id": "balance",
@@ -322,7 +322,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": balance,
           "color": "orange",
-          "tooltip": "Your balance is perfected to its paroxysm and your footing is solid: you have no disadvantage on STR rolls against a target larger than you. You can use this action to resist a knockdown effect and reroll your die roll."
+          "tooltip": "Votre équilibre est perfectionné à son paroxysme et vos appuis sont solides : vous n'avez pas de désavantage aux jets de FOR contre une cible plus grande que vous. Vous pouvez utilier cette action pour résister à un effet de renversement et relancer votre jet de dé."
         },
         {
           "id": "insensitivity",
@@ -332,7 +332,7 @@ const featsFR = {
           "action": "limitée",
           "icon": insens,
           "color": "orange",
-          "tooltip": "Your body is hardened by blows and training: you are resistant to blunt blows and reduce all other physical damage by 1. You can use this action to automatically recover from being stunned once per combat."
+          "tooltip": "Votre corps est endurci par les coups et les entraînements : vous êtes résistant aux coups contondants et réduisez de 1 tous les autres dégats physiques. Vous pouvez utiliser cette action pour récupérer automatiquement aprés être sonné une fois par combat."
         },
         {
           "id": "suplex",
@@ -342,7 +342,7 @@ const featsFR = {
           "action": "principale",
           "icon": skelet,
           "color": "orange",
-          "tooltip": "You get behind your opponent or grab him from the ground to lift him up and turn him behind you. Roll a STR check with disadvantage against your target’s defense. As his body crashes to the ground, he takes 3d4 damage + his armor + your STR bonus. The opponent is stunned at the start of his next turn and must succeed at an END check to regain his senses the following turn. You have no disadvantage on the STR check if you immobilize the target."
+          "tooltip": "Vous vous placez dans le dos de votre adversaire ou le saisissez par terre pour le soulever et le retourner derrière vous. Lancez un jet de FOR avec désavantage contre la défense de votre cible. Alors que son corps s’écrase au sol, il subit 3d4 dégâts + son armure + votre bonus de FOR. L’adversaire est sonné au début de son prochain tour et doit réussir un jet d’END pour reprendre ses esprits au tour suivant. Vous n'avez pas de désavantage au jet de FOR si vous immobilisez la cible."
         },
       ],
     },
@@ -357,7 +357,7 @@ const featsFR = {
           "action": "limitée",
           "icon": grab,
           "color": "orange",
-          "tooltip": "You grab your opponent's body with your limbs, preventing them from moving. For the duration of the immobilization, you suffer automatic hits from other opponents in melee with you. At the start of its turn, the immobilized target must succeed at a STR roll against you with disadvantage or remain immobilized and suffer 1d3 damage. You can use grappling techniques against your immobilized target."
+          "tooltip": "Vous saisissez le corps de votre adversaire avec vos membres et vous l'empêchez de se mouvoir. Pendant toute la durée de l’immobilisation vous subissez des touches automatiques de la part des autres adversaires en mêlée avec vous. Au début de son tour, la cible immobilisée doit réussir un jet de FOR contre vous avec désavantage ou rester immobilisée et subir 1d3 dégats. Vous pouvez placer des techniques de lutte contre votre cible immobilisée."
         },
         {
           "id": "pinch",
@@ -367,7 +367,7 @@ const featsFR = {
           "action": "principale",
           "icon": bootkick,
           "color": "orange",
-          "tooltip": "You grab your opponent by the collar and wrap your hip around them to make them lose their balance. Roll AGI + 1d12 against your opponent’s attack. If successful, your target is prone and has disadvantage on all rolls until the end of his next turn. You have advantage in this action if you already have your opponent pinned."
+          "tooltip": "Vous saisissez votre adversaire par le col et passez votre hanche autour de votre adversaire pour lui faire perdre l’équilibre. Lancez un jet d’AGI + 1d12 contre l’attaque de votre adversaire. En cas de réussite, votre cible est à terre et subit un désavantage sur tous ses jets jusqu’à la fin de son prochain tour. Vous avez avantage à cette action si vous immobilisez déjà votre adversaire."
         },
         {
           "id": "blow",
@@ -377,7 +377,7 @@ const featsFR = {
           "action": "principale",
           "icon": punchblast,
           "color": "orange",
-          "tooltip": "You elbow or knee your nearby opponent in the ribs to gain a major advantage in the fight. Make your attack: if successful, the opponent takes an additional 2d4 damage, and must succeed at an END roll or lose 1 main action for their next turn and cancel their concentration and reactions. If critically failed, the target is stunned."
+          "tooltip": "Vous placez un coup de coude ou de genou dans les côtes de votre adversaire proche afin de gagner un avantage majeur sur le combat. Réalisez votre attaque : en cas de succès, l’adversaire subit 2d4 dégâts supplémentaires, et doit réussir un jet d’END ou perdre 1 action principale pour son prochain tour et annuler ses concentrations et réactions. En cas d'échec critique la cible est sonnée."
         },
         {
           "id": "strangulation",
@@ -387,7 +387,7 @@ const featsFR = {
           "action": "principale",
           "icon": strangle,
           "color": "orange",
-          "tooltip": "You must immobilize the opponent to perform this technique or succeed at an AGI attack roll. You place your hands around your opponent's neck in a swift and relentless gesture. He loses 1d4 LIFE + STR bonus for each turn spent strangled. At the start of his turn, the target must make an END test of increasing difficulty each turn or be unconscious. Roll a STR roll against the target's STR each new turn of strangulation to maintain your hold and inflict damage."
+          "tooltip": "Vous devez immobiliser l'adversaire pour réaliser cette technique ou réussir un jet d'attaque AGI. Vous placez vos mains autour du cou de votre adversaire dans un geste vif et implacable. Il perd 1d4 VIE+bonus FOR, pour chaque tour passé étranglé. Au début de son tour, la cible doit effectuer un test d'END de difficulté croissante à chaque tour ou être inconscient. Lancez un jet de FOR contre la FOR de la cible à chaque nouveau tour d'étranglement pour maintenir votre emprise et infliger les dégats."
         },
         {
           "id": "neck",
@@ -397,7 +397,7 @@ const featsFR = {
           "action": "principale",
           "icon": neck,
           "color": "orange",
-          "tooltip": "You must immobilize the opponent to perform this technique or succeed at an AGI attack roll. You stand behind the enemy and slide your hands around his head to snap his neck with a sharp blow. The player takes 4d4 damage + STR bonus. He is stunned and prone unless he succeeds at his END roll against your STR."
+          "tooltip": "Vous devez immobiliser l'adversaire pour réaliser cette technique ou réussir un jet d'attaque AGI. Vous vous placez derrière l’ennemi et glissez vos mains autour de sa tête pour lui briser d’un coup sec la nuque. Le joueur subit 4d4 dégâts+bonus FOR. Il est sonné et à terre à moins de réussir son jet d'END contre votre FOR."
         },
       ],
     },
@@ -412,7 +412,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": highpunch,
           "color": "orange",
-          "tooltip": "You can take this action after a creature attacks you. Add your INS bonus to your defense. If the attack misses, you deliver a lightning strike, avoiding your opponent's blow, and deal your damage with an additional 1d4 bonus."
+          "tooltip": "Vous pouvez jouer cette action après qu'une creature vous attaque. Ajoutez votre bonus d'INS à votre défense. En cas d'échec de l'attaque, vous assénez une frappe fulgurante en évitant le coup de votre adversaire et infligez vos dégats avec un bonus de 1d4 additionnel.."
         },
         {
           "id": "kick",
@@ -422,7 +422,7 @@ const featsFR = {
           "action": "principale",
           "icon": kick,
           "color": "orange",
-          "tooltip": "You stop an attacker’s advance with a well-placed kick to the supports or head. Launch an AGI attack. If successful, you disorient your opponent who is stunned until the end of the turn in the event of a failed END roll, and who suffers 1d6 additional damage. You can play this action as a reaction with disadvantage if the target charges you."
+          "tooltip": "Vous stoppez l’avancée d’un assaillant d’un coup de pied bien placé dans les appuis ou la tête. Lancez une attaque en AGI.  En cas de réussite, vous désorientez votre adversaire qui est sonné jusqu’à la fin du tour en cas d’échec de jet d’END, et qui subit 1d6 dommages additionnels. Vous pouvez jouer cette action en réaction avec désavantage si la cible vous charge."
         },
         {
           "id": "fling",
@@ -432,7 +432,7 @@ const featsFR = {
           "action": "principale",
           "icon": dump,
           "color": "orange",
-          "tooltip": "You must immobilize the opponent to perform this technique or succeed at an AGI attack roll. You place your hip against your opponent, gripping him firmly, and throw him over you in a dynamic movement. The target Lfaka is sent flying and must succeed at an INS check or be disarmed. She takes 2d3 damage from your STR bonus and must succeed at a COU check at the start of her turn before she can take an action or react."
+          "tooltip": "Vous devez immobiliser l'adversaire pour réaliser cette technique ou réussir un jet d'attaque AGI. Vous placez votre hanche contre votre adversaire en le saisissant fermement, et vous le faites passer par-dessus vous dans un mouvement dynamique. Lfaka cible est envoyée au loin et doit réussir un test d’INS ou se retrouver désarmée. Elle subit 2d3 dégâts + votre bonus de FOR et doit réussir un test de COU au début de son tour pour pouvoir effectuer une action ou réagir."
         },
         {
           "id": "wind",
@@ -442,7 +442,7 @@ const featsFR = {
           "action": "gratuite",
           "icon": wind,
           "color": "orange",
-          "tooltip": "You have advantage against ranged attacks and on dodges. You can use this action to make a free jump without rolling a die once per turn."
+          "tooltip": "Vous avez un avantage contre les attaques à distance et pour les esquives. Vous pouvez utiliser cette action pour effectuer un bond gratuit sans jeter de dé une fois par tour."
         },
         {
           "id": "downpour",
@@ -452,7 +452,7 @@ const featsFR = {
           "action": "principale",
           "icon": downpour,
           "color": "orange",
-          "tooltip": "You unleash a barrage of blows against a single target in melee combat. Make an attack that deals 1d6 times your +1 MOV bonus, taking any bonuses you have. You can perform this action more than once per turn."
+          "tooltip": "Vous assénez un véritable déluge de coups contre une cible unique au corps-à-corps. Lancez une attaque qui inflige 1d6 fois votre bonus de MOU +1 et à laquelle s'applique vos éventuels bonus. Vous pouvez réaliser cette action plus d'une fois par tour."
         },
       ],
     }
