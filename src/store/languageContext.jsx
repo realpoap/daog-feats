@@ -16,7 +16,15 @@ const LanguageProvider = ({ children }) => {
 				feats: [],
 				main: 1,
 				limited: 0,
-				free: 1
+				free: 1,
+				health: {
+					current: 15,
+					max: 15
+				},
+				spirit: {
+					current: 15,
+					max: 15
+				},
 			}
 		)
 
@@ -27,4 +35,5 @@ const LanguageProvider = ({ children }) => {
 	)
 }
 
-export { LanguageContext, LanguageProvider }
+export { LanguageContext, LanguageProvider };
+

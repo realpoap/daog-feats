@@ -2,12 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../store/languageContext";
 
 import ActionsBlock from "./ActionsBlock";
+import Bubble from "./Bubble";
 
 function PlayerActions() {
 	const { playerInfo, setPlayerInfo } = useContext(LanguageContext)
 	const [actionM, setActionM] = useState(0)
 	const [actionL, setActionL] = useState(0)
 	const [actionF, setActionF] = useState(0)
+
+	const [health, setHealth] = useState(0)
+	const [spirit, setSpirit] = useState(0)
 
 	const basics = [
 		{
@@ -81,11 +85,14 @@ function PlayerActions() {
 
 		},
 	]
-
+	
 	useEffect(() => {
 		playerInfo.main ? setActionM(playerInfo.main) : setActionM(1)
 		playerInfo.limited ? setActionL(playerInfo.limited) : setActionL(0)
 		playerInfo.free ? setActionF(playerInfo.free) : setActionF(1)
+		setHealth(playerInfo.health.current);
+		setSpirit(playerInfo.spirit.current);
+
 	}, [playerInfo])
 
 	const resetActions = () => {
@@ -134,6 +141,19 @@ function PlayerActions() {
 				onClick={resetActions}>
 				start your turn
 			</button>
+<div id="bubble-row">
+
+			<Bubble 
+			name={'health'} 
+			current={health}
+			max={playerInfo.health.max} 
+			color={'red'} />
+			<Bubble 
+			current={spirit}
+			name={'spirit'} 
+			max={playerInfo.spirit.max} 
+			color={'blue'} />
+</div>
 
 			<div className="player-feats-block">
 				{(actionM > 0) &&

@@ -14,8 +14,6 @@ body{
 	margin:0;
 }
 
-
-
 * {
 	font-family: 'Noto Sans Mono';
 }
@@ -100,10 +98,6 @@ h4{
 #reset{
 	margin:1em;
 }
-
-
-
-
 
 .player-feats-block {
 	display: flex;
@@ -234,7 +228,6 @@ span.action {
 	align-items: center;
 }
 
-
 .skill-title {
 	text-transform: uppercase;
 	font-weight: 300;
@@ -330,6 +323,7 @@ button.action-btn:active{
 	transform: translateY(1px);
 	box-shadow: 0px 0px 0px rgba(0,0,0,0.7);
 }
+
 
 
 #lang {
