@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react"
-import { LanguageContext } from "../store/languageContext"
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../store/languageContext";
 
 import ActionsBlock from "./ActionsBlock";
 
@@ -30,16 +30,23 @@ function PlayerActions() {
 
 		},
 		{
+			title: 'Marche discrete',
+			action: 'principale',
+			type: 'Base',
+			tooltip: "Vous avancez prudemment en étant ou en essayant d'être furtif (pas de dérobade). Votre distance est MOU/4."
+
+		},
+		{
 			title: 'Remise sur pieds',
 			action: 'principale',
 			type: 'Base',
 			tooltip: "Vous reprenez vos esprits apres une chute, une perte de conscience, un envoutement en mobilisant votre attention."
 		},
 		{
-			title: 'Bond/Marche discrete',
+			title: 'Bond',
 			action: 'limitée',
 			type: 'Base',
-			tooltip: "Vous réalisez un mouvement pour sortir de la mêlée (dérobade avec jet d'AGI) ou pour avancer furtivement (pas de dérobade). Votre distance est de MOU/4."
+			tooltip: "Vous réalisez un mouvement pour sortir de la mêlée (dérobade avec jet d'AGI). Votre distance est de MOU/4."
 		},
 		{
 			title: 'Objet/Interaction',
