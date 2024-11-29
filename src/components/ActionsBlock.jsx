@@ -9,7 +9,6 @@ function ActionsBlock({ type, list, action, number, useAction }) {
       <h2>
         {type}s{" "}
         <input
-          className="	.player-block-label-input"
           type="number"
           inputMode="numeric"
           min={0}
