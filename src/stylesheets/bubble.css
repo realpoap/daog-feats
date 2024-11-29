@@ -2,62 +2,73 @@
   box-sizing: border-box;
 }
 
-#bubble-row{
-	display: flex;
-	margin-top: -3em;
-	flex-direction: row;
-	width: 100vw;
-	justify-content: space-between;
-	padding: 0 2em;;
+#bubble-row {
+  position: relative;
+  display: flex;
+  margin-top: -3em;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 0 1em;
+  margin-bottom: 3em;
+}
+
+.bubble-container {
+  position: relative;
 }
 
 .bubble {
-	border-radius: 50%;
-	border: 2px white solid;
-	width: 15vw;
-	height: 15vw;
-	display: flex;
-	justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 100;
+  border: 2px white solid;
+  width: 15vw;
+  height: 15vw;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.7);
 }
 
 .circle-fill {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  z-index: 10;
+  height: 15vw;
+  width: 15vw;
   border-radius: 50%;
   color: black;
 }
 
-.circle-fill-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-weight: bold;
-}
-
 .circle-overlay {
+  position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: white;
-  animation: circle-overlay-anim 1s forwards;
+  z-index: 50;
+  height: 15vw;
+  width: 15vw;
+  background: #333;
+  animation: circle-overlay-anim 15s ease-out forwards;
   transform-origin: 0 0;
 }
 
+.circle-fill-text {
+  position: relative;
+  z-index: 100;
+  top: 50%;
+}
+
 .circle-input {
-width: 3em;
-	background: none;
-	color: white;
-	margin-left: 1em;
-	font-size: 1.5em;
-	text-align: center;
-	font-weight: 700;
-	border: none;
+  width: 4em;
+  background: none;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  vertical-align: baseline;
+  font-weight: 700;
+  border: none;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes circle-overlay-anim {
