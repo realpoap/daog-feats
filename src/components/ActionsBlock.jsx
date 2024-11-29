@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import Collapsible from "react-collapsible";
-import { LanguageContext } from "../store/languageContext";
+import { useContext, useContext } from "react";
+import { default as Collapsible, default as Collapsible } from "react-collapsible";
+import { LanguageContext, LanguageContext } from "../store/languageContext";
 
 function ActionsBlock({ type, list, action, number, useAction }) {
   const { playerInfo, setPlayerInfo } = useContext(LanguageContext);
@@ -61,5 +61,7 @@ function ActionsBlock({ type, list, action, number, useAction }) {
     </div>
   );
 }
+
+export default ActionsBlock;
 
 export default ActionsBlock;

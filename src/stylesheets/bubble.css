@@ -15,9 +15,32 @@
 
 .bubble-container {
   position: relative;
+#bubble-row {
+  position: relative;
+  display: flex;
+  margin-top: -3em;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 0 1em;
+  margin-bottom: 3em;
+}
+
+.bubble-container {
+  position: relative;
 }
 
 .bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 100;
+  border: 2px white solid;
+  width: 15vw;
+  height: 15vw;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -37,10 +60,14 @@
   z-index: 10;
   height: 15vw;
   width: 15vw;
+  z-index: 10;
+  height: 15vw;
+  width: 15vw;
   border-radius: 50%;
   color: black;
 }
 
+.circle-overlay {
 .circle-overlay {
   position: absolute;
   top: 0;
@@ -50,7 +77,18 @@
   width: 15vw;
   background: #333;
   animation: circle-overlay-anim 15s ease-out forwards;
+  z-index: 50;
+  height: 15vw;
+  width: 15vw;
+  background: #333;
+  animation: circle-overlay-anim 15s ease-out forwards;
   transform-origin: 0 0;
+}
+
+.circle-fill-text {
+  position: relative;
+  z-index: 100;
+  top: 50%;
 }
 
 .circle-fill-text {
@@ -77,3 +115,4 @@
     transform: scaleY(0);
   }
 }
+
