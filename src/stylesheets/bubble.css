@@ -8,9 +8,8 @@
   flex-direction: row;
   width: 90vw;
   align-content: center;
-  justify-content: space-between;
-  margin: auto;
-
+  justify-content: center;
+  gap: 45vw;
   margin-top: -3em;
   margin-bottom: 3em;
 }
@@ -52,7 +51,7 @@
   height: 4em;
   width: 4em;
   background: #333;
-  animation: circle-overlay-anim 15s ease-out forwards;
+  animation: circle-overlay-anim 5s ease-out forwards;
   transform-origin: 0 0;
 }
 
@@ -60,17 +59,12 @@
   position: relative;
   z-index: 100;
   top: 50%;
-}
-
-.circle-fill-text {
-  position: relative;
-  z-index: 100;
-  top: 50%;
+  width: 4em;
 }
 
 .circle-input {
-  width: 2em;
-  margin-left: 1em;
+  position: relative;
+  width: 100%;
   background: none;
   color: white;
   font-size: 1.2em;
